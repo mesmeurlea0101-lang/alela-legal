@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Télécharger Alela — Organisez vos séjours en groupe</title>
+  <meta name="description" content="Alela est l'application tout-en-un pour organiser vos séjours en groupe : dates, hébergements, trajets, repas, budget partagé et souvenirs." />
+  <meta property="og:title" content="Télécharger Alela" />
+  <meta property="og:description" content="L'app qui organise vos séjours en groupe — dates, logement, repas, budget, tout au même endroit." />
+  <meta property="og:image" content="./alela-icon.png" />
+  <link rel="icon" type="image/png" href="./alela-icon.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(160deg, #f8f7f5 0%, #f0ecfb 100%);
+      color: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container { max-width: 480px; margin: 0 auto; padding: 48px 24px; text-align: center; }
+    .icon {
+      width: 120px; height: 120px; border-radius: 27px;
+      box-shadow: 0 8px 32px rgba(67,38,196,0.22);
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 34px; font-weight: 800; color: #2A1E3A; margin-bottom: 10px; }
+    .tagline { font-size: 17px; color: #555; line-height: 1.55; margin-bottom: 8px; }
+    .pitch { font-size: 15px; color: #777; line-height: 1.55; margin-bottom: 36px; }
+    .badges { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 40px; }
+    .badge-apple img { height: 56px; display: block; }
+    .badge-play {
+      display: inline-flex; align-items: center; gap: 10px;
+      height: 56px; padding: 0 22px; border-radius: 10px;
+      background: #e9e6f2; color: #8a84a0;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      cursor: default;
+    }
+    .badge-play.live { background: #000; color: #fff; cursor: pointer; }
+    .badge-play .small { display: block; font-size: 10px; font-weight: 400; text-align: left; }
+    .badge-play .big { display: block; font-size: 16px; font-weight: 700; text-align: left; }
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 40px; }
+    .chip {
+      background: #fff; border-radius: 999px; padding: 7px 14px;
+      font-size: 13px; color: #4326C4; font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .footer { font-size: 12.5px; color: #999; line-height: 1.8; }
+    .footer a { color: #4326C4; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="icon" src="./alela-icon.png" alt="Logo Alela" />
+    <h1>Alela</h1>
+    <p class="tagline">Planifiez et coordonnez vos séjours en groupe, <strong>au même endroit</strong>.</p>
+    <p class="pitch">Week-end entre amis, vacances en famille, EVG, EVJF… Fini les échanges éparpillés et les informations introuvables : tout le groupe avance dans un espace commun, sans multiplier les conversations, les tableurs et les outils séparés.</p>
+
+    <div class="badges">
+      <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268" id="ios-badge">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
+      </a>
+      <a class="badge-play" id="play-badge" href="#" aria-disabled="true">
+        <span>
+          <span class="small">BIENTÔT DISPONIBLE SUR</span>
+          <span class="big">Google Play</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="features">
+      <span class="chip">🗳️ Décisions par sondages</span>
+      <span class="chip">🏡 Hébergements</span>
+      <span class="chip">🚆 Trajets</span>
+      <span class="chip">🍝 Repas & courses</span>
+      <span class="chip">💶 Suivi des dépenses</span>
+      <span class="chip">🧳 Bagages</span>
+      <span class="chip">📸 Photos & vidéos</span>
+    </div>
+
+    <div class="footer">
+      <a href="./privacy.html">Confidentialité</a> · <a href="./terms.html">CGU</a> · <a href="mailto:info@alela.io">info@alela.io</a><br />
+      Alela — exploitée par Lea MESMEUR
+    </div>
+  </div>
+
+  <script>
+    // ─────────────────────────────────────────────────────────────
+    // ⬇️ QUAND L'APP ANDROID EST PUBLIÉE : remplace null par
+    // "https://play.google.com/store/apps/details?id=com.alela.app"
+    // (c'est la SEULE ligne à modifier)
+    var PLAY_STORE_URL = null;
+    // ─────────────────────────────────────────────────────────────
+
+    var playBadge = document.getElementById("play-badge");
+    if (PLAY_STORE_URL) {
+      playBadge.href = PLAY_STORE_URL;
+      playBadge.classList.add("live");
+      playBadge.removeAttribute("aria-disabled");
+      playBadge.querySelector(".small").textContent = "DISPONIBLE SUR";
+    } else {
+      playBadge.addEventListener("click", function (e) { e.preventDefault(); });
+    }
+
+    // Si le visiteur est sur mobile, on l'envoie directement vers son store
+    var ua = navigator.userAgent || "";
+    if (/iPhone|iPad|iPod/i.test(ua)) {
+      window.location.replace("https://apps.apple.com/fr/app/id6762174268");
+    } else if (/Android/i.test(ua) && PLAY_STORE_URL) {
+      window.location.replace(PLAY_STORE_URL);
+    }
+  </script>
+</body>
+</html>
