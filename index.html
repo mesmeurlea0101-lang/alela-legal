@@ -9,166 +9,293 @@
   <meta property="og:description" content="L'app qui organise vos séjours en groupe — dates, logement, repas, budget, tout au même endroit." />
   <meta property="og:image" content="./alela-banner.png" />
   <link rel="icon" type="image/png" href="./alela-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --violet: #4326C4;
+      --violet-deep: #2A1E3A;
+      --orange: #F1760C;
+      --lav-1: #EDE6FF;
+      --lav-2: #E3D9FF;
+      --lav-3: #DACCFF;
+      --ink: #3A2E52;
+      --ink-soft: #6B5E85;
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(160deg, #f8f7f5 0%, #f0ecfb 100%);
-      color: #1a1a2e;
+      font-family: "Nunito", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(175deg, var(--lav-1) 0%, var(--lav-2) 45%, var(--lav-3) 100%);
+      color: var(--ink);
+      overflow-x: hidden;
     }
-    .container { max-width: 860px; margin: 0 auto; padding: 56px 24px 40px; }
-    .hero { text-align: center; margin-bottom: 32px; }
-    .icon {
-      width: 104px; height: 104px; border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(67,38,196,0.22);
-      margin-bottom: 20px;
+    /* Blobs décoratifs, comme sur les visuels de marque */
+    .blob { position: absolute; border-radius: 50%; pointer-events: none; z-index: 0; }
+    .blob-1 { width: 420px; height: 420px; background: rgba(255,255,255,0.35); top: -140px; left: -120px; }
+    .blob-2 { width: 300px; height: 300px; background: rgba(67,38,196,0.07); top: 380px; right: -110px; }
+    .blob-3 { width: 260px; height: 260px; background: rgba(241,118,12,0.08); bottom: 120px; left: -90px; }
+    .page { position: relative; }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    /* ── Héros ─────────────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      align-items: center;
+      gap: 24px;
+      padding-top: 72px;
+      padding-bottom: 8px;
     }
-    h1 { font-size: 36px; font-weight: 800; color: #2A1E3A; margin-bottom: 10px; }
-    .tagline { font-size: 18px; color: #555; line-height: 1.55; margin-bottom: 8px; }
-    .pitch { font-size: 15px; color: #777; line-height: 1.6; max-width: 640px; margin: 0 auto; }
-    .banner {
-      width: 100%; border-radius: 20px; display: block;
-      box-shadow: 0 10px 40px rgba(67,38,196,0.16);
-      margin: 28px 0 48px;
+    .hero-text { padding-bottom: 40px; }
+    .wordmark { width: min(340px, 72vw); display: block; margin-left: -10px; margin-bottom: 26px; }
+    .hero h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 650;
+      font-size: clamp(30px, 4.6vw, 44px);
+      line-height: 1.14;
+      color: var(--violet);
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
     }
-    h2 { font-size: 22px; font-weight: 700; color: #2A1E3A; margin-bottom: 18px; text-align: center; }
-    .features {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px; margin-bottom: 56px;
+    .hero h1 em { font-style: italic; color: var(--orange); }
+    .hero p {
+      font-size: 16.5px; line-height: 1.65; color: var(--ink-soft);
+      max-width: 46ch; margin-bottom: 26px;
     }
-    .feature {
-      background: #fff; border-radius: 16px; padding: 18px 20px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-    .feature-title { font-size: 15px; font-weight: 700; color: #4326C4; margin-bottom: 4px; }
-    .feature-desc { font-size: 13.5px; color: #666; line-height: 1.5; }
-    .download {
-      text-align: center; background: #fff; border-radius: 20px;
-      padding: 36px 24px; margin-bottom: 56px;
-      box-shadow: 0 4px 24px rgba(67,38,196,0.10);
-    }
-    .download h2 { margin-bottom: 8px; }
-    .download-sub { font-size: 14.5px; color: #777; margin-bottom: 24px; }
-    .badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; }
-    .badge-apple img { height: 56px; display: block; }
-    .badge-play {
+    .hero-cta {
       display: inline-flex; align-items: center; gap: 10px;
-      height: 56px; padding: 0 22px; border-radius: 10px;
-      background: #e9e6f2; color: #8a84a0;
-      font-size: 14px; font-weight: 600; text-decoration: none;
-      cursor: default;
+      background: var(--violet); color: #fff; text-decoration: none;
+      font-weight: 800; font-size: 15px;
+      padding: 14px 26px; border-radius: 999px;
+      box-shadow: 0 10px 28px rgba(67,38,196,0.32);
+      transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s;
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(67,38,196,0.4); }
+    .hero-phone { position: relative; text-align: center; }
+    .hero-phone img {
+      width: min(280px, 62vw);
+      transform: rotate(3.5deg);
+      filter: drop-shadow(0 24px 44px rgba(58,32,140,0.28));
+    }
+
+    /* ── Modules ───────────────────────────────────────────── */
+    .section { padding: 64px 0 8px; }
+    .section-kicker {
+      font-size: 13px; font-weight: 900; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+    }
+    .section h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 650; font-size: clamp(26px, 3.6vw, 34px);
+      color: var(--violet-deep); margin-bottom: 30px; letter-spacing: -0.01em;
+    }
+    .modules {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .module {
+      grid-column: span 2;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.9);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .module.wide { grid-column: span 3; }
+    .module-icon {
+      width: 44px; height: 44px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 21px; margin-bottom: 12px;
+      box-shadow: 0 4px 12px rgba(58,32,140,0.18);
+    }
+    .module h3 { font-size: 16px; font-weight: 900; color: var(--violet-deep); margin-bottom: 5px; }
+    .module p { font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); }
+    /* Dégradés inspirés des icônes de l'app */
+    .ic-dates    { background: linear-gradient(145deg, #8A6BF5, #5B3FE0); }
+    .ic-dest     { background: linear-gradient(145deg, #5AA5F8, #2F7FE8); }
+    .ic-heberg   { background: linear-gradient(145deg, #FFA24E, #F1760C); }
+    .ic-trajets  { background: linear-gradient(145deg, #FF8A5C, #F25C2A); }
+    .ic-repas    { background: linear-gradient(145deg, #C4AFF8, #9B7FF0); }
+    .ic-courses  { background: linear-gradient(145deg, #7B5CF0, #4326C4); }
+    .ic-budget   { background: linear-gradient(145deg, #4A55D8, #2E36A8); }
+    .ic-bagages  { background: linear-gradient(145deg, #4D9BF2, #2565D8); }
+    .ic-souvenirs{ background: linear-gradient(145deg, #E58BD0, #C45BB0); }
+    .ic-chat     { background: linear-gradient(145deg, #6C63F0, #4A3FD8); }
+    .ic-sondages { background: linear-gradient(145deg, #FFB25E, #F18C0C); }
+    .ic-convert  { background: linear-gradient(145deg, #55C8F0, #2BA5DC); }
+
+    /* ── Téléchargement ────────────────────────────────────── */
+    .download {
+      position: relative; overflow: hidden;
+      background: var(--violet);
+      border-radius: 26px;
+      padding: 46px 32px;
+      text-align: center;
+      margin: 40px 0 64px;
+      box-shadow: 0 20px 50px rgba(67,38,196,0.3);
+    }
+    .download::before {
+      content: ""; position: absolute; width: 300px; height: 300px; border-radius: 50%;
+      background: rgba(241,118,12,0.25); top: -150px; right: -90px;
+    }
+    .download::after {
+      content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%;
+      background: rgba(255,255,255,0.08); bottom: -110px; left: -60px;
+    }
+    .download h2 {
+      font-family: "Fraunces", Georgia, serif; font-weight: 650;
+      font-size: clamp(24px, 3.2vw, 30px); color: #fff; margin-bottom: 8px;
+      position: relative; z-index: 1;
+    }
+    .download p { color: rgba(255,255,255,0.75); font-size: 15px; margin-bottom: 26px; position: relative; z-index: 1; }
+    .badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; position: relative; z-index: 1; }
+    .badge-apple img { height: 54px; display: block; }
+    .badge-play {
+      display: inline-flex; align-items: center;
+      height: 54px; padding: 0 22px; border-radius: 10px;
+      background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.65);
+      font-size: 14px; font-weight: 600; text-decoration: none; cursor: default;
     }
     .badge-play.live { background: #000; color: #fff; cursor: pointer; }
     .badge-play .small { display: block; font-size: 10px; font-weight: 400; text-align: left; }
     .badge-play .big { display: block; font-size: 16px; font-weight: 700; text-align: left; }
-    .legal-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 40px; }
-    .card {
-      background: #fff; border-radius: 16px; padding: 22px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07); text-decoration: none;
-      display: block; color: inherit; transition: box-shadow 0.2s;
+
+    /* ── Pied de page ──────────────────────────────────────── */
+    .footer {
+      text-align: center; padding-bottom: 48px;
+      font-size: 13px; color: var(--ink-soft); line-height: 2;
     }
-    .card:hover { box-shadow: 0 4px 20px rgba(67,38,196,0.15); }
-    .card-title { font-size: 16px; font-weight: 600; color: #4326C4; margin-bottom: 6px; }
-    .card-desc { font-size: 13.5px; color: #666; line-height: 1.5; }
-    .footer { font-size: 12.5px; color: #999; line-height: 1.8; text-align: center; }
-    .footer a { color: #4326C4; text-decoration: none; }
+    .footer a { color: var(--violet); text-decoration: none; font-weight: 700; }
+    .footer .sep { opacity: 0.4; margin: 0 6px; }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 48px; text-align: center; }
+      .hero p { margin-left: auto; margin-right: auto; }
+      .wordmark { margin-left: auto; margin-right: auto; }
+      .hero-phone { order: 2; margin-top: 8px; }
+      .modules { grid-template-columns: 1fr 1fr; }
+      .module, .module.wide { grid-column: span 2; }
+      .section h2 { text-align: center; }
+      .section-kicker { text-align: center; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="page">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
 
-    <div class="hero">
-      <img class="icon" src="./alela-icon.png" alt="Logo Alela" />
-      <h1>Alela</h1>
-      <p class="tagline">Planifiez et coordonnez vos séjours en groupe, <strong>au même endroit</strong>.</p>
-      <p class="pitch">Week-end entre amis, vacances en famille, EVG, EVJF, anniversaire, séjour entre collègues… Alela rassemble dans une seule interface tout ce qu'un groupe doit préparer, décider et partager avant, pendant et après un séjour. Parce qu'un séjour en groupe ne devrait pas reposer sur une seule personne, chacun peut contribuer, suivre les décisions et retrouver les bonnes informations au bon moment.</p>
-    </div>
+    <div class="container">
 
-    <img class="banner" src="./alela-banner.png" alt="Aperçu de l'application Alela sur iPhone" />
+      <!-- Héros -->
+      <div class="hero">
+        <div class="hero-text">
+          <img class="wordmark" src="./alela-wordmark.png" alt="Alela" />
+          <h1>Vos séjours en groupe, <em>enfin</em> simples à organiser.</h1>
+          <p>Week-end entre amis, vacances en famille, EVG, EVJF… Alela rassemble au même endroit tout ce qu'un groupe doit préparer, décider et partager — pour que le séjour ne repose plus sur une seule personne.</p>
+          <a class="hero-cta" href="#telecharger">Télécharger l'app&nbsp;→</a>
+        </div>
+        <div class="hero-phone">
+          <img src="./alela-phone.png" alt="L'application Alela sur iPhone" />
+        </div>
+      </div>
 
-    <h2>Tout ce qu'il faut pour un séjour réussi</h2>
-    <div class="features">
-      <div class="feature">
-        <div class="feature-title">🗓️ Dates</div>
-        <div class="feature-desc">Proposez plusieurs créneaux et laissez le groupe voter : la date du séjour se décide sans relances interminables.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">📍 Destinations</div>
-        <div class="feature-desc">Proposez des lieux et départagez-les par sondage, puis retrouvez la carte et les prévisions météo de la destination choisie.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🏡 Hébergements</div>
-        <div class="feature-desc">Rassemblez les hébergements repérés, comparez-les et choisissez ensemble celui du groupe.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🚆 Trajets</div>
-        <div class="feature-desc">Chacun renseigne son trajet aller-retour ; le groupe visualise qui arrive quand, et comment.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🍝 Repas</div>
-        <div class="feature-desc">Planifiez les repas jour par jour, proposez des idées et votez — en tenant compte des préférences alimentaires de chacun.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🛒 Courses</div>
-        <div class="feature-desc">Une liste de courses partagée, liée aux repas prévus, que tout le monde peut compléter et cocher.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">💶 Budget partagé</div>
-        <div class="feature-desc">Notez les dépenses au fil du séjour et suivez qui a payé quoi — la répartition reste claire pour tout le monde.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🧳 Bagages</div>
-        <div class="feature-desc">Des listes de bagages par participant — enfants compris — avec des recommandations adaptées à la destination.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">📸 Souvenirs</div>
-        <div class="feature-desc">Un album commun pour partager les photos et vidéos du séjour avec tout le groupe.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">💬 Chat</div>
-        <div class="feature-desc">Discutez avec tout le groupe ou seulement certains participants — pratique pour préparer une surprise ou un cadeau.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🗳️ Sondages</div>
-        <div class="feature-desc">Le moteur des décisions collectives : dates, destinations, hébergements, repas… le groupe tranche par le vote.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">💱 Convertisseur</div>
-        <div class="feature-desc">Un convertisseur de devises intégré au séjour, pour garder des repères clairs hors zone euro.</div>
-      </div>
-    </div>
+      <!-- Modules -->
+      <div class="section">
+        <div class="section-kicker">Les modules</div>
+        <h2>Tout ce qu'il faut pour un séjour réussi</h2>
 
-    <div class="download">
-      <h2>Télécharger Alela</h2>
-      <p class="download-sub">Disponible sur iPhone — bientôt sur Android.</p>
-      <div class="badges">
-        <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268">
-          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
-        </a>
-        <a class="badge-play" id="play-badge" href="#" aria-disabled="true">
-          <span>
-            <span class="small">BIENTÔT DISPONIBLE SUR</span>
-            <span class="big">Google Play</span>
-          </span>
-        </a>
+        <div class="modules">
+          <div class="module wide">
+            <div class="module-icon ic-heberg">🏡</div>
+            <h3>Hébergements</h3>
+            <p>Le QG du logement : lien de l'annonce, adresse, équipements, infos pratiques… tout le groupe retrouve les informations de l'hébergement au même endroit, sans fouiller les conversations.</p>
+          </div>
+          <div class="module wide">
+            <div class="module-icon ic-trajets">🚆</div>
+            <h3>Trajets</h3>
+            <p>Chacun renseigne son trajet aller-retour, le groupe voit qui arrive quand — et Alela suggère des trajets communs pour voyager ensemble.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-dates">🗓️</div>
+            <h3>Dates</h3>
+            <p>Chacun indique ses disponibilités et le créneau qui convient à tout le monde se dégage — sans messages de relance.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-dest">📍</div>
+            <h3>Destinations</h3>
+            <p>Rassemblez les envies du groupe, comparez les destinations et retrouvez la carte et la météo du lieu retenu.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-repas">🍝</div>
+            <h3>Repas</h3>
+            <p>Des idées de repas aux menus jour par jour, en tenant compte des préférences alimentaires de chacun.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-courses">🛒</div>
+            <h3>Courses</h3>
+            <p>La liste de courses du séjour, liée aux repas prévus, que tout le monde peut compléter et cocher.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-budget">💶</div>
+            <h3>Budget partagé</h3>
+            <p>Les dépenses notées au fil de l'eau, une répartition claire : chacun sait où il en est.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-bagages">🧳</div>
+            <h3>Bagages</h3>
+            <p>Des listes de bagages par participant — enfants compris — adaptées à la destination.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-souvenirs">📸</div>
+            <h3>Souvenirs</h3>
+            <p>Un album commun pour que les photos et vidéos du séjour ne restent pas éparpillées sur dix téléphones.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-chat">💬</div>
+            <h3>Chat</h3>
+            <p>Tout le groupe, ou seulement quelques participants — idéal pour préparer une surprise ou un cadeau.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-sondages">🗳️</div>
+            <h3>Sondages</h3>
+            <p>Pour toutes les décisions collectives : le groupe propose, vote, et avance.</p>
+          </div>
+          <div class="module">
+            <div class="module-icon ic-convert">💱</div>
+            <h3>Convertisseur</h3>
+            <p>Les devises du pays converties en un geste, directement dans le séjour.</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <h2>Informations légales</h2>
-    <div class="legal-cards">
-      <a class="card" href="./privacy.html">
-        <div class="card-title">Politique de confidentialité</div>
-        <div class="card-desc">Données personnelles traitées, finalités, bases juridiques, durées de conservation et vos droits RGPD.</div>
-      </a>
-      <a class="card" href="./terms.html">
-        <div class="card-title">Conditions Générales d'Utilisation</div>
-        <div class="card-desc">Règles d'accès et d'usage de l'application Alela, droits et obligations, achats intégrés et médiation.</div>
-      </a>
-    </div>
+      <!-- Téléchargement -->
+      <div class="download" id="telecharger">
+        <h2>Prêts pour le prochain séjour&nbsp;?</h2>
+        <p>Disponible sur iPhone — bientôt sur Android.</p>
+        <div class="badges">
+          <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
+          </a>
+          <a class="badge-play" id="play-badge" href="#" aria-disabled="true">
+            <span>
+              <span class="small">BIENTÔT DISPONIBLE SUR</span>
+              <span class="big">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
 
-    <div class="footer">
-      <a href="./download.html">Télécharger l'app</a> · <a href="./privacy.html">Confidentialité</a> · <a href="./terms.html">CGU</a> · <a href="mailto:info@alela.io">info@alela.io</a><br />
-      Alela — exploitée par Lea MESMEUR
+      <!-- Pied de page -->
+      <div class="footer">
+        <a href="./privacy.html">Politique de confidentialité</a><span class="sep">·</span><a href="./terms.html">Conditions Générales d'Utilisation</a><span class="sep">·</span><a href="mailto:info@alela.io">info@alela.io</a><br />
+        Alela — exploitée par Lea MESMEUR
+      </div>
+
     </div>
   </div>
 
