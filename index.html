@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alela — Organisez vos séjours en groupe</title>
-  <meta name="description" content="Alela est l'application mobile tout-en-un pour organiser vos séjours en groupe : dates, hébergements, trajets, repas, budget partagé et souvenirs." />
+  <meta name="description" content="Alela est l'application mobile tout-en-un pour organiser vos séjours en groupe : dates, destinations, hébergements, trajets, repas, courses, budget partagé, bagages et souvenirs." />
   <meta property="og:title" content="Alela — Organisez vos séjours en groupe" />
   <meta property="og:description" content="L'app qui organise vos séjours en groupe — dates, logement, repas, budget, tout au même endroit." />
   <meta property="og:image" content="./alela-banner.png" />
@@ -17,7 +17,7 @@
       color: #1a1a2e;
     }
     .container { max-width: 860px; margin: 0 auto; padding: 56px 24px 40px; }
-    .hero { text-align: center; margin-bottom: 40px; }
+    .hero { text-align: center; margin-bottom: 32px; }
     .icon {
       width: 104px; height: 104px; border-radius: 24px;
       box-shadow: 0 8px 32px rgba(67,38,196,0.22);
@@ -25,8 +25,31 @@
     }
     h1 { font-size: 36px; font-weight: 800; color: #2A1E3A; margin-bottom: 10px; }
     .tagline { font-size: 18px; color: #555; line-height: 1.55; margin-bottom: 8px; }
-    .pitch { font-size: 15px; color: #777; line-height: 1.6; max-width: 620px; margin: 0 auto 32px; }
-    .badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; margin-bottom: 12px; }
+    .pitch { font-size: 15px; color: #777; line-height: 1.6; max-width: 640px; margin: 0 auto; }
+    .banner {
+      width: 100%; border-radius: 20px; display: block;
+      box-shadow: 0 10px 40px rgba(67,38,196,0.16);
+      margin: 28px 0 48px;
+    }
+    h2 { font-size: 22px; font-weight: 700; color: #2A1E3A; margin-bottom: 18px; text-align: center; }
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px; margin-bottom: 56px;
+    }
+    .feature {
+      background: #fff; border-radius: 16px; padding: 18px 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .feature-title { font-size: 15px; font-weight: 700; color: #4326C4; margin-bottom: 4px; }
+    .feature-desc { font-size: 13.5px; color: #666; line-height: 1.5; }
+    .download {
+      text-align: center; background: #fff; border-radius: 20px;
+      padding: 36px 24px; margin-bottom: 56px;
+      box-shadow: 0 4px 24px rgba(67,38,196,0.10);
+    }
+    .download h2 { margin-bottom: 8px; }
+    .download-sub { font-size: 14.5px; color: #777; margin-bottom: 24px; }
+    .badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; }
     .badge-apple img { height: 56px; display: block; }
     .badge-play {
       display: inline-flex; align-items: center; gap: 10px;
@@ -38,22 +61,6 @@
     .badge-play.live { background: #000; color: #fff; cursor: pointer; }
     .badge-play .small { display: block; font-size: 10px; font-weight: 400; text-align: left; }
     .badge-play .big { display: block; font-size: 16px; font-weight: 700; text-align: left; }
-    .banner {
-      width: 100%; border-radius: 20px; display: block;
-      box-shadow: 0 10px 40px rgba(67,38,196,0.16);
-      margin: 28px 0 48px;
-    }
-    h2 { font-size: 22px; font-weight: 700; color: #2A1E3A; margin-bottom: 18px; text-align: center; }
-    .features {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px; margin-bottom: 48px;
-    }
-    .feature {
-      background: #fff; border-radius: 16px; padding: 18px 20px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-    .feature-title { font-size: 15px; font-weight: 700; color: #4326C4; margin-bottom: 4px; }
-    .feature-desc { font-size: 13.5px; color: #666; line-height: 1.5; }
     .legal-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 40px; }
     .card {
       background: #fff; border-radius: 16px; padding: 22px;
@@ -74,8 +81,66 @@
       <img class="icon" src="./alela-icon.png" alt="Logo Alela" />
       <h1>Alela</h1>
       <p class="tagline">Planifiez et coordonnez vos séjours en groupe, <strong>au même endroit</strong>.</p>
-      <p class="pitch">Week-end entre amis, vacances en famille, EVG, EVJF… Fini les échanges éparpillés et les informations introuvables : tout le groupe avance dans un espace commun, sans multiplier les conversations, les tableurs et les outils séparés.</p>
+      <p class="pitch">Week-end entre amis, vacances en famille, EVG, EVJF, anniversaire, séjour entre collègues… Alela rassemble dans une seule interface tout ce qu'un groupe doit préparer, décider et partager avant, pendant et après un séjour. Parce qu'un séjour en groupe ne devrait pas reposer sur une seule personne, chacun peut contribuer, suivre les décisions et retrouver les bonnes informations au bon moment.</p>
+    </div>
 
+    <img class="banner" src="./alela-banner.png" alt="Aperçu de l'application Alela sur iPhone" />
+
+    <h2>Tout ce qu'il faut pour un séjour réussi</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-title">🗓️ Dates</div>
+        <div class="feature-desc">Proposez plusieurs créneaux et laissez le groupe voter : la date du séjour se décide sans relances interminables.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">📍 Destinations</div>
+        <div class="feature-desc">Proposez des lieux et départagez-les par sondage, puis retrouvez la carte et les prévisions météo de la destination choisie.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">🏡 Hébergements</div>
+        <div class="feature-desc">Rassemblez les hébergements repérés, comparez-les et choisissez ensemble celui du groupe.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">🚆 Trajets</div>
+        <div class="feature-desc">Chacun renseigne son trajet aller-retour ; le groupe visualise qui arrive quand, et comment.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">🍝 Repas</div>
+        <div class="feature-desc">Planifiez les repas jour par jour, proposez des idées et votez — en tenant compte des préférences alimentaires de chacun.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">🛒 Courses</div>
+        <div class="feature-desc">Une liste de courses partagée, liée aux repas prévus, que tout le monde peut compléter et cocher.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">💶 Budget partagé</div>
+        <div class="feature-desc">Notez les dépenses au fil du séjour et suivez qui a payé quoi — la répartition reste claire pour tout le monde.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">🧳 Bagages</div>
+        <div class="feature-desc">Des listes de bagages par participant — enfants compris — avec des recommandations adaptées à la destination.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">📸 Souvenirs</div>
+        <div class="feature-desc">Un album commun pour partager les photos et vidéos du séjour avec tout le groupe.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">💬 Chat</div>
+        <div class="feature-desc">Discutez avec tout le groupe ou seulement certains participants — pratique pour préparer une surprise ou un cadeau.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">🗳️ Sondages</div>
+        <div class="feature-desc">Le moteur des décisions collectives : dates, destinations, hébergements, repas… le groupe tranche par le vote.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">💱 Convertisseur</div>
+        <div class="feature-desc">Un convertisseur de devises intégré au séjour, pour garder des repères clairs hors zone euro.</div>
+      </div>
+    </div>
+
+    <div class="download">
+      <h2>Télécharger Alela</h2>
+      <p class="download-sub">Disponible sur iPhone — bientôt sur Android.</p>
       <div class="badges">
         <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268">
           <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
@@ -86,44 +151,6 @@
             <span class="big">Google Play</span>
           </span>
         </a>
-      </div>
-    </div>
-
-    <img class="banner" src="./alela-banner.png" alt="Aperçu de l'application Alela sur iPhone" />
-
-    <h2>Tout ce qu'il faut pour un séjour réussi</h2>
-    <div class="features">
-      <div class="feature">
-        <div class="feature-title">🗳️ Décisions par sondages</div>
-        <div class="feature-desc">Dates, destination, hébergement : le groupe vote et la décision se prend sans débat interminable.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🏡 Hébergements</div>
-        <div class="feature-desc">Proposez des logements, comparez-les et gardez le lien de la réservation à portée de tous.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🚆 Trajets</div>
-        <div class="feature-desc">Qui part quand, comment, avec qui : les trajets de chacun sont visibles par tout le groupe.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🍝 Repas &amp; courses</div>
-        <div class="feature-desc">Planifiez les repas du séjour et générez la liste de courses correspondante automatiquement.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">💶 Budget partagé</div>
-        <div class="feature-desc">Chaque dépense est notée, la répartition se calcule toute seule — plus de comptes d'apothicaire au retour.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">🧳 Bagages</div>
-        <div class="feature-desc">Listes de bagages intelligentes, adaptées à la destination et à la durée du séjour.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">📸 Photos &amp; souvenirs</div>
-        <div class="feature-desc">Un album commun pour que les photos et vidéos du séjour ne restent pas éparpillées sur dix téléphones.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">💬 Chat de groupe</div>
-        <div class="feature-desc">Discutez au même endroit que là où les décisions se prennent — le contexte est toujours sous la main.</div>
       </div>
     </div>
 
