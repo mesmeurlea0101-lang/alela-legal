@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ouvrir Alela</title>
+  <meta name="description" content="Ouvre l'application Alela pour organiser tes séjours en groupe." />
+  <meta property="og:title" content="Ouvrir Alela" />
+  <meta property="og:description" content="L'app qui organise vos séjours en groupe — dates, logement, repas, budget, tout au même endroit." />
+  <meta property="og:image" content="./alela-icon.png" />
+  <link rel="icon" type="image/png" href="./alela-icon.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(160deg, #f8f7f5 0%, #f0ecfb 100%);
+      color: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container { max-width: 480px; margin: 0 auto; padding: 48px 24px; text-align: center; }
+    .icon {
+      width: 120px; height: 120px; border-radius: 27px;
+      box-shadow: 0 8px 32px rgba(67,38,196,0.22);
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 30px; font-weight: 800; color: #2A1E3A; margin-bottom: 10px; }
+    .tagline { font-size: 16px; color: #555; line-height: 1.55; margin-bottom: 32px; }
+    .btn {
+      display: inline-block; min-width: 260px; padding: 15px 28px;
+      border-radius: 999px; font-size: 16px; font-weight: 700;
+      text-decoration: none; margin-bottom: 14px;
+    }
+    .btn-primary { background: #4326C4; color: #fff; }
+    .btn-secondary { background: #fff; color: #4326C4; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .footer { font-size: 12.5px; color: #999; line-height: 1.8; margin-top: 32px; }
+    .footer a { color: #4326C4; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="icon" src="./alela-icon.png" alt="Logo Alela" />
+    <h1>Ouverture d'Alela…</h1>
+    <p class="tagline">Si l'application ne s'ouvre pas automatiquement, utilise les boutons ci-dessous.</p>
+
+    <a class="btn btn-primary" href="alela://" id="open-app">Ouvrir l'application</a><br />
+    <a class="btn btn-secondary" href="./download.html" id="get-app">Télécharger Alela</a>
+
+    <div class="footer">
+      <a href="./privacy.html">Confidentialité</a> · <a href="./terms.html">CGU</a> · <a href="mailto:info@alela.io">info@alela.io</a><br />
+      Alela — exploitée par Lea MESMEUR
+    </div>
+  </div>
+
+  <script>
+    // ─────────────────────────────────────────────────────────────
+    // ⬇️ QUAND L'APP ANDROID EST PUBLIÉE : remplace null par
+    // "https://play.google.com/store/apps/details?id=com.alela.app"
+    var PLAY_STORE_URL = null;
+    // ─────────────────────────────────────────────────────────────
+    var APP_STORE_URL = "https://apps.apple.com/fr/app/id6762174268";
+
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    var isAndroid = /Android/i.test(ua);
+
+    function storeFallback() {
+      if (document.hidden || document.visibilityState === "hidden") return; // l'app s'est ouverte
+      if (isIOS) window.location.replace(APP_STORE_URL);
+      else if (isAndroid) window.location.replace(PLAY_STORE_URL || "./download.html");
+      else window.location.replace("./download.html");
+    }
+
+    if (isIOS || isAndroid) {
+      // Tente d'ouvrir l'app via le deep link ; si rien ne se passe
+      // au bout de 1,8 s (app non installée), bascule vers le store.
+      setTimeout(storeFallback, 1800);
+      window.location.href = "alela://";
+    } else {
+      // Sur desktop, le deep link n'existe pas : proposer le téléchargement.
+      document.getElementById("open-app").style.display = "none";
+      document.querySelector("h1").textContent = "Alela";
+      document.querySelector(".tagline").textContent =
+        "Alela est disponible sur mobile. Télécharge l'application pour retrouver tes séjours.";
+    }
+  </script>
+</body>
+</html>
