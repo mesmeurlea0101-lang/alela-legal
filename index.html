@@ -148,15 +148,9 @@
     .download p { color: rgba(255,255,255,0.75); font-size: 15px; margin-bottom: 26px; position: relative; z-index: 1; }
     .badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; position: relative; z-index: 1; }
     .badge-apple img { height: 54px; display: block; }
-    .badge-play {
-      display: inline-flex; align-items: center;
-      height: 54px; padding: 0 22px; border-radius: 10px;
-      background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.65);
-      font-size: 14px; font-weight: 600; text-decoration: none; cursor: default;
-    }
-    .badge-play.live { background: #000; color: #fff; cursor: pointer; }
-    .badge-play .small { display: block; font-size: 10px; font-weight: 400; text-align: left; }
-    .badge-play .big { display: block; font-size: 16px; font-weight: 700; text-align: left; }
+    /* Le badge officiel Google contient une marge interne : on l'affiche
+       plus grand que celui d'Apple pour un rendu visuellement aligné. */
+    .badge-play img { height: 80px; display: block; }
 
     /* ── Informations légales ──────────────────────────────── */
     .legal { padding-bottom: 24px; }
@@ -299,11 +293,8 @@
           <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
           </a>
-          <a class="badge-play" id="play-badge" href="#" aria-disabled="true">
-            <span>
-              <span class="small">BIENTÔT DISPONIBLE SUR</span>
-              <span class="big">Google Play</span>
-            </span>
+          <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.alela.app">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="Disponible sur Google Play" />
           </a>
         </div>
       </div>
@@ -332,18 +323,5 @@
     </div>
   </div>
 
-  <script>
-    var PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.alela.app";
-
-    var playBadge = document.getElementById("play-badge");
-    if (PLAY_STORE_URL) {
-      playBadge.href = PLAY_STORE_URL;
-      playBadge.classList.add("live");
-      playBadge.removeAttribute("aria-disabled");
-      playBadge.querySelector(".small").textContent = "DISPONIBLE SUR";
-    } else {
-      playBadge.addEventListener("click", function (e) { e.preventDefault(); });
-    }
-  </script>
 </body>
 </html>
