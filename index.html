@@ -294,7 +294,7 @@
       <!-- Téléchargement -->
       <div class="download" id="telecharger">
         <h2>Prêts pour le prochain séjour&nbsp;?</h2>
-        <p>Disponible sur iPhone. Bientôt sur Android.</p>
+        <p>Disponible sur iPhone et Android.</p>
         <div class="badges">
           <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
@@ -333,12 +333,7 @@
   </div>
 
   <script>
-    // ─────────────────────────────────────────────────────────────
-    // ⬇️ QUAND L'APP ANDROID EST PUBLIÉE : remplace null par
-    // "https://play.google.com/store/apps/details?id=com.alela.app"
-    // (c'est la SEULE ligne à modifier — comme dans download.html)
-    var PLAY_STORE_URL = null;
-    // ─────────────────────────────────────────────────────────────
+    var PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.alela.app";
 
     var playBadge = document.getElementById("play-badge");
     if (PLAY_STORE_URL) {
