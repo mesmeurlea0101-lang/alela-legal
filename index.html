@@ -76,7 +76,7 @@
       filter: drop-shadow(0 24px 44px rgba(58,32,140,0.28));
     }
 
-    /* ── Modules ───────────────────────────────────────────── */
+    /* ── Sections communes ─────────────────────────────────── */
     .section { padding: 64px 0 8px; }
     .section-kicker {
       font-size: 13px; font-weight: 900; letter-spacing: 0.14em;
@@ -87,27 +87,73 @@
       font-weight: 650; font-size: clamp(26px, 3.6vw, 34px);
       color: var(--violet-deep); margin-bottom: 30px; letter-spacing: -0.01em;
     }
-    .modules {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-bottom: 40px;
+    .section-note { font-size: 14.5px; color: var(--ink-soft); margin: -18px 0 26px; }
+
+    /* ── Comment ça marche ─────────────────────────────────── */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 32px; }
+    .step {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.9);
+      border-radius: 20px; padding: 24px 22px;
+      backdrop-filter: blur(4px);
     }
-    .module {
+    .step-num {
+      width: 38px; height: 38px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 17px; color: #fff;
+      background: linear-gradient(145deg, #8A6BF5, var(--violet));
+      box-shadow: 0 4px 12px rgba(58,32,140,0.24);
+      margin-bottom: 14px;
+    }
+    .step h3 { font-size: 16.5px; font-weight: 900; color: var(--violet-deep); margin-bottom: 6px; }
+    .step p { font-size: 14px; line-height: 1.6; color: var(--ink-soft); }
+
+    /* ── Modules dépliables ────────────────────────────────── */
+    .modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 40px; align-items: start; }
+    details.module {
       background: rgba(255,255,255,0.72);
       border: 1px solid rgba(255,255,255,0.9);
       border-radius: 20px;
-      padding: 20px;
       backdrop-filter: blur(4px);
+      overflow: hidden;
     }
+    details.module summary {
+      list-style: none; cursor: pointer;
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 18px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    details.module summary::-webkit-details-marker { display: none; }
+    details.module summary::after {
+      content: "＋"; margin-left: auto; font-weight: 900;
+      color: var(--violet); opacity: 0.55; font-size: 16px; transition: transform 0.2s;
+    }
+    details.module[open] summary::after { content: "－"; }
     .module-icon {
-      width: 44px; height: 44px; border-radius: 13px;
+      flex: 0 0 auto;
+      width: 42px; height: 42px; border-radius: 13px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 21px; margin-bottom: 12px;
+      font-size: 20px;
       box-shadow: 0 4px 12px rgba(58,32,140,0.18);
     }
-    .module h3 { font-size: 16px; font-weight: 900; color: var(--violet-deep); margin-bottom: 5px; }
-    .module p { font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); }
+    details.module h3 { font-size: 15.5px; font-weight: 900; color: var(--violet-deep); }
+    .module-body { padding: 0 18px 18px; }
+    .module-body p { font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 12px; }
+    .module-body ul { list-style: none; }
+    .module-body li {
+      font-size: 13px; line-height: 1.5; color: var(--ink);
+      padding: 5px 0 5px 22px; position: relative;
+    }
+    .module-body li::before {
+      content: "✓"; position: absolute; left: 2px; top: 5px;
+      color: var(--violet); font-weight: 900; font-size: 12px;
+    }
+    .tag-aventure {
+      display: inline-block; vertical-align: 1px;
+      font-size: 10px; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--orange); background: rgba(241,118,12,0.12);
+      border-radius: 999px; padding: 1.5px 8px; margin-left: 6px; white-space: nowrap;
+    }
     /* Dégradés inspirés des icônes de l'app */
     .ic-dates    { background: linear-gradient(145deg, #8A6BF5, #5B3FE0); }
     .ic-dest     { background: linear-gradient(145deg, #5AA5F8, #2F7FE8); }
@@ -121,6 +167,112 @@
     .ic-chat     { background: linear-gradient(145deg, #6C63F0, #4A3FD8); }
     .ic-sondages { background: linear-gradient(145deg, #FFB25E, #F18C0C); }
     .ic-convert  { background: linear-gradient(145deg, #55C8F0, #2BA5DC); }
+
+    /* ── Captures d'écran ──────────────────────────────────── */
+    .shots {
+      display: flex; gap: 22px; overflow-x: auto; padding: 6px 4px 26px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .shot { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
+    .shot img {
+      width: min(230px, 58vw); border-radius: 26px;
+      border: 6px solid #fff;
+      box-shadow: 0 16px 36px rgba(58,32,140,0.22);
+      display: block;
+    }
+    .shot figcaption { font-size: 13.5px; font-weight: 800; color: var(--ink-soft); margin-top: 12px; }
+
+    /* ── Prix ──────────────────────────────────────────────── */
+    .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; align-items: stretch; }
+    .price-card {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.95);
+      border-radius: 22px; padding: 28px 26px;
+      backdrop-filter: blur(4px);
+      display: flex; flex-direction: column;
+    }
+    .price-card.aventure {
+      border: 2px solid var(--orange);
+      box-shadow: 0 14px 38px rgba(241,118,12,0.18);
+      position: relative;
+    }
+    .price-pill {
+      position: absolute; top: -12px; right: 20px;
+      background: var(--orange); color: #fff;
+      font-size: 11px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: 999px; padding: 4px 12px;
+    }
+    .price-name { font-size: 14px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+    .price-card.escapade .price-name { color: #7B5EA7; }
+    .price-card.aventure .price-name { color: var(--orange); }
+    .price-amount { font-family: "Fraunces", Georgia, serif; font-size: 34px; font-weight: 650; color: var(--violet-deep); margin-bottom: 2px; }
+    .price-amount small { font-size: 15px; font-family: "Nunito", sans-serif; font-weight: 700; color: var(--ink-soft); }
+    .price-sub { font-size: 13px; color: var(--ink-soft); margin-bottom: 18px; }
+    .price-card ul { list-style: none; margin-bottom: 6px; }
+    .price-card li { font-size: 13.5px; line-height: 1.5; padding: 5px 0 5px 24px; position: relative; }
+    .price-card li::before { content: "✓"; position: absolute; left: 2px; font-weight: 900; font-size: 12px; }
+    .price-card.escapade li::before { color: #7B5EA7; }
+    .price-card.aventure li::before { color: var(--orange); }
+    .price-argument {
+      background: rgba(67,38,196,0.07);
+      border-radius: 16px; padding: 16px 20px;
+      font-size: 14.5px; line-height: 1.6; color: var(--ink);
+      margin-bottom: 26px;
+    }
+    .price-argument strong { color: var(--violet); }
+
+    /* Comparatif détaillé par module (repris de l'app) */
+    .compare { margin-bottom: 40px; }
+    .compare-title { font-size: 15px; font-weight: 900; color: var(--violet-deep); margin-bottom: 12px; }
+    details.cmp {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.9);
+      border-radius: 16px; margin-bottom: 8px; overflow: hidden;
+    }
+    details.cmp summary {
+      list-style: none; cursor: pointer;
+      display: flex; align-items: center; gap: 10px;
+      padding: 13px 16px; font-weight: 900; font-size: 14px; color: var(--violet-deep);
+      -webkit-tap-highlight-color: transparent;
+    }
+    details.cmp summary::-webkit-details-marker { display: none; }
+    details.cmp summary::after { content: "＋"; margin-left: auto; color: var(--violet); opacity: 0.55; font-weight: 900; }
+    details.cmp[open] summary::after { content: "－"; }
+    .cmp-count { font-size: 11.5px; font-weight: 800; color: var(--orange); margin-left: 6px; }
+    .cmp-table { width: 100%; border-collapse: collapse; }
+    .cmp-table th {
+      font-size: 10.5px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 6px 8px; text-align: center; width: 74px;
+    }
+    .cmp-table th:first-child { text-align: left; width: auto; }
+    .cmp-table th.col-e { color: #7B5EA7; }
+    .cmp-table th.col-a { color: var(--orange); }
+    .cmp-table td { font-size: 12.5px; line-height: 1.45; padding: 7px 8px; border-top: 1px solid rgba(42,30,58,0.06); }
+    .cmp-table td.c { text-align: center; font-weight: 900; }
+    .cmp-table td.yes { color: var(--violet); }
+    .cmp-table td.no { color: rgba(42,30,58,0.25); }
+    .cmp-table td.custom { font-size: 11px; font-weight: 800; text-align: center; color: var(--ink-soft); }
+    .cmp-table td.custom.good { color: var(--orange); }
+
+    /* ── FAQ ───────────────────────────────────────────────── */
+    .faq { margin-bottom: 40px; }
+    details.qa {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.9);
+      border-radius: 16px; margin-bottom: 8px; overflow: hidden;
+    }
+    details.qa summary {
+      list-style: none; cursor: pointer;
+      padding: 15px 18px; font-weight: 900; font-size: 14.5px; color: var(--violet-deep);
+      display: flex; align-items: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+    details.qa summary::-webkit-details-marker { display: none; }
+    details.qa summary::after { content: "＋"; margin-left: auto; color: var(--violet); opacity: 0.55; font-weight: 900; }
+    details.qa[open] summary::after { content: "－"; }
+    .qa-body { padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+    .qa-body a { color: var(--violet); font-weight: 700; }
 
     /* ── Téléchargement ────────────────────────────────────── */
     .download {
@@ -178,6 +330,7 @@
 
     @media (max-width: 860px) {
       .modules { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr; }
     }
     @media (max-width: 760px) {
       .hero { grid-template-columns: 1fr; padding-top: 48px; text-align: center; }
@@ -186,6 +339,8 @@
       .hero-phone { order: 2; margin-top: 8px; }
       .section h2 { text-align: center; }
       .section-kicker { text-align: center; }
+      .pricing { grid-template-columns: 1fr; }
+      .price-card.aventure { order: -1; }
     }
     @media (max-width: 560px) {
       .modules { grid-template-columns: 1fr; }
@@ -210,7 +365,30 @@
           <a class="hero-cta" href="#telecharger">Télécharger l'app&nbsp;→</a>
         </div>
         <div class="hero-phone">
-          <img src="./alela-phone.png" alt="L'application Alela sur iPhone" />
+          <img src="./alela-phone.png" alt="L'application Alela sur mobile" />
+        </div>
+      </div>
+
+      <!-- Comment ça marche -->
+      <div class="section">
+        <div class="section-kicker">Comment ça marche</div>
+        <h2>Trois étapes, et le groupe avance</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Crée ton séjour</h3>
+            <p>Donne-lui un nom, une photo, et c'est parti — en moins de deux minutes.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Invite le groupe</h3>
+            <p>Un lien à partager sur WhatsApp, Messenger ou par SMS. Chacun rejoint le séjour depuis son téléphone, iOS ou Android.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Décidez ensemble</h3>
+            <p>Dates, destination, hébergement, repas, budget… tout se décide et se retrouve au même endroit, visible par tout le groupe.</p>
+          </div>
         </div>
       </div>
 
@@ -218,68 +396,355 @@
       <div class="section">
         <div class="section-kicker">Les modules</div>
         <h2>Tout ce qu'il faut pour un séjour réussi</h2>
+        <p class="section-note">Touchez un module pour voir tout ce qu'il sait faire.</p>
 
         <div class="modules">
-          <div class="module">
-            <div class="module-icon ic-dates">🗓️</div>
-            <h3>Dates</h3>
-            <p>Fixez les dates directement ou faites décider le groupe. Et pour les road trips, chaque étape du séjour a ses propres dates.</p>
+          <details class="module">
+            <summary><div class="module-icon ic-dates">🗓️</div><h3>Dates</h3></summary>
+            <div class="module-body">
+              <p>Fixez les dates directement ou faites décider le groupe.</p>
+              <ul>
+                <li>Fixer les dates du séjour</li>
+                <li>Sondage dates <span class="tag-aventure">Aventure</span></li>
+                <li>Multi-étapes : des dates par étape du séjour <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-dest">📍</div><h3>Destinations</h3></summary>
+            <div class="module-body">
+              <p>Comparez les envies de chacun et validez la destination ensemble.</p>
+              <ul>
+                <li>Fixer la destination du séjour</li>
+                <li>Carte du séjour et prévisions météo</li>
+                <li>Sondage destinations <span class="tag-aventure">Aventure</span></li>
+                <li>Multi-étapes : plusieurs destinations <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-heberg">🏡</div><h3>Hébergements</h3></summary>
+            <div class="module-body">
+              <p>Une fiche par hébergement avec tout ce qui compte, visible par tout le groupe.</p>
+              <ul>
+                <li>Fiche hébergement : dates, adresse, parking, équipements…</li>
+                <li>Recherche multi-plateformes (Airbnb, Booking, Agoda…)</li>
+                <li>Multi-hébergements <span class="tag-aventure">Aventure</span></li>
+                <li>Favoris <span class="tag-aventure">Aventure</span></li>
+                <li>Sondage hébergements <span class="tag-aventure">Aventure</span></li>
+                <li>Comparatif prix, localisation, avis <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-trajets">🚆</div><h3>Trajets</h3></summary>
+            <div class="module-body">
+              <p>Renseignez votre trajet en quelques secondes et voyez qui arrive quand.</p>
+              <ul>
+                <li>Saisir son trajet aller/retour</li>
+                <li>Consulter les trajets de tous</li>
+                <li>Recherche multi-plateformes (Skyscanner, SNCF…)</li>
+                <li>Suggestions de trajets communs <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-repas">🍝</div><h3>Repas</h3></summary>
+            <div class="module-body">
+              <p>Des menus décidés ensemble, qui respectent les régimes de chacun.</p>
+              <ul>
+                <li>Planning des repas</li>
+                <li>Ajouter ses idées de repas</li>
+                <li>Profils alimentaires : allergies, régimes… <span class="tag-aventure">Aventure</span></li>
+                <li>Suggestions personnalisées, 300+ recettes <span class="tag-aventure">Aventure</span></li>
+                <li>Favoris et sondage idées de repas <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-courses">🛒</div><h3>Courses</h3></summary>
+            <div class="module-body">
+              <p>La liste de courses du groupe, classée par rayons.</p>
+              <ul>
+                <li>Liste partagée : ajout, suppression, rayons</li>
+                <li>Import automatique depuis le planning repas <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-bagages">🧳</div><h3>Bagages</h3></summary>
+            <div class="module-body">
+              <p>Des valises prêtes sans y penser, pour les grands comme les petits.</p>
+              <ul>
+                <li>Ma liste personnelle</li>
+                <li>Liste de groupe partagée</li>
+                <li>Liste enfants, différenciée par âge</li>
+                <li>Liste préconfigurée selon le séjour : destination, météo, durée, transport… <span class="tag-aventure">Aventure</span></li>
+                <li>Infos pratiques : formalités, prises électriques, santé… <span class="tag-aventure">Aventure</span></li>
+                <li>Actualisation automatique si le séjour évolue <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-budget">💶</div><h3>Budget partagé</h3></summary>
+            <div class="module-body">
+              <p>Zéro calcul de fin de séjour — tout est inclus, gratuitement.</p>
+              <ul>
+                <li>Dépenses illimitées, multi-devises</li>
+                <li>Catégorisation par type</li>
+                <li>Répartition personnalisée par participant</li>
+                <li>Équilibres en temps réel</li>
+                <li>Suggestions de remboursements</li>
+                <li>Import du coût de l'hébergement</li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-souvenirs">📸</div><h3>Souvenirs</h3></summary>
+            <div class="module-body">
+              <p>Un flux commun pour les photos et vidéos de tout le groupe.</p>
+              <ul>
+                <li>Galerie en grille ou fil d'actualité</li>
+                <li>Commenter, liker, partager</li>
+                <li>Photos &amp; vidéos : 30 en Escapade, illimité en <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-sondages">🗳️</div><h3>Sondages</h3></summary>
+            <div class="module-body">
+              <p>Chacun propose, le groupe vote — les décisions cessent de traîner.</p>
+              <ul>
+                <li>Sondages dates, destinations, hébergements et idées de repas <span class="tag-aventure">Aventure</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-convert">💱</div><h3>Convertisseur</h3></summary>
+            <div class="module-body">
+              <p>Les prix sur place, convertis en un geste.</p>
+              <ul>
+                <li>Conversion instantanée dans votre devise</li>
+                <li>Dépenses en devises converties dans le budget</li>
+              </ul>
+            </div>
+          </details>
+          <details class="module">
+            <summary><div class="module-icon ic-chat">💬</div><h3>Chat</h3></summary>
+            <div class="module-body">
+              <p>Tous les participants sont déjà là — pas besoin d'un groupe ailleurs.</p>
+              <ul>
+                <li>Chat de groupe du séjour</li>
+                <li>Conversations en petit comité (surprise, covoiturage…)</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Captures d'écran -->
+      <div class="section">
+        <div class="section-kicker">L'app en images</div>
+        <h2>Voyez par vous-même</h2>
+        <div class="shots">
+          <figure class="shot">
+            <img src="./shot-sejour.jpg" alt="Vue d'ensemble d'un séjour dans Alela" loading="lazy" />
+            <figcaption>Le séjour en un coup d'œil</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="./shot-etapes.jpg" alt="Dates et destinations d'un séjour multi-étapes" loading="lazy" />
+            <figcaption>Dates &amp; destinations, même en road trip</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="./shot-budget.jpg" alt="Équilibres du budget partagé" loading="lazy" />
+            <figcaption>Qui doit quoi, calculé en direct</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="./shot-repas.jpg" alt="Suggestions d'idées de repas" loading="lazy" />
+            <figcaption>Des idées de repas pour le groupe</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Prix -->
+      <div class="section" id="prix">
+        <div class="section-kicker">Le prix</div>
+        <h2>Gratuit pour commencer, 4,99&nbsp;€ pour tout débloquer</h2>
+
+        <div class="pricing">
+          <div class="price-card escapade">
+            <div class="price-name">Escapade</div>
+            <div class="price-amount">Gratuit</div>
+            <div class="price-sub">Pour organiser l'essentiel du séjour</div>
+            <ul>
+              <li>Création du séjour et invitations</li>
+              <li>Chat de groupe</li>
+              <li>Dates, destination, météo</li>
+              <li>Fiche hébergement et trajets de chacun</li>
+              <li>Budget partagé complet</li>
+              <li>Listes bagages et courses</li>
+              <li>30 photos &amp; vidéos par séjour</li>
+            </ul>
           </div>
-          <div class="module">
-            <div class="module-icon ic-dest">📍</div>
-            <h3>Destinations</h3>
-            <p>Comparez les envies de chacun et validez la destination ensemble. La carte du séjour et la météo heure par heure sont ensuite à portée de main.</p>
+          <div class="price-card aventure">
+            <div class="price-pill">Recommandé</div>
+            <div class="price-name">Aventure</div>
+            <div class="price-amount">4,99&nbsp;€ <small>par séjour, une seule fois</small></div>
+            <div class="price-sub">Tout Escapade, plus&nbsp;:</div>
+            <ul>
+              <li>Sondages : dates, destinations, hébergements, repas</li>
+              <li>Séjours multi-étapes (road trips)</li>
+              <li>Comparatif d'hébergements et favoris</li>
+              <li>Suggestions de repas personnalisées (300+ recettes)</li>
+              <li>Liste de bagages intelligente et infos pratiques</li>
+              <li>Suggestions de trajets communs</li>
+              <li>Photos &amp; vidéos illimitées</li>
+            </ul>
           </div>
-          <div class="module">
-            <div class="module-icon ic-heberg">🏡</div>
-            <h3>Hébergements</h3>
-            <p>Une fiche par hébergement avec tout ce qui compte : lien de réservation, adresse, check-in, code d'entrée… Tout le groupe retrouve les infos sans les redemander.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-trajets">🚆</div>
-            <h3>Trajets</h3>
-            <p>Renseignez votre trajet en quelques secondes et voyez qui arrive quand. Alela détecte même les opportunités de trajet en commun : covoiturage, même point de départ, horaires compatibles.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-repas">🍝</div>
-            <h3>Repas</h3>
-            <p>Plus de 300 idées de repas qui respectent les allergies et régimes de chacun, des quantités calées sur le groupe et un calendrier des menus validés ensemble.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-courses">🛒</div>
-            <h3>Courses</h3>
-            <p>La liste de courses se fait toute seule : classée par rayons, quantités calculées, mise à jour automatiquement selon les repas prévus.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-bagages">🧳</div>
-            <h3>Bagages</h3>
-            <p>Une liste préconfigurée selon votre séjour : météo, activités, transport, formalités… Avec la valise des enfants et les équipements communs du groupe.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-budget">💶</div>
-            <h3>Budget partagé</h3>
-            <p>Chaque dépense notée en 10 secondes, des équilibres calculés en direct et des remboursements proposés. Zéro calcul de fin de séjour.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-souvenirs">📸</div>
-            <h3>Souvenirs</h3>
-            <p>Un flux commun pour les photos et vidéos de tous, avec réactions et commentaires. Tout se télécharge en un clic, sans doublons.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-sondages">🗳️</div>
-            <h3>Sondages</h3>
-            <p>Dates, destinations, hébergements, idées de repas : chacun propose, le groupe vote, et les décisions cessent de traîner.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-convert">💱</div>
-            <h3>Convertisseur</h3>
-            <p>Les prix sur place convertis en un geste dans votre devise. Et dans le budget, les dépenses en devises se convertissent automatiquement.</p>
-          </div>
-          <div class="module">
-            <div class="module-icon ic-chat">💬</div>
-            <h3>Chat</h3>
-            <p>Tous les participants sont déjà là, pas besoin de recréer un groupe ailleurs. Créez aussi des conversations à quelques-uns, pour une surprise ou un covoiturage.</p>
-          </div>
+        </div>
+
+        <div class="price-argument">
+          <strong>4,99&nbsp;€ pour tout le séjour et tous les participants</strong> — pas d'abonnement, pas de paiement par personne. Le coût peut même se partager dans le budget du groupe&nbsp;: à 6, c'est moins d'un café chacun. ☕
+        </div>
+
+        <div class="compare">
+          <div class="compare-title">Comparer en détail, module par module</div>
+
+          <details class="cmp">
+            <summary>⚙️ Général <span class="cmp-count">+1 en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Créer &amp; gérer le séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Inviter des participants</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Chat de groupe</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Convertisseur de monnaie</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Notifications</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondages (dates, destinations, hébergements, idées de repas)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>📅 Dates &amp; Destinations <span class="cmp-count">+3 en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Fixer les dates du séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Fixer la destination du séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Prévisions météorologiques</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Multi-étapes (plusieurs dates et/ou destinations)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondage dates</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondage destinations</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>🏨 Hébergements <span class="cmp-count">+4 en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Renseigner un hébergement (dates, adresse, parking, équipements…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Recherche multi-plateformes (Airbnb, Booking, Agoda…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Multi-hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Favoris hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondage hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Comparatif hébergements (prix, localisation, avis)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>🚆 Trajets <span class="cmp-count">+1 en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Saisir son trajet aller/retour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Consulter les trajets de tous</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Recherche multi-plateformes (Skyscanner, SNCF…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Suggestions de trajets communs</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>🍽️ Repas <span class="cmp-count">+4 en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Planning des repas</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Ajouter des idées de repas manuellement</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Profils alimentaires (allergies, régimes…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Suggestions personnalisées (300+ recettes)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Favoris idées de repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondage idées de repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>🛒 Courses <span class="cmp-count">+1 en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Gestion de la liste (ajout, suppression, rayons)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Import automatique depuis le planning repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>🧳 Bagages <span class="cmp-count">+3 en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Ma liste (ajout, édition, cochage manuel)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Liste de groupe partagée entre participants</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Liste enfants (différenciée par âge et profil)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Liste pré-configurée selon le contexte du séjour (destination, météo &amp; saison, durée, transport…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Infos pratiques du séjour (formalités, prises électriques, culture, santé &amp; vaccins)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Actualisation automatique si le séjour évolue</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>💰 Budget <span class="cmp-count"></span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Ajout illimité de dépenses (multi-devises)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Catégorisation par type</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Répartition coût personnalisée par participant</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Équilibres en temps réel</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Suggestions de remboursements</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Import du coût de l'hébergement</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+
+          <details class="cmp">
+            <summary>📸 Souvenirs <span class="cmp-count">photos illimitées en Aventure</span></summary>
+            <table class="cmp-table">
+              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
+              <tr><td>Ajout médias (photos et vidéos)</td><td class="custom">30 max par séjour</td><td class="custom good">Illimité</td></tr>
+              <tr><td>Galerie (grille ou fil d'actualité)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Commenter, liker, partager</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+            </table>
+          </details>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="section" id="faq">
+        <div class="section-kicker">Questions fréquentes</div>
+        <h2>On vous répond</h2>
+        <div class="faq">
+          <details class="qa">
+            <summary>C'est vraiment gratuit&nbsp;?</summary>
+            <div class="qa-body">Oui. Le mode Escapade est gratuit, sans limite de durée ni de nombre de séjours. Le mode Aventure, qui débloque les fonctionnalités avancées (sondages, suggestions de repas, road trips…), coûte 4,99&nbsp;€ par séjour — payé une seule fois, sans abonnement.</div>
+          </details>
+          <details class="qa">
+            <summary>Mes amis doivent-ils payer aussi&nbsp;?</summary>
+            <div class="qa-body">Non. Le déverrouillage vaut pour le séjour entier&nbsp;: dès qu'un séjour passe en mode Aventure, tous ses participants en profitent. Et le coût peut être partagé entre tous via le budget du groupe.</div>
+          </details>
+          <details class="qa">
+            <summary>Combien de participants peut-on inviter&nbsp;?</summary>
+            <div class="qa-body">Autant que nécessaire&nbsp;: petit week-end à 4 ou grande cousinade à 20, l'application ne fixe pas de limite au nombre de participants d'un séjour.</div>
+          </details>
+          <details class="qa">
+            <summary>Mes données et mes photos sont-elles privées&nbsp;?</summary>
+            <div class="qa-body">Oui. Les contenus d'un séjour (photos, messages, documents, dépenses) ne sont visibles que par ses participants. Vos données ne sont ni revendues ni utilisées à des fins publicitaires. Tous les détails sont dans notre <a href="./privacy.html">politique de confidentialité</a>.</div>
+          </details>
+          <details class="qa">
+            <summary>iPhone et Android peuvent-ils être dans le même séjour&nbsp;?</summary>
+            <div class="qa-body">Bien sûr. Alela est disponible sur iOS et Android, et tout le monde retrouve le même séjour, synchronisé en temps réel, quel que soit le téléphone.</div>
+          </details>
         </div>
       </div>
 
@@ -314,12 +779,46 @@
 
       <!-- Pied de page -->
       <div class="footer">
-        <a href="./download.html">Télécharger l'app</a><span class="sep">·</span><a href="./privacy.html">Confidentialité</a><span class="sep">·</span><a href="./terms.html">CGU</a><span class="sep">·</span><a href="mailto:info@alela.io">info@alela.io</a><br />
+        <a href="#telecharger">Télécharger l'app</a><span class="sep">·</span><a href="./privacy.html">Confidentialité</a><span class="sep">·</span><a href="./terms.html">CGU</a><span class="sep">·</span><a href="mailto:info@alela.io">info@alela.io</a><br />
         Alela, exploitée par Lea MESMEUR
       </div>
 
     </div>
   </div>
 
+  <!-- Balisage FAQ pour les moteurs de recherche -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Alela est-elle vraiment gratuite ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le mode Escapade est gratuit, sans limite de durée ni de nombre de séjours. Le mode Aventure coûte 4,99 € par séjour, payé une seule fois, sans abonnement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Mes amis doivent-ils payer aussi ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. Le déverrouillage vaut pour le séjour entier : dès qu'un séjour passe en mode Aventure, tous ses participants en profitent. Le coût peut être partagé via le budget du groupe." }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de participants peut-on inviter ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "L'application ne fixe pas de limite au nombre de participants d'un séjour." }
+      },
+      {
+        "@type": "Question",
+        "name": "Mes données et mes photos sont-elles privées ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les contenus d'un séjour ne sont visibles que par ses participants. Les données ne sont ni revendues ni utilisées à des fins publicitaires." }
+      },
+      {
+        "@type": "Question",
+        "name": "iPhone et Android peuvent-ils être dans le même séjour ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Alela est disponible sur iOS et Android, et le séjour est synchronisé en temps réel entre tous les téléphones." }
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
