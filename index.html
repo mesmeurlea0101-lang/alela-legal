@@ -229,16 +229,19 @@
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
-    .shot { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
+    .shot { flex: 0 0 auto; width: min(225px, 56vw); scroll-snap-align: center; text-align: center; }
     .shot:nth-child(odd)  { transform: rotate(-1.6deg); }
     .shot:nth-child(even) { transform: rotate(1.4deg) translateY(8px); }
     .shot img {
-      width: min(225px, 56vw); border-radius: 26px;
+      width: 100%; border-radius: 26px;
       border: 6px solid #fff;
       box-shadow: 0 16px 36px rgba(58,32,140,0.22);
       display: block;
     }
-    .shot figcaption { font-size: 13.5px; font-weight: 800; color: var(--ink-soft); margin-top: 12px; }
+    .shot figcaption {
+      font-size: 13px; font-weight: 800; color: var(--ink-soft);
+      margin-top: 12px; line-height: 1.4; padding: 0 4px;
+    }
 
     /* ── Prix (compact) ────────────────────────────────────── */
     .pricing-panel {
@@ -419,6 +422,20 @@
         </div>
         <div class="hero-phone">
           <img src="./alela-phone.png" alt="L'application Alela sur mobile" />
+        </div>
+      </div>
+
+      <!-- Téléchargement -->
+      <div class="download" id="telecharger">
+        <h2>Prêts pour le prochain séjour&nbsp;?</h2>
+        <p>Disponible sur iOS et Android.</p>
+        <div class="badges">
+          <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
+          </a>
+          <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.alela.app">
+            <img src="./google-play-badge.png" alt="Disponible sur Google Play" />
+          </a>
         </div>
       </div>
 
@@ -640,7 +657,7 @@
           </figure>
           <figure class="shot">
             <img src="./shot-etapes.jpg" alt="Dates et destinations d'un séjour multi-étapes" loading="lazy" />
-            <figcaption>Dates &amp; destinations, même en road trip</figcaption>
+            <figcaption>Dates &amp; destinations, étape par étape</figcaption>
           </figure>
           <figure class="shot">
             <img src="./shot-carte.jpg" alt="Carte du séjour avec les étapes" loading="lazy" />
@@ -656,7 +673,7 @@
           </figure>
           <figure class="shot">
             <img src="./shot-budget.jpg" alt="Équilibres des dépenses du séjour" loading="lazy" />
-            <figcaption>Les dépenses du séjour&nbsp;: qui doit quoi, remboursements calculés en direct</figcaption>
+            <figcaption>Les dépenses du séjour&nbsp;: qui doit quoi, en direct</figcaption>
           </figure>
           <figure class="shot">
             <img src="./shot-repas.jpg" alt="Suggestions d'idées de repas" loading="lazy" />
@@ -672,7 +689,7 @@
           </figure>
           <figure class="shot">
             <img src="./shot-prises.jpg" alt="Prises électriques et adaptateurs selon la destination" loading="lazy" />
-            <figcaption>Des infos utiles selon la destination, pour préparer vos bagages</figcaption>
+            <figcaption>Des infos utiles selon la destination</figcaption>
           </figure>
           <figure class="shot">
             <img src="./shot-souvenirs.jpg" alt="Galerie de souvenirs photos et vidéos du groupe" loading="lazy" />
@@ -883,10 +900,10 @@
         </div>
       </div>
 
-      <!-- Téléchargement -->
-      <div class="download" id="telecharger">
-        <h2>Prêts pour le prochain séjour&nbsp;?</h2>
-        <p>Disponible sur iOS et Android.</p>
+      <!-- Rappel téléchargement -->
+      <div class="download download-bottom">
+        <h2>Convaincu&nbsp;? Le prochain séjour commence ici.</h2>
+        <p>Gratuit sur iOS et Android.</p>
         <div class="badges">
           <a class="badge-apple" href="https://apps.apple.com/fr/app/id6762174268">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr" alt="Télécharger dans l'App Store" />
