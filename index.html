@@ -214,14 +214,18 @@
 
     .after-hero { padding-top: 90px; }
     @media (max-width: 760px) {
-      .hero-dark { padding: 56px 0 70px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-      .wordmark { margin: 0 auto 26px; }
+      .hero-dark { padding: 48px 0 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 34px; text-align: center; }
+      .wordmark { margin: 0 auto 24px; }
+      .hero-dark h1 { font-size: clamp(22px, 6.5vw, 30px); }
       .hero-dark .sub { margin-left: auto; margin-right: auto; }
       .hero-grid .badges { justify-content: center; }
-      .hero-devices .phone-frame { width: min(220px, 43vw); }
-      .rotator-col { margin-left: -24px; }
-      .after-hero { padding-top: 76px; }
+      /* mobile : un seul téléphone (celui qui défile), centré et net */
+      .hero-devices { padding-top: 0; }
+      .phone-frame.fixed { display: none; }
+      .rotator-col { margin-left: 0; }
+      .hero-devices .phone-frame.rotator { --tilt: 0deg; width: min(260px, 66vw); animation: none; }
+      .after-hero { padding-top: 70px; }
     }
 
     /* ── Comment ça marche : timeline verticale ─────────────── */
@@ -371,25 +375,46 @@
     @media (max-width: 1023px) {
       .vmf-desktop { display: none; }
       .vmf-mobile { display: block; }
-      .vmf-m-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
-      .vmf-m-tenet { font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(26px, 8vw, 34px); line-height: 0.9; letter-spacing: -0.03em; }
-      .vmf-m-tenet.a-orange { color: var(--orange); }
-      .vmf-m-tenet.a-violet { color: #8b78ea; }
-      .vmf-m-count { font-size: 13px; font-weight: 600; color: var(--ink-3); }
-      .vmf-stage { position: relative; overflow: hidden; touch-action: pan-y; min-height: 340px; }
-      .vmf-mcard {
-        position: absolute; inset: 0;
-        opacity: 0; transform: translateX(80px); pointer-events: none;
-        transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+
+      /* Piste horizontale : hauteur naturelle, glisse au doigt */
+      .vmf-stage {
+        position: relative; overflow: hidden; touch-action: pan-y;
+        margin: 0 calc(-1 * var(--gutter, 20px));
       }
-      .vmf-mcard.active { opacity: 1; transform: none; pointer-events: auto; }
-      .vmf-mcard.prev { transform: translateX(-80px); }
-      .vmf-mcard h3 { font-size: clamp(24px, 7vw, 34px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--ink); margin-bottom: 6px; }
-      .vmf-mcard .vmf-mobnum { display: block; }
-      .vmf-mcard .vmf-rule { margin: 18px 0 22px; }
-      .vmf-mcard .vmf-body p { font-size: 15px; }
-      .vmf-dots { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 22px; }
-      .vmf-dots button { padding: 8px; margin: -8px; background: none; border: none; cursor: pointer; }
+      .vmf-mtrack {
+        display: flex; align-items: flex-start;
+        transition: transform 0.42s var(--ease);
+        will-change: transform;
+      }
+      .vmf-mcard {
+        flex: 0 0 100%; width: 100%;
+        padding: 0 var(--gutter, 20px);
+        opacity: 0.35; transition: opacity 0.42s var(--ease);
+      }
+      .vmf-mcard.active { opacity: 1; }
+
+      .vmf-mphoto {
+        position: relative; border-radius: 20px; overflow: hidden;
+        aspect-ratio: 16 / 10; margin-bottom: 22px;
+        box-shadow: 0 14px 34px rgba(30, 25, 50, 0.16);
+      }
+      .vmf-mphoto img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(1.04); }
+      .vmf-mphoto::after { content: ""; position: absolute; inset: 0; mix-blend-mode: multiply; }
+      .vmf-mphoto.t-orange::after { background: linear-gradient(160deg, rgba(255,110,20,0.82), rgba(200,40,10,0.92)); }
+      .vmf-mphoto.t-violet::after { background: linear-gradient(160deg, rgba(110,70,235,0.82), rgba(55,30,140,0.92)); }
+      .vmf-mphoto-num {
+        position: absolute; left: 18px; bottom: 6px; z-index: 1;
+        font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 500;
+        font-size: clamp(64px, 20vw, 104px); line-height: 0.9; letter-spacing: -0.03em;
+        color: #fff; opacity: 0.96; text-shadow: 0 4px 20px rgba(0,0,0,0.28);
+      }
+
+      .vmf-mcard h3 { font-size: clamp(23px, 6.4vw, 30px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; color: var(--ink); margin-bottom: 6px; }
+      .vmf-mcard .vmf-rule { margin: 16px 0 20px; }
+      .vmf-mcard .vmf-body p { font-size: 15px; line-height: 1.7; }
+
+      .vmf-dots { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 26px; }
+      .vmf-dots button { padding: 8px; margin: -8px; background: none; border: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
       .vmf-dots span {
         display: block; width: 8px; height: 8px; border-radius: 999px; background: var(--hairline);
         transition: width 0.22s ease, background 0.22s ease;
@@ -469,6 +494,7 @@
       text-align: center; font-family: var(--serif); font-style: italic;
       font-size: 13px; color: var(--ink-3); margin-top: 14px;
     }
+    .hint-mobile { display: none; }
     .mod-detail-panel { min-height: 340px; }
     .mod-detail { display: none; }
     .mod-detail.active { display: block; animation: fadeUp 0.35s var(--ease); }
@@ -489,7 +515,10 @@
       .hub-tile { width: 54px; height: 54px; border-radius: 16px; }
       .hub-tile svg { width: 24px; height: 24px; }
       .hub-center { width: 90px; height: 90px; }
-      .mod-detail-panel { min-height: 300px; }
+      /* Sur mobile, le détail s'ouvre en modale : on masque le panneau latéral. */
+      .mod-detail-panel { display: none; }
+      .hint-desktop { display: none; }
+      .hint-mobile { display: inline; }
     }
 
     /* ── Prix : grand panneau sombre ────────────────────────── */
@@ -590,6 +619,44 @@
     @media (max-width: 760px) {
       .compare-modal { padding: 18px 14px 14px; }
     }
+
+    /* ── Fiche fonctionnalité en modale (mobile) ─────────────── */
+    .mod-modal {
+      position: fixed; inset: auto 0 0 0; margin: 0;
+      width: 100%; max-width: 100%;
+      max-height: min(82vh, 82dvh);
+      border: none; border-radius: 22px 22px 0 0;
+      background: var(--paper); color: var(--ink);
+      padding: 26px 22px calc(26px + env(safe-area-inset-bottom));
+      overflow-y: auto; overscroll-behavior: contain;
+      box-shadow: 0 -18px 60px rgba(0, 0, 0, 0.35);
+    }
+    .mod-modal::backdrop { background: rgba(23, 19, 40, 0.6); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+    .mod-modal[open] { animation: modSheetUp 0.32s var(--ease); }
+    @keyframes modSheetUp { from { transform: translateY(100%); } to { transform: none; } }
+    .mod-modal::before {
+      content: ""; display: block;
+      width: 42px; height: 4px; border-radius: 3px;
+      background: var(--hairline); margin: -8px auto 16px;
+    }
+    .mod-modal-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hairline);
+      background: var(--card); color: var(--ink-2); font-size: 14px; cursor: pointer;
+      -webkit-tap-highlight-color: transparent; z-index: 2;
+    }
+    .mod-modal-body h3 {
+      font-weight: 800; letter-spacing: -0.01em;
+      font-size: 22px; color: var(--ink); margin-bottom: 8px; padding-right: 40px;
+    }
+    .mod-modal-body .mod-tagline { font-size: 14.5px; font-weight: 600; color: var(--orange); margin-bottom: 16px; }
+    .mod-modal-body p {
+      font-size: 14.5px; line-height: 1.8; color: var(--ink-2);
+      margin-bottom: 14px; text-align: justify; hyphens: auto; -webkit-hyphens: auto;
+    }
+    .mod-modal-body p:last-child { margin-bottom: 0; }
+    .mod-modal-body p strong { color: var(--ink); font-weight: 600; }
+
     details.cmp {
       background: var(--card); border: 1px solid var(--hairline);
       border-radius: 14px; margin-bottom: 8px; overflow: hidden;
@@ -912,28 +979,35 @@
 
         <!-- Mobile : carrousel swipe -->
         <div class="vmf-mobile" id="vmf-mobile">
-          <div class="vmf-m-header">
-            <span class="vmf-m-tenet a-orange" id="vmf-m-tenet">01</span>
-            <span class="vmf-m-count">/ 03</span>
-          </div>
           <div class="vmf-stage" id="vmf-stage">
+            <div class="vmf-mtrack" id="vmf-mtrack">
             <div class="vmf-mcard a-orange active" data-i="0">
-              <div class="vmf-mobnum">01</div>
+              <div class="vmf-mphoto t-orange">
+                <img src="./themes/road-trip.jpg" alt="" loading="lazy">
+                <span class="vmf-mphoto-num">01</span>
+              </div>
               <h3>Tout au même endroit</h3>
               <span class="vmf-rule"></span>
               <div class="vmf-body"><p>Chaque séjour a son propre espace qui rassemble tout&nbsp;: participants, dates, lieux, hébergements, trajets, repas, courses, bagages, budget, conversation, souvenirs. <strong>Un seul endroit pour tout retrouver et partager.</strong></p></div>
             </div>
             <div class="vmf-mcard a-violet" data-i="1">
-              <div class="vmf-mobnum">02</div>
+              <div class="vmf-mphoto t-violet">
+                <img src="./themes/grande-tablee.jpg" alt="" loading="lazy">
+                <span class="vmf-mphoto-num">02</span>
+              </div>
               <h3>Organiser à plusieurs</h3>
               <span class="vmf-rule"></span>
               <div class="vmf-body"><p>On part quand&nbsp;? Où&nbsp;? Qui apporte quoi&nbsp;? Avec Alela, chacun peut participer, donner son avis, proposer une idée ou prendre en charge une partie de l'organisation&nbsp;: chacun participe à sa façon. <strong>Le séjour se prépare à plusieurs&nbsp;!</strong></p></div>
             </div>
             <div class="vmf-mcard a-orange" data-i="2">
-              <div class="vmf-mobnum">03</div>
+              <div class="vmf-mphoto t-orange">
+                <img src="./themes/vacances-famille.jpg" alt="" loading="lazy">
+                <span class="vmf-mphoto-num">03</span>
+              </div>
               <h3>Pensée pour chacun</h3>
               <span class="vmf-rule"></span>
               <div class="vmf-body"><p>Une organisation commune, mais une expérience qui s'adapte à chacun&nbsp;: votre checklist bagages, celle de vos enfants par âge, une liste de courses qui tient compte des régimes de chacun, des trajets communs selon votre situation.</p></div>
+            </div>
             </div>
           </div>
           <div class="vmf-dots" id="vmf-dots" role="tablist" aria-label="Convictions">
@@ -1041,7 +1115,7 @@
             Convertisseur
           </button>
         </div>
-        <p class="hub-hint">Cliquez ou survolez les icônes pour découvrir le détail de chaque fonctionnalité.</p>
+        <p class="hub-hint"><span class="hint-desktop">Cliquez ou survolez les icônes pour découvrir le détail de chaque fonctionnalité.</span><span class="hint-mobile">Touchez une icône pour découvrir le détail de chaque fonctionnalité.</span></p>
         </div>
 
         <div class="mod-detail-panel" id="mod-detail-panel">
@@ -1123,6 +1197,12 @@
           </div>
         </div>
       </div>
+
+      <!-- Mobile : fiche fonctionnalité en modale -->
+      <dialog class="mod-modal" id="mod-modal">
+        <button class="mod-modal-close" type="button" id="mod-modal-close" aria-label="Fermer">✕</button>
+        <div class="mod-modal-body" id="mod-modal-body"></div>
+      </dialog>
     </div>
 
     <!-- Prix -->
@@ -1470,10 +1550,42 @@
         details.forEach(function (d) { d.classList.toggle("active", d.dataset.mod === mod); });
       }
 
+      // Modale « fiche fonctionnalité » (mobile)
+      var mobileMQ = window.matchMedia("(max-width: 860px)");
+      var modal = document.getElementById("mod-modal");
+      var modalBody = document.getElementById("mod-modal-body");
+      var modalClose = document.getElementById("mod-modal-close");
+
+      function openModal(i) {
+        var mod = tiles[i].dataset.mod;
+        var src = details.filter(function (d) { return d.dataset.mod === mod; })[0];
+        if (!src || !modal) return;
+        current = i;
+        tiles.forEach(function (t, j) { t.classList.toggle("active", j === i); });
+        modalBody.innerHTML = src.innerHTML;
+        if (typeof modal.showModal === "function") { modal.showModal(); }
+        else { modal.setAttribute("open", ""); }
+      }
+      function closeModal() {
+        if (!modal) return;
+        if (modal.open && typeof modal.close === "function") { modal.close(); }
+        else { modal.removeAttribute("open"); }
+        tiles.forEach(function (t) { t.classList.remove("active"); });
+      }
+      if (modalClose) { modalClose.addEventListener("click", closeModal); }
+      if (modal) {
+        // Fermer en touchant le fond (hors contenu)
+        modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+      }
+
       tiles.forEach(function (tile, i) {
-        tile.addEventListener("click", function () { stopAuto(); activate(i); });
+        tile.addEventListener("click", function () {
+          stopAuto();
+          if (mobileMQ.matches) { openModal(i); }
+          else { activate(i); }
+        });
         tile.addEventListener("pointerenter", function (e) {
-          if (e.pointerType === "mouse") { stopAuto(); activate(i); }
+          if (e.pointerType === "mouse" && !mobileMQ.matches) { stopAuto(); activate(i); }
         });
       });
 
@@ -1487,7 +1599,7 @@
         activate((current + 1) % tiles.length);
       }
       function startAuto() {
-        if (reduceMotion || autoTimer) return;
+        if (reduceMotion || autoTimer || mobileMQ.matches) return;
         autoTimer = setInterval(tick, 3600);
       }
       function stopAuto() {
@@ -1641,28 +1753,19 @@
         }, 2600);
       }
 
-      // ── Mobile : carrousel swipe ──
+      // ── Mobile : carrousel swipe (piste horizontale) ──
       var mcards = Array.prototype.slice.call(root.querySelectorAll(".vmf-mcard"));
       var dots = Array.prototype.slice.call(root.querySelectorAll("#vmf-dots button"));
-      var mTenet = document.getElementById("vmf-m-tenet");
+      var mtrack = document.getElementById("vmf-mtrack");
       var stage = document.getElementById("vmf-stage");
       var mIdx = 0, total = mcards.length;
 
       function goTo(i) {
         i = Math.max(0, Math.min(total - 1, i));
-        if (i === mIdx) return;
-        var dir = i > mIdx ? 1 : -1;
-        mcards.forEach(function (c, j) {
-          c.classList.remove("active", "prev");
-          if (j === i) c.classList.add("active");
-          else if ((dir === 1 && j < i) || (dir === -1 && j > i)) c.classList.add("prev");
-        });
-        dots.forEach(function (d, j) { d.classList.toggle("active", j === i); });
-        if (mTenet) {
-          mTenet.textContent = String(i + 1).padStart(2, "0");
-          mTenet.className = "vmf-m-tenet " + (mcards[i].classList.contains("a-orange") ? "a-orange" : "a-violet");
-        }
         mIdx = i;
+        if (mtrack) mtrack.style.transform = "translateX(" + (-i * 100) + "%)";
+        mcards.forEach(function (c, j) { c.classList.toggle("active", j === i); });
+        dots.forEach(function (d, j) { d.classList.toggle("active", j === i); });
       }
       dots.forEach(function (d, i) { d.addEventListener("click", function () { goTo(i); }); });
 
