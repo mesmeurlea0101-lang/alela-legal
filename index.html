@@ -206,10 +206,15 @@
       letter-spacing: -0.01em;
       text-shadow: 0 2px 14px rgba(0,0,0,0.35);
     }
-    @media (max-width: 760px) {
-      .themes { padding: 60px 0 4px; }
-      .theme-card { width: 168px; }
-      .theme-card span { font-size: 18px; left: 15px; bottom: 15px; }
+    /* L'album défilant n'apparaît que sur mobile (le desktop a déjà sa galerie dans la vision) */
+    .themes-mobile { display: none; }
+    @media (max-width: 1023px) {
+      .themes-mobile { display: block; padding: 8px 0 4px; }
+      .themes-mobile .themes-kicker { font-family: var(--serif); font-style: italic; font-size: 15px; letter-spacing: 0; text-transform: none; }
+      .themes-mobile .themes-row { padding: 7px 0; }
+      .themes-mobile .themes-track { gap: 14px; animation-duration: 48s; }
+      .themes-mobile .theme-card { width: 150px; border-radius: 18px; }
+      .themes-mobile .theme-card span { font-size: 16px; left: 14px; bottom: 14px; right: 12px; }
     }
 
     .after-hero { padding-top: 90px; }
@@ -1020,6 +1025,45 @@
       </div>
     </div>
 
+    <!-- Album des occasions (mobile) -->
+    <div class="themes themes-mobile" aria-label="Toutes vos occasions de partir">
+      <div class="kicker themes-kicker"><span class="kline"></span>Pour toutes vos occasions<span class="kline"></span></div>
+      <div class="themes-row">
+        <div class="themes-track">
+          <a class="theme-card t-orange"><img src="./themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip</span></a>
+          <a class="theme-card t-violet"><img src="./themes/week-end-amis.jpg" alt="" loading="lazy"><span>Week-end entre amis</span></a>
+          <a class="theme-card t-orange"><img src="./themes/evg-evjf.jpg" alt="" loading="lazy"><span>EVG / EVJF</span></a>
+          <a class="theme-card t-violet"><img src="./themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacances en famille</span></a>
+          <a class="theme-card t-orange"><img src="./themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
+          <a class="theme-card t-violet"><img src="./themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
+          <!-- duplicata pour la boucle -->
+          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/week-end-amis.jpg" alt="" loading="lazy"><span>Week-end entre amis</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/evg-evjf.jpg" alt="" loading="lazy"><span>EVG / EVJF</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacances en famille</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
+        </div>
+      </div>
+      <div class="themes-row reverse">
+        <div class="themes-track">
+          <a class="theme-card t-violet"><img src="./themes/camping.jpg" alt="" loading="lazy"><span>Camping</span></a>
+          <a class="theme-card t-orange"><img src="./themes/seminaire.jpg" alt="" loading="lazy"><span>Séminaire</span></a>
+          <a class="theme-card t-violet"><img src="./themes/anniversaire.jpg" alt="" loading="lazy"><span>Anniversaire</span></a>
+          <a class="theme-card t-orange"><img src="./themes/rando-groupe.jpg" alt="" loading="lazy"><span>Rando en groupe</span></a>
+          <a class="theme-card t-violet"><img src="./themes/sejour-lac.jpg" alt="" loading="lazy"><span>Séjour au lac</span></a>
+          <a class="theme-card t-orange"><img src="./themes/escapade-deux.jpg" alt="" loading="lazy"><span>Escapade à deux</span></a>
+          <!-- duplicata pour la boucle -->
+          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/camping.jpg" alt="" loading="lazy"><span>Camping</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/seminaire.jpg" alt="" loading="lazy"><span>Séminaire</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/anniversaire.jpg" alt="" loading="lazy"><span>Anniversaire</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/rando-groupe.jpg" alt="" loading="lazy"><span>Rando en groupe</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/sejour-lac.jpg" alt="" loading="lazy"><span>Séjour au lac</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/escapade-deux.jpg" alt="" loading="lazy"><span>Escapade à deux</span></a>
+        </div>
+      </div>
+    </div>
+
     <!-- Comment ça marche -->
     <div class="section" id="etapes">
       <div class="kicker"><span class="knum">02</span><span class="kline"></span>Comment ça marche</div>
@@ -1566,8 +1610,15 @@
         if (typeof modal.showModal === "function") { modal.showModal(); }
         else { modal.setAttribute("open", ""); }
       }
+      function resetSheet() {
+        if (!modal) return;
+        modal.style.transition = "";
+        modal.style.transform = "";
+        modal.style.opacity = "";
+      }
       function closeModal() {
         if (!modal) return;
+        resetSheet();
         if (modal.open && typeof modal.close === "function") { modal.close(); }
         else { modal.removeAttribute("open"); }
         tiles.forEach(function (t) { t.classList.remove("active"); });
@@ -1576,6 +1627,54 @@
       if (modal) {
         // Fermer en touchant le fond (hors contenu)
         modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+
+        // Fermer par glissement (bas, ou gauche/droite)
+        var gx = 0, gy = 0, gtrack = false, gdir = null, atTop = true;
+        modal.addEventListener("touchstart", function (e) {
+          if (e.touches.length !== 1) { gtrack = false; return; }
+          var t = e.touches[0]; gx = t.clientX; gy = t.clientY;
+          gtrack = true; gdir = null;
+          atTop = modal.scrollTop <= 2;
+          modal.style.transition = "none";
+        }, { passive: true });
+        modal.addEventListener("touchmove", function (e) {
+          if (!gtrack) return;
+          var t = e.touches[0];
+          var dx = t.clientX - gx, dy = t.clientY - gy;
+          if (gdir === null) {
+            if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+            gdir = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+          }
+          if (gdir === "y") {
+            // vers le bas seulement, et seulement si la fiche est en haut de son scroll
+            if (dy > 0 && atTop) {
+              modal.style.transform = "translateY(" + dy + "px)";
+              modal.style.opacity = String(Math.max(0.4, 1 - dy / 500));
+            }
+          } else {
+            modal.style.transform = "translateX(" + dx + "px)";
+            modal.style.opacity = String(Math.max(0.4, 1 - Math.abs(dx) / 400));
+          }
+        }, { passive: true });
+        modal.addEventListener("touchend", function (e) {
+          if (!gtrack) return; gtrack = false;
+          var t = e.changedTouches[0];
+          var dx = t.clientX - gx, dy = t.clientY - gy;
+          modal.style.transition = "transform 0.28s var(--ease), opacity 0.28s var(--ease)";
+          var dismiss = (gdir === "y" && dy > 120 && atTop) || (gdir === "x" && Math.abs(dx) > 90);
+          if (dismiss) {
+            var outX = gdir === "x" ? (dx < 0 ? "-100%" : "100%") : "0";
+            var outY = gdir === "y" ? "100%" : "0";
+            modal.style.transform = "translate(" + outX + "," + outY + ")";
+            modal.style.opacity = "0";
+            setTimeout(closeModal, 240);
+          } else {
+            modal.style.transform = "";
+            modal.style.opacity = "";
+          }
+        }, { passive: true });
+        // Réinitialiser à chaque fermeture native (Échap, etc.)
+        modal.addEventListener("close", resetSheet);
       }
 
       tiles.forEach(function (tile, i) {
