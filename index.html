@@ -571,12 +571,14 @@
       .hub-tile svg { width: 24px; height: 24px; }
       .hub-tile-label { font-size: 10px; top: calc(100% + 4px); }
       .hub-center { width: 90px; height: 90px; }
-      /* Pastilles Chat / Sondages / Convertisseur : plus petites et plus aérées,
-         proportionnées aux icônes de la roue. */
-      .hub-extras { gap: 8px 10px; margin-top: 10px; }
-      .hub-pill { padding: 7px 13px; font-size: 12.5px; gap: 6px; }
-      .hub-pill svg { width: 15px; height: 15px; }
-      .hub-plus { font-size: 18px; }
+      /* Pastilles Chat / Sondages / Convertisseur : petites et sur UNE seule ligne. */
+      .hub-extras { flex-wrap: nowrap; gap: 7px; margin-top: 12px; padding: 0 4px; }
+      .hub-pill {
+        padding: 7px 10px; font-size: 12px; gap: 5px;
+        flex: 0 1 auto; min-width: 0; white-space: nowrap;
+      }
+      .hub-pill svg { width: 14px; height: 14px; flex: 0 0 auto; }
+      .hub-plus { display: none; }
       /* Sur mobile, le détail s'ouvre en modale : on masque le panneau latéral. */
       .mod-detail-panel { display: none; }
       .hint-desktop { display: none; }
@@ -632,7 +634,23 @@
       text-transform: uppercase; color: var(--orange-light);
       margin: 44px 0 14px;
     }
-    .price-punch { margin-bottom: 36px; }
+    /* « En savoir plus sur le mode Aventure » : dépliable avec une flèche */
+    .price-more { margin: 40px 0 36px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+    .price-more summary {
+      list-style: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 18px 2px 0;
+    }
+    .price-more summary::-webkit-details-marker { display: none; }
+    .price-more summary .price-kicker { margin: 0; }
+    .price-more-chevron {
+      flex: 0 0 auto; width: 11px; height: 11px;
+      border-right: 2px solid var(--orange-light); border-bottom: 2px solid var(--orange-light);
+      transform: rotate(45deg); transition: transform 0.3s var(--ease);
+      margin-bottom: 3px;
+    }
+    .price-more[open] .price-more-chevron { transform: rotate(-135deg); margin-bottom: -3px; }
+    .price-more .price-punch { margin: 14px 0 0; }
     .price-punch p { font-size: 14.5px; line-height: 1.7; color: var(--on-dark); margin-bottom: 10px; }
     .price-punch p:last-child { margin-bottom: 0; }
     .price-punch strong { color: var(--orange-light); font-weight: 600; }
@@ -875,8 +893,12 @@
       .dl-bar-btn img { width: 100%; height: auto; display: block; }
       /* Laisser la place à la barre en bas de page */
       body { padding-bottom: 92px; }
-      /* Remonter le bouton « haut de page » au-dessus de la barre */
-      .to-top { bottom: calc(92px + env(safe-area-inset-bottom)); right: 16px; }
+      /* Bouton « haut de page » : plus petit et remonté au-dessus de la barre */
+      .to-top {
+        bottom: calc(92px + env(safe-area-inset-bottom)); right: 16px;
+        width: 38px; height: 38px;
+      }
+      .to-top svg { width: 16px; height: 16px; }
     }
     .footer-bottom {
       display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;
@@ -902,26 +924,40 @@
       .download { padding: 52px 24px; margin: 80px 0 60px; }
       /* Tarifs : panneau plus large (moins de marges) et 2 cartes côte à côte */
       .price-panel { padding: 30px 16px; border-radius: 20px; }
-      .plans { grid-template-columns: 1fr 1fr; gap: 12px; }
-      .plan { padding: 22px 15px; border-radius: 16px; }
-      .plan-name { font-size: 10.5px; letter-spacing: 0.12em; margin-bottom: 10px; }
+      .plans { grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
+      /* Les cartes deviennent des colonnes flex : le bandeau prend une vraie
+         place en haut, il ne peut donc jamais recouvrir le titre. */
+      .plan {
+        display: flex; flex-direction: column;
+        padding: 0; border-radius: 16px; overflow: hidden;
+      }
+      .plan-name, .plan-price, .plan-desc { margin-left: 16px; margin-right: 16px; }
+      .plan-name { font-size: 10.5px; letter-spacing: 0.12em; margin-top: 20px; margin-bottom: 10px; }
       .plan-price { font-size: 24px; }
       .plan-price s { font-size: 16px; margin-right: 5px; }
       .plan-price small { display: block; margin-left: 0; margin-top: 4px; font-size: 11.5px; }
-      .plan-desc { font-size: 12.5px; line-height: 1.55; margin-top: 12px; }
-      /* Le badge « Offre de lancement » devient un bandeau en haut de la carte
-         (il ne recouvre plus le titre « Aventure »). Les DEUX cartes reçoivent
-         le même décalage en haut pour garder « Escapade » et « Aventure » alignés. */
-      .plan { padding-top: 40px; }
+      .plan-desc { font-size: 12.5px; line-height: 1.55; margin-top: 12px; margin-bottom: 20px; }
+      /* Le badge « Offre de lancement » : bandeau plein en haut de la carte Aventure */
       .plan-tag {
-        top: 0; left: 0; right: 0; margin: 0; text-align: center;
-        border-radius: 16px 16px 0 0; padding: 7px 8px;
-        font-size: 9.5px; letter-spacing: 0.08em;
+        position: static; order: -1; margin: 0; width: 100%;
+        text-align: center; border-radius: 0; white-space: nowrap;
+        padding: 8px 6px; font-size: 9px; letter-spacing: 0.06em; line-height: 1.3;
       }
+      /* Escapade n'a pas de bandeau : un bandeau vide de même hauteur garde
+         « Escapade » et « Aventure » parfaitement alignés (pas de valeur magique). */
+      .plan.ghost::before {
+        content: ""; display: block; order: -1;
+        padding: 8px 6px; font-size: 9px; line-height: 1.3;
+        visibility: hidden;
+      }
+      .plan.ghost::before { content: "Offre de lancement"; }
     }
     @media (max-width: 400px) {
       .plan-price { font-size: 21px; }
-      .plan { padding: 20px 12px; }
+      .plan-name, .plan-price, .plan-desc { margin-left: 12px; margin-right: 12px; }
+      /* Pastilles encore un peu plus compactes pour tenir sur une ligne */
+      .hub-pill { padding: 6px 8px; font-size: 11px; gap: 4px; }
+      .hub-extras { gap: 6px; }
     }
   </style>
 </head>
@@ -1385,12 +1421,13 @@
 
       <button class="compare-btn" type="button" id="compare-open">Comparer les deux modes, fonctionnalité par fonctionnalité<span class="plus">＋</span></button>
 
-      <div class="price-kicker">En savoir plus sur le mode Aventure</div>
-
-      <div class="price-punch">
-        <p>C'est sans abonnement&nbsp;! Le mode Aventure est <strong>un achat unique par séjour</strong>&nbsp;: vous payez 4,99&nbsp;€ une fois, rien ne se renouvelle, rien à résilier.</p>
-        <p>Le mode Aventure est payé par un seul participant, <strong>pour tout le groupe</strong>. Mais rien n'oblige à l'assumer seul&nbsp;: ajouté au budget du séjour, le montant se <strong>répartit automatiquement entre tous les participants</strong>. Pour un séjour à six, cela revient à moins d'un café par personne&nbsp;☕&nbsp;!</p>
-      </div>
+      <details class="price-more">
+        <summary><span class="price-kicker">En savoir plus sur le mode Aventure</span><span class="price-more-chevron" aria-hidden="true"></span></summary>
+        <div class="price-punch">
+          <p>C'est sans abonnement&nbsp;! Le mode Aventure est <strong>un achat unique par séjour</strong>&nbsp;: vous payez 4,99&nbsp;€ une fois, rien ne se renouvelle, rien à résilier.</p>
+          <p>Le mode Aventure est payé par un seul participant, <strong>pour tout le groupe</strong>. Mais rien n'oblige à l'assumer seul&nbsp;: ajouté au budget du séjour, le montant se <strong>répartit automatiquement entre tous les participants</strong>. Pour un séjour à six, cela revient à moins d'un café par personne&nbsp;☕&nbsp;!</p>
+        </div>
+      </details>
 
       <!-- OFFRE DE LANCEMENT : retirer cet encadré et le badge de la carte Aventure à la fin de la période -->
       <div class="launch-box"><strong>Offre de lancement&nbsp;:</strong> Alela vient tout juste de voir le jour, et pour fêter ça, l'application est entièrement gratuite pendant la période de lancement&nbsp;: le mode Aventure est <strong>offert sur tous vos nouveaux séjours</strong>. Profitez-en&nbsp;!</div>
