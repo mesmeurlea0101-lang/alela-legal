@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="64" viewBox="0 0 192 64" role="img" aria-label="Disponible sur Google Play">
-  <rect width="192" height="64" rx="9.6" fill="#000"/>
+  <rect x="1" y="1" width="190" height="62" rx="9.2" fill="#000" stroke="#fff" stroke-width="1.5"/>
   <!-- Google Play triangle logo -->
   <g transform="translate(22,17)">
     <path fill="#00D3FF" d="M0 1.2C0 .3.9-.3 1.7.2l16.9 9.7-4.6 4.6L0 1.2z"/>
