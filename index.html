@@ -191,6 +191,13 @@
       cursor: pointer; -webkit-tap-highlight-color: transparent;
     }
     .rotator-dots span.active { width: 18px; background: var(--orange-light); }
+    .rotator-caption {
+      margin: 12px auto 0; max-width: 260px; text-align: center;
+      font-family: var(--serif); font-style: italic;
+      font-size: 13.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.6);
+      min-height: 2.4em;
+      transition: opacity 0.3s var(--ease);
+    }
     /* ── Album des thèmes de séjour (pleine largeur) ────────── */
     .themes {
       width: 100vw; position: relative;
@@ -970,6 +977,7 @@
               </div>
             </div>
             <div class="rotator-dots" id="rotator-dots"></div>
+            <p class="rotator-caption" id="rotator-caption" aria-live="polite"></p>
             </div>
           </div>
         </div>
@@ -1876,7 +1884,13 @@
       var imgs = Array.prototype.slice.call(track.querySelectorAll("img"));
       var current = 0;
 
+      var captionEl = document.getElementById("rotator-caption");
+      function setCaption(i) {
+        if (captionEl) captionEl.textContent = imgs[i].getAttribute("data-caption") || "";
+      }
+
       imgs[0].classList.add("active");
+      setCaption(0);
       var dots = [];
       if (dotsWrap) {
         imgs.forEach(function (_, i) {
@@ -1892,6 +1906,7 @@
         current = i;
         imgs[current].classList.add("active");
         if (dots[current]) dots[current].classList.add("active");
+        setCaption(i);
       }
 
       var autoTimer = null;
