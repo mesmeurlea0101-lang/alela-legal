@@ -2,17 +2,17 @@
 <!-- GÉNÉRÉ par scripts/site-i18n.mjs — NE PAS ÉDITER CE FICHIER.
      Source : docs/github-pages-legal/site-src/*.master.html (français)
      + site-src/locales/<lang>.json, puis : node scripts/site-i18n.mjs build -->
-<html lang="fr">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alela — Organisez vos séjours en groupe</title>
-  <meta name="description" content="Alela est l'application mobile pour planifier et coordonner vos séjours en groupe : dates, destinations, hébergements, trajets, repas, courses, bagages, budget, souvenirs." />
-  <meta property="og:title" content="Alela — Organisez vos séjours en groupe" />
-  <meta property="og:description" content="L'application mobile pour planifier et coordonner vos séjours en groupe." />
+  <title>Alela — Organizza i tuoi viaggi di gruppo</title>
+  <meta name="description" content="Alela è l'app mobile per pianificare e coordinare i tuoi viaggi di gruppo: date, destinazioni, alloggi, spostamenti, pasti, spesa, bagagli, budget, ricordi." />
+  <meta property="og:title" content="Alela — Organizza i tuoi viaggi di gruppo" />
+  <meta property="og:description" content="L'app mobile per pianificare e coordinare i tuoi viaggi di gruppo." />
   <meta property="og:image" content="https://alela.io/alela-banner.png" />
-  <link rel="icon" type="image/png" href="./alela-icon.png" />
-  <link rel="canonical" href="https://alela.io/" />
+  <link rel="icon" type="image/png" href="../alela-icon.png" />
+  <link rel="canonical" href="https://alela.io/it/" />
   <link rel="alternate" hreflang="fr" href="https://alela.io/" />
   <link rel="alternate" hreflang="en" href="https://alela.io/en/" />
   <link rel="alternate" hreflang="es" href="https://alela.io/es/" />
@@ -23,8 +23,8 @@
   <link rel="alternate" hreflang="sv" href="https://alela.io/sv/" />
   <link rel="alternate" hreflang="nl" href="https://alela.io/nl/" />
   <link rel="alternate" hreflang="x-default" href="https://alela.io/" />
-  <meta property="og:url" content="https://alela.io/" />
-  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://alela.io/it/" />
+  <meta property="og:locale" content="it_IT" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500;1,9..144,650&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -342,7 +342,7 @@
       .after-hero { padding-top: 70px; }
     }
 
-    /* ── Comment ça marche : timeline verticale ─────────────── */
+    /* ── Come funziona : timeline verticale ─────────────── */
     .steps-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; }
     .steps-screen { text-align: center; }
     .steps-screen .phone-frame { width: min(272px, 64vw); }
@@ -642,7 +642,7 @@
       .hub-tile svg { width: 24px; height: 24px; }
       .hub-tile-label { font-size: 10px; top: calc(100% + 4px); }
       .hub-center { width: 90px; height: 90px; }
-      /* Pastilles Chat / Sondages / Convertisseur : petites et sur UNE seule ligne. */
+      /* Pastilles Chat / Sondaggi / Convertitore : petites et sur UNE seule ligne. */
       .hub-extras { flex-wrap: nowrap; gap: 7px; margin-top: 12px; padding: 0 4px; }
       .hub-pill {
         padding: 7px 10px; font-size: 12px; gap: 5px;
@@ -705,7 +705,7 @@
       text-transform: uppercase; color: var(--orange-light);
       margin: 44px 0 14px;
     }
-    /* « En savoir plus sur le mode Aventure » : dépliable avec une flèche */
+    /* « En savoir plus sur le mode Avventura » : dépliable avec une flèche */
     .price-more { margin: 40px 0 36px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
     .price-more summary {
       list-style: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
@@ -993,7 +993,7 @@
     @media (max-width: 760px) {
       .container { padding: 0 18px; }
       .download { padding: 52px 24px; margin: 80px 0 60px; }
-      /* Tarifs : panneau plus large (moins de marges) et 2 cartes côte à côte */
+      /* Prezzi : panneau plus large (moins de marges) et 2 cartes côte à côte */
       .price-panel { padding: 30px 16px; border-radius: 20px; }
       .plans { grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
       /* Les cartes deviennent des colonnes flex : le bandeau prend une vraie
@@ -1008,20 +1008,20 @@
       .plan-price s { font-size: 16px; margin-right: 5px; }
       .plan-price small { display: block; margin-left: 0; margin-top: 4px; font-size: 11.5px; }
       .plan-desc { font-size: 12.5px; line-height: 1.55; margin-top: 12px; margin-bottom: 20px; }
-      /* Le badge « Offre de lancement » : bandeau plein en haut de la carte Aventure */
+      /* Le badge « Offerta di lancio » : bandeau plein en haut de la carte Avventura */
       .plan-tag {
         position: static; order: -1; margin: 0; width: 100%;
         text-align: center; border-radius: 0; white-space: nowrap;
         padding: 8px 6px; font-size: 9px; letter-spacing: 0.06em; line-height: 1.3;
       }
-      /* Escapade n'a pas de bandeau : un bandeau vide de même hauteur garde
-         « Escapade » et « Aventure » parfaitement alignés (pas de valeur magique). */
+      /* Escursione n'a pas de bandeau : un bandeau vide de même hauteur garde
+         « Escursione » et « Avventura » parfaitement alignés (pas de valeur magique). */
       .plan.ghost::before {
         content: ""; display: block; order: -1;
         padding: 8px 6px; font-size: 9px; line-height: 1.3;
         visibility: hidden;
       }
-      .plan.ghost::before { content: "Offre de lancement"; }
+      .plan.ghost::before { content: "Offerta di lancio"; }
     }
     @media (max-width: 400px) {
       .plan-price { font-size: 21px; }
@@ -1037,34 +1037,34 @@
   <!-- Navigation -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="#"><img class="icon-sm" src="./alela-icon.png" alt="Alela" /></a>
+      <a href="#"><img class="icon-sm" src="../alela-icon.png" alt="Alela" /></a>
       <nav class="nav-links">
-        <a class="link" href="#pourquoi">Notre vision</a>
-        <a class="link" href="#etapes">Comment ça marche</a>
-        <a class="link" href="#modules">Fonctionnalités</a>
-        <a class="link" href="#prix">Tarifs</a>
+        <a class="link" href="#pourquoi">La nostra visione</a>
+        <a class="link" href="#etapes">Come funziona</a>
+        <a class="link" href="#modules">Funzionalità</a>
+        <a class="link" href="#prix">Prezzi</a>
         <a class="link" href="#faq">FAQ</a>
-        <a class="nav-cta" href="#telecharger">Télécharger</a>
+        <a class="nav-cta" href="#telecharger">Scarica</a>
       </nav>
       <div class="nav-right">
         <div class="lang-switch" id="lang-switch">
-          <button class="lang-btn" id="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Changer la langue du site">
-            <span class="lang-flag">🇫🇷</span>
+          <button class="lang-btn" id="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Cambia la lingua del sito">
+            <span class="lang-flag">🇮🇹</span>
           </button>
-          <div class="lang-menu" id="lang-menu" hidden><a data-lang="fr" href="/" aria-current="true"><span class="lm-flag">🇫🇷</span>Français</a><a data-lang="en" href="/en/"><span class="lm-flag">🇬🇧</span>English</a><a data-lang="es" href="/es/"><span class="lm-flag">🇪🇸</span>Español</a><a data-lang="de" href="/de/"><span class="lm-flag">🇩🇪</span>Deutsch</a><a data-lang="it" href="/it/"><span class="lm-flag">🇮🇹</span>Italiano</a><a data-lang="pt" href="/pt/"><span class="lm-flag">🇵🇹</span>Português</a><a data-lang="no" href="/no/"><span class="lm-flag">🇳🇴</span>Norsk</a><a data-lang="sv" href="/sv/"><span class="lm-flag">🇸🇪</span>Svenska</a><a data-lang="nl" href="/nl/"><span class="lm-flag">🇳🇱</span>Nederlands</a></div>
+          <div class="lang-menu" id="lang-menu" hidden><a data-lang="fr" href="/"><span class="lm-flag">🇫🇷</span>Français</a><a data-lang="en" href="/en/"><span class="lm-flag">🇬🇧</span>English</a><a data-lang="es" href="/es/"><span class="lm-flag">🇪🇸</span>Español</a><a data-lang="de" href="/de/"><span class="lm-flag">🇩🇪</span>Deutsch</a><a data-lang="it" href="/it/" aria-current="true"><span class="lm-flag">🇮🇹</span>Italiano</a><a data-lang="pt" href="/pt/"><span class="lm-flag">🇵🇹</span>Português</a><a data-lang="no" href="/no/"><span class="lm-flag">🇳🇴</span>Norsk</a><a data-lang="sv" href="/sv/"><span class="lm-flag">🇸🇪</span>Svenska</a><a data-lang="nl" href="/nl/"><span class="lm-flag">🇳🇱</span>Nederlands</a></div>
         </div>
-        <button class="nav-burger" id="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-drawer">
+        <button class="nav-burger" id="nav-burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-drawer">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
     <div class="nav-drawer" id="nav-drawer" hidden>
-      <a class="link" href="#pourquoi">Notre vision</a>
-      <a class="link" href="#etapes">Comment ça marche</a>
-      <a class="link" href="#modules">Fonctionnalités</a>
-      <a class="link" href="#prix">Tarifs</a>
+      <a class="link" href="#pourquoi">La nostra visione</a>
+      <a class="link" href="#etapes">Come funziona</a>
+      <a class="link" href="#modules">Funzionalità</a>
+      <a class="link" href="#prix">Prezzi</a>
       <a class="link" href="#faq">FAQ</a>
-      <a class="nav-cta" href="#telecharger">Télécharger l'application</a>
+      <a class="nav-cta" href="#telecharger">Scarica l'app</a>
     </div>
   </header>
 
@@ -1073,41 +1073,41 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-text">
-          <img class="wordmark" src="./alela-wordmark.png" alt="Alela" />
-          <h1>L'application mobile pour planifier et coordonner vos séjours <em>en groupe.</em></h1>
-          <p class="sub">Alela rassemble dans une seule interface tout ce qu'un groupe doit préparer, décider et partager, pour simplifier l'organisation d'un séjour à plusieurs.</p>
+          <img class="wordmark" src="../alela-wordmark.png" alt="Alela" />
+          <h1>L'app mobile per pianificare e coordinare i tuoi viaggi <em>di gruppo.</em></h1>
+          <p class="sub">Alela riunisce in un'unica interfaccia tutto ciò che un gruppo deve preparare, decidere e condividere, per semplificare l'organizzazione di un viaggio in compagnia.</p>
           <div class="badges js-badges-anchor">
-            <a href="https://apps.apple.com/fr/app/id6762174268">
-              <img src="./badge-app-store.svg" alt="Télécharger dans l'App Store" />
+            <a href="https://apps.apple.com/it/app/id6762174268">
+              <img src="../badge-app-store.svg" alt="Scarica su App Store" />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.alela.app">
-              <img src="./badge-google-play.svg" alt="Disponible sur Google Play" />
+            <a href="https://play.google.com/store/apps/details?id=com.alela.app&hl=it">
+              <img src="../badge-google-play.svg" alt="Disponibile su Google Play" />
             </a>
           </div>
-          <p class="hero-note">Disponible gratuitement et sans abonnement sur iOS et Android.</p>
-          <p class="hero-langs"><span class="hl-flags" aria-hidden="true">🇫🇷🇬🇧🇪🇸🇩🇪🇮🇹🇵🇹🇳🇴🇸🇪🇳🇱</span><span>Application disponible en 9 langues.</span></p>
+          <p class="hero-note">Disponibile gratuitamente e senza abbonamento su iOS e Android.</p>
+          <p class="hero-langs"><span class="hl-flags" aria-hidden="true">🇫🇷🇬🇧🇪🇸🇩🇪🇮🇹🇵🇹🇳🇴🇸🇪🇳🇱</span><span>App disponibile in 9 lingue.</span></p>
         </div>
         <div class="hero-device">
           <div class="hero-devices">
             <div class="phone-frame fixed">
-              <img src="./shot-home.jpg" alt="L'application Alela : l'écran d'un séjour avec toutes ses fonctionnalités" />
+              <img src="../shot-home.jpg" alt="L'app Alela: la schermata di un viaggio con tutte le sue funzionalità" />
             </div>
             <div class="rotator-col">
             <div class="phone-frame rotator" id="hero-rotator">
               <div class="rotator-screen">
               <div class="rotator-track" id="rotator-track">
-              <img src="./shot-sondage.jpg" data-caption="Le groupe vote, la destination se décide" alt="Sondage destinations avec les votes du groupe" />
-              <img src="./shot-budget.jpg" data-caption="Qui doit quoi, en temps réel" alt="Équilibres des dépenses du séjour" loading="lazy" />
-              <img src="./shot-repas.jpg" data-caption="Des idées de repas pour tout le groupe" alt="Suggestions d'idées de repas" loading="lazy" />
-              <img src="./shot-courses.jpg" data-caption="La liste de courses se génère toute seule" alt="Liste de courses classée par rayons" loading="lazy" />
-              <img src="./shot-souvenirs.jpg" data-caption="Les souvenirs de tous, au même endroit" alt="Galerie de souvenirs du groupe" loading="lazy" />
-              <img src="./shot-etapes.jpg" data-caption="Chaque étape a ses dates et sa destination" alt="Séjour multi-étapes" loading="lazy" />
-              <img src="./shot-carte.jpg" data-caption="Le séjour et ses étapes, sur une carte" alt="Carte du séjour" loading="lazy" />
-              <img src="./shot-inviter.jpg" data-caption="Un lien ou un QR code, et le groupe est là" alt="Inviter des participants" loading="lazy" />
-              <img src="./shot-enfants.jpg" data-caption="La valise des enfants, adaptée à leur âge" alt="Checklist bagages des enfants" loading="lazy" />
-              <img src="./shot-prises.jpg" data-caption="Les infos pratiques selon la destination" alt="Prises et adaptateurs selon le pays" loading="lazy" />
-              <img src="./shot-chat.jpg" data-caption="La conversation du groupe, déjà prête" alt="Chat de groupe du séjour" loading="lazy" />
-              <img src="./shot-sejour.jpg" data-caption="Le séjour en un coup d'œil" alt="Vue d'ensemble du séjour" loading="lazy" />
+              <img src="../shot-sondage.jpg" data-caption="Il gruppo vota, la destinazione si decide" alt="Sondaggio destinazioni con i voti del gruppo" />
+              <img src="../shot-budget.jpg" data-caption="Chi deve cosa, in tempo reale" alt="Saldi delle spese del viaggio" loading="lazy" />
+              <img src="../shot-repas.jpg" data-caption="Idee per i pasti per tutto il gruppo" alt="Suggerimenti di idee per i pasti" loading="lazy" />
+              <img src="../shot-courses.jpg" data-caption="La lista della spesa si genera da sola" alt="Lista della spesa organizzata per reparti" loading="lazy" />
+              <img src="../shot-souvenirs.jpg" data-caption="I ricordi di tutti, nello stesso posto" alt="Galleria dei ricordi del gruppo" loading="lazy" />
+              <img src="../shot-etapes.jpg" data-caption="Ogni tappa ha le sue date e la sua destinazione" alt="Viaggio multi-tappe" loading="lazy" />
+              <img src="../shot-carte.jpg" data-caption="Il viaggio e le sue tappe, su una mappa" alt="Mappa del viaggio" loading="lazy" />
+              <img src="../shot-inviter.jpg" data-caption="Un link o un codice QR, e il gruppo è già dentro" alt="Invita partecipanti" loading="lazy" />
+              <img src="../shot-enfants.jpg" data-caption="La valigia dei bambini, adatta alla loro età" alt="Checklist bagagli dei bambini" loading="lazy" />
+              <img src="../shot-prises.jpg" data-caption="Le info pratiche in base alla destinazione" alt="Prese e adattatori in base al paese" loading="lazy" />
+              <img src="../shot-chat.jpg" data-caption="La conversazione del gruppo, già pronta" alt="Chat di gruppo del viaggio" loading="lazy" />
+              <img src="../shot-sejour.jpg" data-caption="Il viaggio in un colpo d'occhio" alt="Panoramica del viaggio" loading="lazy" />
               </div>
               </div>
             </div>
@@ -1123,15 +1123,15 @@
 
   <div class="container">
 
-    <!-- Notre vision -->
+    <!-- La nostra visione -->
     <div class="section after-hero" id="pourquoi">
-      <div class="kicker"><span class="knum">01</span><span class="kline"></span>Notre vision</div>
-      <h2 class="h2">Moins de temps à s'organiser, <em>plus de temps à en profiter.</em></h2>
+      <div class="kicker"><span class="knum">01</span><span class="kline"></span>La nostra visione</div>
+      <h2 class="h2">Meno tempo a organizzarti, <em>più tempo a goderti il viaggio.</em></h2>
       <div class="founder">
         <div class="cols">
-        <p>Un voyage entre amis, la cousinade annuelle, les 30 ans de Margaux, l'EVG d'Antoine… Se retrouver à plusieurs, sur le papier, c'est plutôt joyeux.</p>
-        <p>Et puis vient la phase de l'organisation. Dans un groupe, il y a souvent ceux qui planifient tout (qui cherchent le logement, relancent les autres, pensent aux trajets, font les comptes…) et ceux qui, le jour du départ, découvrent 100 messages non lus et culpabilisent d'avoir encore laissé Marie tout gérer.</p>
-        <p>Jusqu'ici, on s'en est toujours sortis sans application dédiée. Mais on s'est dit qu'on pouvait rendre tout ça plus simple, plus clair et plus sympa pour tout le monde. Avec Alela, on peut <strong>planifier, décider, retrouver, partager et relancer</strong>&nbsp;; et puis, idéalement, on referme l'appli <strong>pour passer moins de temps à organiser et plus à profiter de son séjour&nbsp;!</strong></p>
+        <p>Un viaggio tra amici, la cousinade annuale, i 30 anni di Margaux, l'addio al celibato di Antoine… Ritrovarsi in tanti, sulla carta, è una gioia.</p>
+        <p>E poi arriva la fase dell'organizzazione. In un gruppo, ci sono spesso quelli che pianificano tutto (che cercano l'alloggio, sollecitano gli altri, pensano agli spostamenti, fanno i conti…) e quelli che, il giorno della partenza, scoprono 100 messaggi non letti e si sentono in colpa per aver lasciato ancora una volta Marie a gestire tutto.</p>
+        <p>Finora ce la siamo sempre cavata senza un'app dedicata. Ma ci siamo detti che potevamo rendere tutto questo più semplice, più chiaro e più piacevole per tutti. Con Alela puoi <strong>pianificare, decidere, ritrovare, condividere e sollecitare</strong>; e poi, idealmente, chiudi l'app <strong>per passare meno tempo a organizzare e più tempo a goderti il tuo viaggio!</strong></p>
         </div>
       </div>
 
@@ -1146,29 +1146,29 @@
             <aside class="vmf-sticky">
               <div class="vmf-sticky-inner">
                 <div class="vmf-photo-stage" id="vmf-photo-stage">
-                  <div class="vmf-photo t-orange active"><img src="./themes/road-trip.jpg" alt="Road trip entre potes" loading="lazy"><span>Road trip entre potes</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/week-end-amis.jpg" alt="Enterrement de vie de garçon" loading="lazy"><span>Enterrement de vie de garçon</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/evg-evjf.jpg" alt="Enterrement de vie de jeune fille" loading="lazy"><span>Enterrement de vie de jeune fille</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/vacances-famille.jpg" alt="Vacances en famille" loading="lazy"><span>Vacances en famille</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/anniversaire.jpg" alt="Anniversaire" loading="lazy"><span>Anniversaire</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/seminaire.jpg" alt="Week-end sportif" loading="lazy"><span>Week-end sportif</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/grande-tablee.jpg" alt="Séjour retrouvailles" loading="lazy"><span>Séjour retrouvailles</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/rando-groupe.jpg" alt="Week-end jeux de société" loading="lazy"><span>Week-end jeux de société</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/festival.jpg" alt="Festival" loading="lazy"><span>Festival</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/camping.jpg" alt="Camping et bivouac" loading="lazy"><span>Camping &amp; bivouac</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/cousinade.jpg" alt="Cousinade" loading="lazy"><span>Cousinade</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/vacances-amis.jpg" alt="Vacances entre amis" loading="lazy"><span>Vacances entre amis</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/voyage-amis.jpg" alt="Week-end entre amis" loading="lazy"><span>Week-end entre amis</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/retrouvailles.jpg" alt="Séminaire d'entreprise" loading="lazy"><span>Séminaire d'entreprise</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/sejour-lac.jpg" alt="Vacances en famille" loading="lazy"><span>Vacances en famille</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/soiree.jpg" alt="Soirée d'anniversaire" loading="lazy"><span>Soirée d'anniversaire</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/diner-fetes.jpg" alt="Dîner de fêtes" loading="lazy"><span>Dîner de fêtes</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/escapade-deux.jpg" alt="Escapade à deux" loading="lazy"><span>Escapade à deux</span></div>
+                  <div class="vmf-photo t-orange active"><img src="../themes/road-trip.jpg" alt="Road trip tra amici" loading="lazy"><span>Road trip tra amici</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/week-end-amis.jpg" alt="Addio al celibato" loading="lazy"><span>Addio al celibato</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/evg-evjf.jpg" alt="Addio al nubilato" loading="lazy"><span>Addio al nubilato</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/vacances-famille.jpg" alt="Vacanze in famiglia" loading="lazy"><span>Vacanze in famiglia</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/anniversaire.jpg" alt="Compleanno" loading="lazy"><span>Compleanno</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/seminaire.jpg" alt="Weekend sportivo" loading="lazy"><span>Weekend sportivo</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/grande-tablee.jpg" alt="Viaggio di rimpatriata" loading="lazy"><span>Viaggio di rimpatriata</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/rando-groupe.jpg" alt="Weekend giochi da tavolo" loading="lazy"><span>Weekend giochi da tavolo</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/festival.jpg" alt="Festival" loading="lazy"><span>Festival</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/camping.jpg" alt="Campeggio e bivacco" loading="lazy"><span>Campeggio &amp; bivacco</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/cousinade.jpg" alt="Cousinade" loading="lazy"><span>Cousinade</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/vacances-amis.jpg" alt="Vacanze tra amici" loading="lazy"><span>Vacanze tra amici</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/voyage-amis.jpg" alt="Weekend tra amici" loading="lazy"><span>Weekend tra amici</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/retrouvailles.jpg" alt="Seminario aziendale" loading="lazy"><span>Seminario aziendale</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/sejour-lac.jpg" alt="Vacanze in famiglia" loading="lazy"><span>Vacanze in famiglia</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/soiree.jpg" alt="Festa di compleanno" loading="lazy"><span>Festa di compleanno</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/diner-fetes.jpg" alt="Cena delle feste" loading="lazy"><span>Cena delle feste</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/escapade-deux.jpg" alt="Fuga romantica in due" loading="lazy"><span>Fuga romantica in due</span></div>
                 </div>
-                <div class="vmf-rail" id="vmf-rail" role="tablist" aria-label="Progression du manifeste">
-                  <button type="button" class="a-orange active" data-i="0" aria-label="Conviction 01"></button>
-                  <button type="button" class="a-violet" data-i="1" aria-label="Conviction 02"></button>
-                  <button type="button" class="a-orange" data-i="2" aria-label="Conviction 03"></button>
+                <div class="vmf-rail" id="vmf-rail" role="tablist" aria-label="Avanzamento del manifesto">
+                  <button type="button" class="a-orange active" data-i="0" aria-label="Convinzione 01"></button>
+                  <button type="button" class="a-violet" data-i="1" aria-label="Convinzione 02"></button>
+                  <button type="button" class="a-orange" data-i="2" aria-label="Convinzione 03"></button>
                 </div>
               </div>
             </aside>
@@ -1177,32 +1177,32 @@
             <div class="vmf-panels" id="vmf-panels">
               <section class="vmf-panel a-orange active" data-i="0">
                 <span class="vmf-bg" aria-hidden="true">01</span>
-                <h3>Tout ce qui concerne votre séjour, dans un espace commun</h3>
+                <h3>Tutto ciò che riguarda il tuo viaggio, in uno spazio comune</h3>
                 <span class="vmf-rule"></span>
                 <div class="vmf-body">
-                  <p>Alela, c'est <strong>un espace qui rassemble tout ce qui concerne un même séjour</strong>&nbsp;: les participants, les dates, les destinations, les hébergements, les trajets, les repas, les courses, les bagages, le budget, une conversation commune, l'album souvenirs…</p>
-                  <p>Chacun peut y retrouver les informations dont il a besoin, mais aussi partager celles qui peuvent être utiles aux autres. Selon les séjours, à vous de piocher ce qui vous sert vraiment&nbsp;!</p>
+                  <p>Alela è <strong>uno spazio che riunisce tutto ciò che riguarda uno stesso viaggio</strong>: i partecipanti, le date, le destinazioni, gli alloggi, gli spostamenti, i pasti, la spesa, i bagagli, il budget, una conversazione comune, l'album dei ricordi…</p>
+                  <p>Ognuno può trovarci le informazioni di cui ha bisogno, ma anche condividere quelle che possono essere utili agli altri. A seconda del viaggio, sta a te scegliere ciò che ti serve davvero!</p>
                 </div>
               </section>
               <section class="vmf-panel a-violet" data-i="1">
                 <span class="vmf-bg" aria-hidden="true">02</span>
-                <h3>Le séjour se planifie et s'organise à plusieurs&nbsp;!</h3>
+                <h3>Il viaggio si pianifica e si organizza in gruppo!</h3>
                 <span class="vmf-rule"></span>
                 <div class="vmf-body">
-                  <p>Les galères commencent souvent avant le début du séjour, quand le groupe doit se mettre d'accord et décider ensemble.</p>
-                  <p class="qline">On part quand&nbsp;? Où&nbsp;? Quel logement&nbsp;? Qui vient&nbsp;? Qu'est-ce qu'on mange&nbsp;? Qui apporte quoi&nbsp;?</p>
-                  <p>Avec Alela, chacun peut participer, donner son avis, proposer une idée ou prendre en charge une partie de l'organisation&nbsp;: chacun participe à sa façon. <strong>Le séjour se prépare à plusieurs&nbsp;!</strong></p>
+                  <p>I grattacapi cominciano spesso prima dell'inizio del viaggio, quando il gruppo deve mettersi d'accordo e decidere insieme.</p>
+                  <p class="qline">Quando si parte? Dove? Quale alloggio? Chi viene? Cosa mangiamo? Chi porta cosa?</p>
+                  <p>Con Alela, ognuno può partecipare, dare la sua opinione, proporre un'idea o occuparsi di una parte dell'organizzazione: ognuno partecipa a modo suo. <strong>Il viaggio si prepara in gruppo!</strong></p>
                 </div>
               </section>
               <section class="vmf-panel a-orange" data-i="2">
                 <span class="vmf-bg" aria-hidden="true">03</span>
-                <h3>Une application collaborative, mais pensée pour chacun</h3>
+                <h3>Un'app collaborativa, ma pensata per ognuno</h3>
                 <span class="vmf-rule"></span>
                 <div class="vmf-body">
-                  <p>Un séjour s'organise à plusieurs, mais au moment de faire sa valise à une heure du matin, on est souvent bien seul face à ses questions&nbsp;:</p>
-                  <p class="qline">Je prends une serviette&nbsp;? Il me faut un adaptateur pour l'Irlande&nbsp;? Quelqu'un peut me récupérer à la gare&nbsp;?</p>
-                  <p>Alors Alela prend en compte la situation de chacun et vous propose une expérience personnalisée&nbsp;: votre checklist bagages, la prise en compte de votre profil alimentaire, des suggestions de trajets communs selon votre situation…</p>
-                  <p>Un même séjour, une organisation commune, mais <strong>une expérience qui s'adapte à chacun.</strong></p>
+                  <p>Un viaggio si organizza in gruppo, ma al momento di fare la valigia all'una di notte, spesso ti ritrovi da solo davanti alle tue domande:</p>
+                  <p class="qline">Prendo un asciugamano? Mi serve un adattatore per l'Irlanda? Qualcuno può venirmi a prendere alla stazione?</p>
+                  <p>Alela tiene conto della situazione di ognuno e ti propone un'esperienza personalizzata: la tua checklist bagagli, il tuo profilo alimentare, suggerimenti di spostamenti comuni in base alla tua situazione…</p>
+                  <p>Uno stesso viaggio, un'organizzazione comune, ma <strong>un'esperienza che si adatta a ognuno.</strong></p>
                 </div>
               </section>
             </div>
@@ -1216,37 +1216,37 @@
             <div class="vmf-mtrack" id="vmf-mtrack">
             <div class="vmf-mcard a-orange active" data-i="0">
               <div class="vmf-mphoto t-orange">
-                <img src="./themes/road-trip.jpg" alt="" loading="lazy">
+                <img src="../themes/road-trip.jpg" alt="" loading="lazy">
                 <span class="vmf-mphoto-num">01</span>
               </div>
-              <h3>Tout au même endroit</h3>
+              <h3>Tutto nello stesso posto</h3>
               <span class="vmf-rule"></span>
-              <div class="vmf-body"><p>Chaque séjour a son propre espace qui rassemble tout&nbsp;: participants, dates, lieux, hébergements, trajets, repas, courses, bagages, budget, conversation, souvenirs. <strong>Un seul endroit pour tout retrouver et partager.</strong></p></div>
+              <div class="vmf-body"><p>Ogni viaggio ha il suo spazio che riunisce tutto: partecipanti, date, luoghi, alloggi, spostamenti, pasti, spesa, bagagli, budget, conversazione, ricordi. <strong>Un unico posto per ritrovare e condividere tutto.</strong></p></div>
             </div>
             <div class="vmf-mcard a-violet" data-i="1">
               <div class="vmf-mphoto t-violet">
-                <img src="./themes/grande-tablee.jpg" alt="" loading="lazy">
+                <img src="../themes/grande-tablee.jpg" alt="" loading="lazy">
                 <span class="vmf-mphoto-num">02</span>
               </div>
-              <h3>Organiser à plusieurs</h3>
+              <h3>Organizzare in gruppo</h3>
               <span class="vmf-rule"></span>
-              <div class="vmf-body"><p>On part quand&nbsp;? Où&nbsp;? Qui apporte quoi&nbsp;? Avec Alela, chacun peut participer, donner son avis, proposer une idée ou prendre en charge une partie de l'organisation&nbsp;: chacun participe à sa façon. <strong>Le séjour se prépare à plusieurs&nbsp;!</strong></p></div>
+              <div class="vmf-body"><p>Quando si parte? Dove? Chi porta cosa? Con Alela, ognuno può partecipare, dare la sua opinione, proporre un'idea o occuparsi di una parte dell'organizzazione: ognuno partecipa a modo suo. <strong>Il viaggio si prepara in gruppo!</strong></p></div>
             </div>
             <div class="vmf-mcard a-orange" data-i="2">
               <div class="vmf-mphoto t-orange">
-                <img src="./themes/vacances-famille.jpg" alt="" loading="lazy">
+                <img src="../themes/vacances-famille.jpg" alt="" loading="lazy">
                 <span class="vmf-mphoto-num">03</span>
               </div>
-              <h3>Pensée pour chacun</h3>
+              <h3>Pensata per ognuno</h3>
               <span class="vmf-rule"></span>
-              <div class="vmf-body"><p>Une organisation commune, mais une expérience qui s'adapte à chacun&nbsp;: votre checklist bagages, celle de vos enfants par âge, une liste de courses qui tient compte des régimes de chacun, des trajets communs selon votre situation.</p></div>
+              <div class="vmf-body"><p>Un'organizzazione comune, ma un'esperienza che si adatta a ognuno: la tua checklist bagagli, quella dei tuoi figli per età, una lista della spesa che tiene conto dei regimi di ciascuno, spostamenti comuni in base alla tua situazione.</p></div>
             </div>
             </div>
           </div>
-          <div class="vmf-dots" id="vmf-dots" role="tablist" aria-label="Convictions">
-            <button type="button" class="a-orange active" data-i="0" aria-label="Conviction 01"><span></span></button>
-            <button type="button" class="a-violet" data-i="1" aria-label="Conviction 02"><span></span></button>
-            <button type="button" class="a-orange" data-i="2" aria-label="Conviction 03"><span></span></button>
+          <div class="vmf-dots" id="vmf-dots" role="tablist" aria-label="Convinzioni">
+            <button type="button" class="a-orange active" data-i="0" aria-label="Convinzione 01"><span></span></button>
+            <button type="button" class="a-violet" data-i="1" aria-label="Convinzione 02"><span></span></button>
+            <button type="button" class="a-orange" data-i="2" aria-label="Convinzione 03"><span></span></button>
           </div>
         </div>
 
@@ -1254,65 +1254,65 @@
     </div>
 
     <!-- Album des occasions (mobile) : une seule ligne, mêmes titres que le desktop -->
-    <div class="themes themes-mobile" aria-label="Toutes vos occasions de partir">
-      <div class="kicker themes-kicker"><span class="kline"></span>Pour toutes vos occasions<span class="kline"></span></div>
+    <div class="themes themes-mobile" aria-label="Tutte le occasioni per partire">
+      <div class="kicker themes-kicker"><span class="kline"></span>Per tutte le tue occasioni<span class="kline"></span></div>
       <div class="themes-row">
         <div class="themes-track">
-          <a class="theme-card t-orange"><img src="./themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip entre potes</span></a>
-          <a class="theme-card t-violet"><img src="./themes/week-end-amis.jpg" alt="" loading="lazy"><span>Enterrement de vie de garçon</span></a>
-          <a class="theme-card t-orange"><img src="./themes/evg-evjf.jpg" alt="" loading="lazy"><span>Enterrement de vie de jeune fille</span></a>
-          <a class="theme-card t-violet"><img src="./themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacances en famille</span></a>
-          <a class="theme-card t-orange"><img src="./themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
-          <a class="theme-card t-violet"><img src="./themes/grande-tablee.jpg" alt="" loading="lazy"><span>Séjour retrouvailles</span></a>
-          <a class="theme-card t-orange"><img src="./themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
-          <a class="theme-card t-violet"><img src="./themes/seminaire.jpg" alt="" loading="lazy"><span>Week-end sportif</span></a>
-          <a class="theme-card t-orange"><img src="./themes/camping.jpg" alt="" loading="lazy"><span>Camping &amp; bivouac</span></a>
-          <a class="theme-card t-violet"><img src="./themes/escapade-deux.jpg" alt="" loading="lazy"><span>Escapade à deux</span></a>
+          <a class="theme-card t-orange"><img src="../themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip tra amici</span></a>
+          <a class="theme-card t-violet"><img src="../themes/week-end-amis.jpg" alt="" loading="lazy"><span>Addio al celibato</span></a>
+          <a class="theme-card t-orange"><img src="../themes/evg-evjf.jpg" alt="" loading="lazy"><span>Addio al nubilato</span></a>
+          <a class="theme-card t-violet"><img src="../themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacanze in famiglia</span></a>
+          <a class="theme-card t-orange"><img src="../themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
+          <a class="theme-card t-violet"><img src="../themes/grande-tablee.jpg" alt="" loading="lazy"><span>Viaggio di rimpatriata</span></a>
+          <a class="theme-card t-orange"><img src="../themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
+          <a class="theme-card t-violet"><img src="../themes/seminaire.jpg" alt="" loading="lazy"><span>Weekend sportivo</span></a>
+          <a class="theme-card t-orange"><img src="../themes/camping.jpg" alt="" loading="lazy"><span>Campeggio &amp; bivacco</span></a>
+          <a class="theme-card t-violet"><img src="../themes/escapade-deux.jpg" alt="" loading="lazy"><span>Fuga romantica in due</span></a>
           <!-- duplicata pour la boucle -->
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip entre potes</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/week-end-amis.jpg" alt="" loading="lazy"><span>Enterrement de vie de garçon</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/evg-evjf.jpg" alt="" loading="lazy"><span>Enterrement de vie de jeune fille</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacances en famille</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/grande-tablee.jpg" alt="" loading="lazy"><span>Séjour retrouvailles</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/seminaire.jpg" alt="" loading="lazy"><span>Week-end sportif</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/camping.jpg" alt="" loading="lazy"><span>Camping &amp; bivouac</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/escapade-deux.jpg" alt="" loading="lazy"><span>Escapade à deux</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip tra amici</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/week-end-amis.jpg" alt="" loading="lazy"><span>Addio al celibato</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/evg-evjf.jpg" alt="" loading="lazy"><span>Addio al nubilato</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacanze in famiglia</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/grande-tablee.jpg" alt="" loading="lazy"><span>Viaggio di rimpatriata</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/seminaire.jpg" alt="" loading="lazy"><span>Weekend sportivo</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/camping.jpg" alt="" loading="lazy"><span>Campeggio &amp; bivacco</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/escapade-deux.jpg" alt="" loading="lazy"><span>Fuga romantica in due</span></a>
         </div>
       </div>
     </div>
 
-    <!-- Comment ça marche -->
+    <!-- Come funziona -->
     <div class="section" id="etapes">
-      <div class="kicker"><span class="knum">02</span><span class="kline"></span>Comment ça marche</div>
-      <h2 class="h2">Lancez votre séjour <em>en trois étapes.</em></h2>
+      <div class="kicker"><span class="knum">02</span><span class="kline"></span>Come funziona</div>
+      <h2 class="h2">Crea il tuo viaggio <em>in tre passaggi.</em></h2>
       <div class="steps-grid">
         <div class="steps-screen">
           <div class="phone-frame">
-            <video src="./video-creation.mp4" autoplay muted loop playsinline preload="metadata" aria-label="La création d'un séjour sur Alela, de A à Z"></video>
+            <video src="../video-creation.mp4" autoplay muted loop playsinline preload="metadata" aria-label="La creazione di un viaggio su Alela, dalla A alla Z"></video>
           </div>
         </div>
         <ol class="timeline">
           <li class="tl-step a-orange">
             <span class="tl-marker">1</span>
             <div class="tl-content">
-              <h3>Créez votre séjour</h3>
-              <p>Répondez à quelques questions&nbsp;: en moins de deux minutes, votre séjour est créé.</p>
+              <h3>Crea il tuo viaggio</h3>
+              <p>Rispondi a qualche domanda: in meno di due minuti, il tuo viaggio è creato.</p>
             </div>
           </li>
           <li class="tl-step a-violet">
             <span class="tl-marker">2</span>
             <div class="tl-content">
-              <h3>Invitez les participants</h3>
-              <p>Partagez-leur un lien ou un QR Code pour rejoindre Alela et le séjour. Chacun s'y connecte depuis son téléphone, iOS ou Android.</p>
+              <h3>Invita i partecipanti</h3>
+              <p>Condividi con loro un link o un codice QR per unirsi ad Alela e al viaggio. Ognuno si collega dal proprio telefono, iOS o Android.</p>
             </div>
           </li>
           <li class="tl-step a-blue">
             <span class="tl-marker">3</span>
             <div class="tl-content">
-              <h3>Et c'est parti&nbsp;!</h3>
-              <p>Faites vivre votre séjour sur Alela&nbsp;: dates, logement, repas, budget… tout se partage et se décide sur la même interface, visible par tout le groupe.</p>
+              <h3>E si parte!</h3>
+              <p>Vivi il tuo viaggio su Alela: date, alloggio, pasti, budget… tutto si condivide e si decide sulla stessa interfaccia, visibile da tutto il gruppo.</p>
             </div>
           </li>
         </ol>
@@ -1321,55 +1321,55 @@
 
     <!-- Modules -->
     <div class="section" id="modules">
-      <div class="kicker"><span class="knum">03</span><span class="kline"></span>Les fonctionnalités</div>
-      <h2 class="h2">Pour chaque séjour, <em>une interface unique.</em></h2>
+      <div class="kicker"><span class="knum">03</span><span class="kline"></span>Le funzionalità</div>
+      <h2 class="h2">Per ogni viaggio, <em>un'interfaccia unica.</em></h2>
       <div class="lede">
-        <p>Chaque séjour a son propre espace, partagé par tout le groupe et synchronisé en temps réel.</p>
-        <p>On y retrouve toutes les fonctionnalités&nbsp;: des dates au budget, en passant par les repas, les bagages et les souvenirs, mais aussi les décisions, les infos pratiques, la conversation du groupe et bien plus encore&nbsp;!</p>
-        <p>Bien sûr, à chaque séjour, vous n'utilisez que ce qui vous sert vraiment, et vous pouvez créer autant de séjours que vous le souhaitez&nbsp;!</p>
+        <p>Ogni viaggio ha il suo spazio, condiviso da tutto il gruppo e sincronizzato in tempo reale.</p>
+        <p>Ci trovi tutte le funzionalità: dalle date al budget, passando per i pasti, i bagagli e i ricordi, ma anche le decisioni, le info pratiche, la conversazione del gruppo e molto altro!</p>
+        <p>Naturalmente, per ogni viaggio usi solo ciò che ti serve davvero, e puoi creare tutti i viaggi che vuoi!</p>
       </div>
 
       <div class="mod-hub-grid" id="mod-hub-grid">
         <div class="mod-hub-col">
         <div class="mod-hub" id="mod-hub">
           <div class="hub-center" aria-hidden="true">
-            <img src="./alela-icon.png" alt="" />
+            <img src="../alela-icon.png" alt="" />
           </div>
-          <button class="hub-tile g-dates active" type="button" data-mod="dates" aria-label="Dates" style="left: 50%; top: 11%;">
+          <button class="hub-tile g-dates active" type="button" data-mod="dates" aria-label="Date" style="left: 50%; top: 11%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 2.8v4M16 2.8v4"/></svg>
-            <span class="hub-tile-label">Dates</span>
+            <span class="hub-tile-label">Date</span>
           </button>
-          <button class="hub-tile g-dest" type="button" data-mod="dest" aria-label="Destinations" style="left: 75.1%; top: 20.1%;">
+          <button class="hub-tile g-dest" type="button" data-mod="dest" aria-label="Destinazioni" style="left: 75.1%; top: 20.1%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5 3.5 6.5v13L9 17.5l6 2 5.5-2v-13l-5.5 2-6-2Z"/><path d="M9 4.5v13M15 6.5v13"/></svg>
-            <span class="hub-tile-label">Destinations</span>
+            <span class="hub-tile-label">Destinazioni</span>
           </button>
-          <button class="hub-tile g-heberg" type="button" data-mod="heberg" aria-label="Hébergements" style="left: 88.4%; top: 43.2%;">
+          <button class="hub-tile g-heberg" type="button" data-mod="heberg" aria-label="Alloggi" style="left: 88.4%; top: 43.2%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18v-11"/><path d="M3.5 15h17v3M3.5 18v0M20.5 15v-2a2.5 2.5 0 0 0-2.5-2.5h-7.5V15"/><circle cx="6.9" cy="11.6" r="1.6"/></svg>
-            <span class="hub-tile-label">Hébergements</span>
+            <span class="hub-tile-label">Alloggi</span>
           </button>
-          <button class="hub-tile g-trajets" type="button" data-mod="trajets" aria-label="Trajets" style="left: 83.8%; top: 69.5%;">
+          <button class="hub-tile g-trajets" type="button" data-mod="trajets" aria-label="Spostamenti" style="left: 83.8%; top: 69.5%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3.5" width="12" height="13.5" rx="3"/><path d="M6 11.5h12M9.6 20.5 8.2 17m6.2 3.5 1.4-3.5M9.4 14.3h.01M14.6 14.3h.01"/></svg>
-            <span class="hub-tile-label">Trajets</span>
+            <span class="hub-tile-label">Spostamenti</span>
           </button>
-          <button class="hub-tile g-repas" type="button" data-mod="repas" aria-label="Repas" style="left: 63.3%; top: 86.7%;">
+          <button class="hub-tile g-repas" type="button" data-mod="repas" aria-label="Pasti" style="left: 63.3%; top: 86.7%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M7 3v7.5M4.5 3v4.5a2.5 2.5 0 0 0 5 0V3M7 10.5V21M16.5 3c-1.7 1.2-2.5 3.6-2.5 6v3h5v9M19 3v9"/></svg>
-            <span class="hub-tile-label">Repas</span>
+            <span class="hub-tile-label">Pasti</span>
           </button>
-          <button class="hub-tile g-courses" type="button" data-mod="courses" aria-label="Courses" style="left: 36.7%; top: 86.7%;">
+          <button class="hub-tile g-courses" type="button" data-mod="courses" aria-label="Spesa" style="left: 36.7%; top: 86.7%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="19.7" r="1.3"/><circle cx="16.8" cy="19.7" r="1.3"/><path d="M3.5 4.5h2.2l2.1 10.5h9.9l2.1-7.5H7"/></svg>
-            <span class="hub-tile-label">Courses</span>
+            <span class="hub-tile-label">Spesa</span>
           </button>
-          <button class="hub-tile g-bagages" type="button" data-mod="bagages" aria-label="Bagages" style="left: 16.2%; top: 69.5%;">
+          <button class="hub-tile g-bagages" type="button" data-mod="bagages" aria-label="Bagagli" style="left: 16.2%; top: 69.5%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="7.5" width="14" height="13" rx="2.5"/><path d="M9 7.5V5.2A1.7 1.7 0 0 1 10.7 3.5h2.6A1.7 1.7 0 0 1 15 5.2v2.3M9.5 11.5v5M14.5 11.5v5"/></svg>
-            <span class="hub-tile-label">Bagages</span>
+            <span class="hub-tile-label">Bagagli</span>
           </button>
           <button class="hub-tile g-budget" type="button" data-mod="budget" aria-label="Budget" style="left: 11.6%; top: 43.2%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13.5" rx="2.5"/><path d="M3 10h18M7 15.5h4"/></svg>
             <span class="hub-tile-label">Budget</span>
           </button>
-          <button class="hub-tile g-souvenirs" type="button" data-mod="souvenirs" aria-label="Souvenirs" style="left: 24.9%; top: 20.1%;">
+          <button class="hub-tile g-souvenirs" type="button" data-mod="souvenirs" aria-label="Ricordi" style="left: 24.9%; top: 20.1%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 7.5h3l1.8-2.5h5.4l1.8 2.5h3A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V9a1.5 1.5 0 0 1 1.5-1.5Z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
-            <span class="hub-tile-label">Souvenirs</span>
+            <span class="hub-tile-label">Ricordi</span>
           </button>
         </div>
         <div class="hub-extras">
@@ -1380,267 +1380,267 @@
           </button>
           <button class="hub-pill" type="button" data-mod="sondages">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M5 20v-8M12 20V4M19 20v-11"/></svg>
-            Sondages
+            Sondaggi
           </button>
           <button class="hub-pill" type="button" data-mod="convertisseur">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5h13.5l-3-3M20 16.5H6.5l3 3"/></svg>
-            Convertisseur
+            Convertitore
           </button>
         </div>
-        <p class="hub-hint"><span class="hint-desktop">Cliquez ou survolez les icônes pour découvrir le détail de chaque fonctionnalité.</span><span class="hint-mobile">Touchez une icône pour découvrir le détail de chaque fonctionnalité.</span></p>
+        <p class="hub-hint"><span class="hint-desktop">Clicca o passa il mouse sulle icone per scoprire il dettaglio di ogni funzionalità.</span><span class="hint-mobile">Tocca un'icona per scoprire il dettaglio di ogni funzionalità.</span></p>
         </div>
 
         <div class="mod-detail-panel" id="mod-detail-panel">
           <div class="mod-detail active" data-mod="dates">
-            <h3>Dates</h3>
-            <div class="mod-tagline">Trouver quand partir, sans y passer trois semaines.</div>
-            <p>Deux façons de faire&nbsp;: <strong>fixez les dates directement</strong> pour en informer les participants, ou <strong>décidez collectivement grâce à un sondage</strong> pour prendre en compte les disponibilités et les préférences de chacun, sans échanges interminables.</p>
-            <p>Une fois les dates posées, l'information se retrouve en un coup d'œil, et chacun peut <strong>ajouter le séjour à son agenda personnel</strong>.</p>
+            <h3>Date</h3>
+            <div class="mod-tagline">Trovare quando partire, senza passarci tre settimane.</div>
+            <p>Due modi di procedere: <strong>fissa le date direttamente</strong> per informare i partecipanti, oppure <strong>decidete insieme grazie a un sondaggio</strong> per tenere conto delle disponibilità e delle preferenze di ognuno, senza discussioni infinite.</p>
+            <p>Una volta fissate le date, l'informazione si trova in un colpo d'occhio, e ognuno può <strong>aggiungere il viaggio al proprio calendario personale</strong>.</p>
           </div>
           <div class="mod-detail" data-mod="dest">
-            <h3>Destinations</h3>
-            <div class="mod-tagline">Choisir la destination qui met tout le monde d'accord.</div>
-            <p>Là aussi, à vous de choisir&nbsp;: la destination peut être <strong>fixée directement</strong> pour en informer les participants, ou <strong>décidée collectivement grâce à un sondage</strong>&nbsp;: chacun propose, le groupe vote.</p>
-            <p>Ensuite, tout le monde retrouve facilement l'information, ainsi que <strong>la carte et la météo</strong> de la destination.</p>
-            <p>Et si vous partez en mode road trip&nbsp;? Aucun problème&nbsp;: renseignez <strong>plusieurs destinations, chacune avec ses dates</strong>.</p>
+            <h3>Destinazioni</h3>
+            <div class="mod-tagline">Scegliere la destinazione che mette tutti d'accordo.</div>
+            <p>Anche qui, sta a te scegliere: la destinazione può essere <strong>fissata direttamente</strong> per informare i partecipanti, oppure <strong>decisa insieme grazie a un sondaggio</strong>: ognuno propone, il gruppo vota.</p>
+            <p>Poi, tutti trovano facilmente l'informazione, oltre a <strong>mappa e meteo</strong> della destinazione.</p>
+            <p>E se parti in modalità road trip? Nessun problema: aggiungi <strong>più destinazioni, ognuna con le sue date</strong>.</p>
           </div>
           <div class="mod-detail" data-mod="heberg">
-            <h3>Hébergements</h3>
-            <div class="mod-tagline">Loger tout le monde, sans prise de tête.</div>
-            <p><strong>Vous avez déjà votre hébergement&nbsp;?</strong> Partagez-en les infos utiles (lien de réservation, adresse, arrivée, parking…)&nbsp;: le groupe les retrouve en un clin d'œil, et les choses à emporter filent directement dans la checklist bagages. Si tout le monde ne dort pas au même endroit, ajoutez simplement plusieurs hébergements.</p>
-            <p><strong>Pas encore trouvé&nbsp;?</strong> Alela facilite votre recherche sur plusieurs plateformes (Airbnb, Booking, Agoda…) en préremplissant vos critères&nbsp;: dates, lieu, nombre de participants. Gardez vos pépites en favoris, puis lancez un sondage pour aider le groupe à trancher&nbsp;: prix, localisation, avis des participants…</p>
+            <h3>Alloggi</h3>
+            <div class="mod-tagline">Sistemare tutti, senza pensieri.</div>
+            <p><strong>Hai già il tuo alloggio?</strong> Condividi le info utili (link di prenotazione, indirizzo, arrivo, parcheggio…): il gruppo le trova in un colpo d'occhio, e le cose da portare finiscono direttamente nella checklist bagagli. Se non dormite tutti nello stesso posto, aggiungi semplicemente più alloggi.</p>
+            <p><strong>Non l'hai ancora trovato?</strong> Alela facilita la tua ricerca su più piattaforme (Airbnb, Booking.com, Agoda…) precompilando i tuoi criteri: date, luogo, numero di partecipanti. Salva le tue chicche nei preferiti, poi lancia un sondaggio per aiutare il gruppo a decidere: prezzo, posizione, recensioni dei partecipanti…</p>
           </div>
           <div class="mod-detail" data-mod="trajets">
-            <h3>Trajets</h3>
-            <div class="mod-tagline">Coordonner vos trajets et voyager ensemble.</div>
-            <p>L'idée&nbsp;: que personne ne se retrouve sans solution de transport pour se rendre au séjour, et que les voitures ne partent pas à moitié vides…</p>
-            <p>Pour ça, chacun renseigne son itinéraire et les détails de son trajet aller/retour, même s'il n'est pas encore tout à fait défini.</p>
-            <p>À partir de là, Alela repère les coordinations possibles et <strong>suggère des trajets communs entre participants</strong> quand c'est pertinent&nbsp;: covoiturer, faire un détour pour récupérer quelqu'un, ou tout simplement prendre le même train pour profiter du voyage ensemble.</p>
-            <p>Les suggestions tiennent compte de la situation réelle de chacun&nbsp;: mode de transport, places disponibles, points de départ et d'arrivée, détours possibles ou non, flexibilité sur les dates et les horaires…</p>
+            <h3>Spostamenti</h3>
+            <div class="mod-tagline">Coordinare i tuoi spostamenti e viaggiare insieme.</div>
+            <p>L'idea: che nessuno si ritrovi senza un mezzo di trasporto per raggiungere il viaggio, e che le auto non partano mezze vuote…</p>
+            <p>Per questo, ognuno indica il proprio itinerario e i dettagli del tragitto andata/ritorno, anche se non è ancora del tutto definito.</p>
+            <p>A partire da lì, Alela individua le coordinazioni possibili e <strong>suggerisce spostamenti comuni tra i partecipanti</strong> quando è utile: fare un passaggio in auto, una deviazione per recuperare qualcuno, o semplicemente prendere lo stesso treno per viaggiare insieme.</p>
+            <p>I suggerimenti tengono conto della situazione reale di ognuno: mezzo di trasporto, posti disponibili, punti di partenza e arrivo, deviazioni possibili o meno, flessibilità su date e orari…</p>
           </div>
           <div class="mod-detail" data-mod="repas">
-            <h3>Repas</h3>
-            <div class="mod-tagline">Nourrir un groupe, sans casse-tête.</div>
-            <p>Retrouvez un <strong>agenda des repas du séjour</strong>&nbsp;: chacun voit le repas prévu jour après jour, avec des quantités adaptées aux personnes présentes.</p>
-            <p>En manque d'inspiration pour les menus&nbsp;? Alela vous suggère <strong>des idées et des recettes complètes</strong>, calibrées pour le nombre de convives. Et pour des suggestions vraiment adaptées, chacun peut compléter son <strong>profil alimentaire</strong>&nbsp;: allergies, régime, aliments à éviter. Les suggestions pourront en tenir compte sans que vous ayez besoin d'y penser.</p>
-            <p>Un doute sur le menu&nbsp;? Vous pouvez aussi lancer des sondages pour être sûr que les repas conviennent vraiment à tout le monde, et conserver vos recettes fétiches en favoris pour les prochains séjours.</p>
+            <h3>Pasti</h3>
+            <div class="mod-tagline">Sfamare un gruppo, senza grattacapi.</div>
+            <p>Trova un <strong>planning dei pasti del viaggio</strong>: ognuno vede il pasto previsto giorno per giorno, con quantità adatte alle persone presenti.</p>
+            <p>A corto di idee per i menu? Alela ti suggerisce <strong>idee e ricette complete</strong>, calibrate per il numero di commensali. E per suggerimenti davvero su misura, ognuno può completare il proprio <strong>profilo alimentare</strong>: allergie, regime, alimenti da evitare. I suggerimenti ne terranno conto senza che tu debba pensarci.</p>
+            <p>Un dubbio sul menu? Puoi anche lanciare sondaggi per essere sicuro che i pasti vadano bene a tutti, e conservare le tue ricette preferite nei favoriti per i prossimi viaggi.</p>
           </div>
           <div class="mod-detail" data-mod="courses">
-            <h3>Courses</h3>
-            <div class="mod-tagline">Une liste de courses générée en un clin d'œil.</div>
-            <p>Une <strong>liste de courses commune au groupe</strong>, organisée par rayons et par repas&nbsp;: chacun peut y ajouter des éléments, et au moment des courses, chacun coche de son côté, la liste se met à jour en direct pour tout le monde.</p>
-            <p>Et si vous avez complété l'agenda des repas, <strong>la liste de courses se génère toute seule</strong>. Tous les ingrédients des recettes prévues s'y ajoutent, dans les bonnes quantités pour le bon nombre de convives, sans rien avoir à saisir.</p>
+            <h3>Spesa</h3>
+            <div class="mod-tagline">Una lista della spesa generata in un colpo d'occhio.</div>
+            <p>Una <strong>lista della spesa comune al gruppo</strong>, organizzata per reparti e per pasti: ognuno può aggiungerci elementi, e al momento della spesa, ognuno spunta dal proprio telefono, e la lista si aggiorna in diretta per tutti.</p>
+            <p>E se hai completato il planning dei pasti, <strong>la lista della spesa si genera da sola</strong>. Tutti gli ingredienti delle ricette previste ci si aggiungono, nelle quantità giuste per il numero giusto di commensali, senza dover inserire nulla.</p>
           </div>
           <div class="mod-detail" data-mod="bagages">
-            <h3>Bagages</h3>
-            <div class="mod-tagline">Des valises prêtes sans y penser.</div>
-            <p>Chacun retrouve sa <strong>checklist pour préparer sa valise sereinement&nbsp;!</strong></p>
-            <p>Son gros intérêt&nbsp;: elle se <strong>préconfigure et se met à jour selon le contexte du séjour</strong> (durée, météo, pays et culture, essentiels pour l'hébergement, mode de transport et plus encore), tout en s'adaptant à votre profil et à vos choix&nbsp;: activités prévues, espace disponible dans les bagages, essentiels personnels, animaux de compagnie…</p>
-            <p>Vous partez avec vos enfants&nbsp;? Retrouvez également leurs listes, adaptées à leur âge et au contexte du séjour. Et si l'autre co-parent fait partie du séjour, la liste est commune et partagée.</p>
-            <p>Enfin, pour les articles utiles à tout le monde (une enceinte, des jeux, la trousse à pharmacie…), une <strong>liste commune au groupe</strong> permet de tout regrouper. Chacun peut se désigner pour apporter un item&nbsp;: on évite ainsi les doublons… et surtout les oublis&nbsp;!</p>
+            <h3>Bagagli</h3>
+            <div class="mod-tagline">Valigie pronte senza pensieri.</div>
+            <p>Ognuno trova la propria <strong>checklist per preparare la valigia con tranquillità!</strong></p>
+            <p>Il suo grande vantaggio: si <strong>preconfigura e si aggiorna in base al contesto del viaggio</strong> (durata, meteo, paese e cultura, cose essenziali per l'alloggio, mezzo di trasporto e altro ancora), adattandosi anche al tuo profilo e alle tue scelte: attività previste, spazio disponibile nei bagagli, cose essenziali personali, animali domestici…</p>
+            <p>Parti con i tuoi figli? Trova anche le loro liste, adatte alla loro età e al contesto del viaggio. E se anche l'altro co-genitore fa parte del viaggio, la lista è comune e condivisa.</p>
+            <p>Infine, per gli articoli utili a tutti (una cassa audio, dei giochi, il kit di pronto soccorso…), una <strong>lista comune al gruppo</strong> permette di raggruppare tutto. Ognuno può proporsi di portare un elemento: si evitano così i doppioni… e soprattutto le dimenticanze!</p>
           </div>
           <div class="mod-detail" data-mod="budget">
             <h3>Budget</h3>
-            <div class="mod-tagline">Zéro calcul de fin de séjour.</div>
-            <p>Vous avez effectué une dépense pour le groupe, ou pour une partie des participants&nbsp;? Ajoutez-la dans Alela, et <strong>visualisez en temps réel qui doit combien à qui</strong>&nbsp;! Alela vous suggère les remboursements les plus simples pour solder les comptes entre participants à la fin du séjour, et chaque remboursement se marque en un clic.</p>
-            <p>Et si vous avez payé dans différentes devises&nbsp;? Pas de souci&nbsp;: Alela convertit automatiquement pour vous faciliter les démarches.</p>
-            <p>Petit plus&nbsp;: le coût de l'hébergement renseigné dans Alela et les 4,99&nbsp;€ pour débloquer le mode Aventure peuvent <strong>s'importer automatiquement dans le budget</strong>, pour être directement répartis entre tous les participants&nbsp;!</p>
+            <div class="mod-tagline">Zero calcoli a fine viaggio.</div>
+            <p>Hai fatto una spesa per il gruppo, o per una parte dei partecipanti? Aggiungila su Alela, e <strong>visualizza in tempo reale chi deve quanto a chi</strong>! Alela ti suggerisce i rimborsi più semplici per saldare i conti tra i partecipanti a fine viaggio, e ogni rimborso si segna con un clic.</p>
+            <p>E se hai pagato in valute diverse? Nessun problema: Alela converte automaticamente per semplificarti la vita.</p>
+            <p>Un piccolo extra: il costo dell'alloggio inserito su Alela e i 4,99 € per sbloccare la Modalità Avventura possono <strong>essere importati automaticamente nel budget</strong>, per essere ripartiti direttamente tra tutti i partecipanti!</p>
           </div>
           <div class="mod-detail" data-mod="souvenirs">
-            <h3>Souvenirs</h3>
-            <div class="mod-tagline">Les photos de tous, au même endroit.</div>
-            <p>Un espace commun pour <strong>les photos et vidéos de tout le monde</strong>, avec réactions et commentaires pour revivre les moments ensemble. Tout se télécharge en un clic, sans doublons, et chaque séjour garde son album, à rouvrir des mois plus tard.</p>
+            <h3>Ricordi</h3>
+            <div class="mod-tagline">Le foto di tutti, nello stesso posto.</div>
+            <p>Uno spazio comune per <strong>le foto e i video di tutti</strong>, con reazioni e commenti per rivivere i momenti insieme. Tutto si scarica con un clic, senza doppioni, e ogni viaggio conserva il suo album, da riaprire anche mesi dopo.</p>
           </div>
           <div class="mod-detail" data-mod="chat">
             <h3>Chat</h3>
-            <div class="mod-tagline">Une conversation qui réunit tout le groupe automatiquement&nbsp;!</div>
-            <p>Dès le séjour créé, <strong>la conversation de groupe existe déjà, avec tous les participants dedans</strong>. Rien à créer sur une autre appli, aucun numéro ni contact à récupérer.</p>
-            <p>Besoin d'un aparté&nbsp;? Créez des conversations avec seulement les participants que vous souhaitez&nbsp;: un cadeau surprise à organiser sans la personne concernée, un covoiturage à caler à deux…</p>
+            <div class="mod-tagline">Una conversazione che riunisce tutto il gruppo automaticamente!</div>
+            <p>Appena creato il viaggio, <strong>la chat di gruppo esiste già, con tutti i partecipanti dentro</strong>. Niente da creare su un'altra app, nessun numero né contatto da recuperare.</p>
+            <p>Bisogno di parlare in disparte? Crea conversazioni solo con i partecipanti che vuoi: un regalo a sorpresa da organizzare senza la persona coinvolta, un passaggio in auto da definire in due…</p>
           </div>
           <div class="mod-detail" data-mod="sondages">
-            <h3>Sondages</h3>
-            <div class="mod-tagline">Le groupe vote, la décision est prise.</div>
-            <p>Dates, destinations, hébergements, idées de repas… Dès qu'il faut trancher, <strong>lancez un sondage</strong>&nbsp;: chacun vote depuis son téléphone, le résultat est visible de tous, et la décision est actée, sans relances ni débats sans fin.</p>
+            <h3>Sondaggi</h3>
+            <div class="mod-tagline">Il gruppo vota, la decisione è presa.</div>
+            <p>Date, destinazioni, alloggi, idee per i pasti… Ogni volta che c'è da decidere, <strong>lancia un sondaggio</strong>: ognuno vota dal proprio telefono, il risultato è visibile a tutti, e la decisione è presa, senza solleciti né discussioni infinite.</p>
           </div>
           <div class="mod-detail" data-mod="convertisseur">
-            <h3>Convertisseur</h3>
-            <div class="mod-tagline">Les prix sur place, dans votre devise.</div>
-            <p>En séjour à l'étranger&nbsp;? <strong>Convertissez un prix dans votre monnaie habituelle en deux secondes</strong>&nbsp;!</p>
+            <h3>Convertitore</h3>
+            <div class="mod-tagline">I prezzi sul posto, nella tua valuta.</div>
+            <p>In viaggio all'estero? <strong>Converti un prezzo nella tua valuta abituale in due secondi</strong>!</p>
           </div>
         </div>
       </div>
 
       <!-- Mobile : fiche fonctionnalité en modale -->
       <dialog class="mod-modal" id="mod-modal">
-        <button class="mod-modal-close" type="button" id="mod-modal-close" aria-label="Fermer">✕</button>
+        <button class="mod-modal-close" type="button" id="mod-modal-close" aria-label="Chiudi">✕</button>
         <div class="mod-modal-body" id="mod-modal-body"></div>
       </dialog>
     </div>
 
-    <!-- Tarifs -->
+    <!-- Prezzi -->
     <div class="section" id="prix">
-      <div class="kicker"><span class="knum">04</span><span class="kline"></span>Les tarifs</div>
+      <div class="kicker"><span class="knum">04</span><span class="kline"></span>I prezzi</div>
       <div class="price-panel">
-      <h2 class="h2">Escapade ou Aventure&nbsp;? <em>À vous de choisir, à chaque séjour.</em></h2>
+      <h2 class="h2">Escursione o Avventura? <em>A te la scelta, per ogni viaggio.</em></h2>
 
-      <p class="price-intro">Téléchargez Alela gratuitement, puis à chaque nouveau séjour, à vous de choisir entre les deux modes disponibles&nbsp;:</p>
+      <p class="price-intro">Scarica Alela gratuitamente, poi per ogni nuovo viaggio, scegli tra le due modalità disponibili:</p>
 
       <div class="plans">
         <div class="plan ghost">
-          <div class="plan-name">Escapade</div>
-          <div class="plan-price">Gratuit</div>
-          <p class="plan-desc">L'essentiel pour organiser un séjour à plusieurs, sans limite de durée ni de nombre de séjours.</p>
+          <div class="plan-name">Escursione</div>
+          <div class="plan-price">Gratis</div>
+          <p class="plan-desc">L'essenziale per organizzare un viaggio in gruppo, senza limiti di durata né di numero di viaggi.</p>
         </div>
         <div class="plan">
-          <div class="plan-tag">Offre de lancement</div>
-          <div class="plan-name">Aventure</div>
-          <div class="plan-price"><s>4,99&nbsp;€</s> Offert <small>pendant le lancement</small></div>
-          <p class="plan-desc">Toutes les fonctionnalités avancées, débloquées pour tout le séjour et tous les participants.</p>
+          <div class="plan-tag">Offerta di lancio</div>
+          <div class="plan-name">Avventura</div>
+          <div class="plan-price"><s>4,99 €</s> Gratis <small>durante il lancio</small></div>
+          <p class="plan-desc">Tutte le funzionalità avanzate, sbloccate per tutto il viaggio e tutti i partecipanti.</p>
         </div>
       </div>
 
-      <button class="compare-btn" type="button" id="compare-open">Comparer les deux modes, fonctionnalité par fonctionnalité<span class="plus">＋</span></button>
+      <button class="compare-btn" type="button" id="compare-open">Confronta le due modalità, funzionalità per funzionalità<span class="plus">＋</span></button>
 
       <details class="price-more">
-        <summary><span class="price-kicker">En savoir plus sur le mode Aventure</span><span class="price-more-chevron" aria-hidden="true"></span></summary>
+        <summary><span class="price-kicker">Scopri di più sulla Modalità Avventura</span><span class="price-more-chevron" aria-hidden="true"></span></summary>
         <div class="price-punch">
-          <p>C'est sans abonnement&nbsp;! Le mode Aventure est <strong>un achat unique par séjour</strong>&nbsp;: vous payez 4,99&nbsp;€ une fois, rien ne se renouvelle, rien à résilier.</p>
-          <p>Le mode Aventure est payé par un seul participant, <strong>pour tout le groupe</strong>. Mais rien n'oblige à l'assumer seul&nbsp;: ajouté au budget du séjour, le montant se <strong>répartit automatiquement entre tous les participants</strong>. Pour un séjour à six, cela revient à moins d'un café par personne&nbsp;☕&nbsp;!</p>
+          <p>Niente abbonamento! La Modalità Avventura è <strong>un acquisto unico per viaggio</strong>: paghi 4,99 € una volta sola, niente si rinnova, niente da disdire.</p>
+          <p>La Modalità Avventura è pagata da un solo partecipante, <strong>per tutto il gruppo</strong>. Ma nulla obbliga ad assumersela da soli: aggiunto al budget del viaggio, l'importo si <strong>ripartisce automaticamente tra tutti i partecipanti</strong>. Per un viaggio in sei, viene meno di un caffè a testa ☕!</p>
         </div>
       </details>
 
-      <!-- OFFRE DE LANCEMENT : retirer cet encadré et le badge de la carte Aventure à la fin de la période -->
-      <div class="launch-box"><strong>Offre de lancement&nbsp;:</strong> Alela vient tout juste de voir le jour, et pour fêter ça, l'application est entièrement gratuite pendant la période de lancement&nbsp;: le mode Aventure est <strong>offert sur tous vos nouveaux séjours</strong>. Profitez-en&nbsp;!</div>
+      <!-- OFFRE DE LANCEMENT : retirer cet encadré et le badge de la carte Avventura à la fin de la période -->
+      <div class="launch-box"><strong>Offerta di lancio:</strong> Alela è appena nata, e per festeggiare, l'app è completamente gratuita durante il periodo di lancio: la Modalità Avventura è <strong>offerta su tutti i tuoi nuovi viaggi</strong>. Approfittane!</div>
 
       <dialog class="compare-modal" id="compare-modal">
         <div class="cm-head">
-          <h3>Escapade ou Aventure&nbsp;?</h3>
-          <button class="cm-close" type="button" id="compare-close" aria-label="Fermer">✕</button>
+          <h3>Escursione o Avventura?</h3>
+          <button class="cm-close" type="button" id="compare-close" aria-label="Chiudi">✕</button>
         </div>
         <div class="compare">
 
         <details class="cmp">
-          <summary>⚙️ Général <span class="cmp-count">+1 en Aventure</span></summary>
+          <summary>⚙️ Generale <span class="cmp-count">+1 in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Créer &amp; gérer le séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Inviter des participants</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Chat de groupe</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Convertisseur de monnaie</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Notifications</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondages (dates, destinations, hébergements, idées de repas)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Crea &amp; gestisci il viaggio</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Invita partecipanti</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Chat di gruppo</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Convertitore di valuta</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Notifiche</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondaggi (date, destinazioni, alloggi, idee pasti)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>📅 Dates &amp; Destinations <span class="cmp-count">+3 en Aventure</span></summary>
+          <summary>📅 Date &amp; Destinazioni <span class="cmp-count">+3 in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Fixer les dates du séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Fixer la destination du séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Prévisions météorologiques</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Multi-étapes (plusieurs dates et/ou destinations)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage dates</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage destinations</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Fissa le date del viaggio</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Fissa la destinazione del viaggio</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Previsioni meteo</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Multi-tappe (più date e/o destinazioni)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondaggio date</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondaggio destinazioni</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🏨 Hébergements <span class="cmp-count">+4 en Aventure</span></summary>
+          <summary>🏨 Alloggi <span class="cmp-count">+4 in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Renseigner un hébergement (dates, adresse, parking, équipements…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Recherche multi-plateformes (Airbnb, Booking, Agoda…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Multi-hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Favoris hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Comparatif hébergements (prix, localisation, avis)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Indica un alloggio (date, indirizzo, parcheggio, dotazioni…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Ricerca multi-piattaforma (Airbnb, Booking.com, Agoda…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Multi-alloggio</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Preferiti alloggi</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondaggio alloggi</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Confronto alloggi (prezzo, posizione, recensioni)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🚆 Trajets <span class="cmp-count">+1 en Aventure</span></summary>
+          <summary>🚆 Spostamenti <span class="cmp-count">+1 in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Saisir son trajet aller/retour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Consulter les trajets de tous</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Recherche multi-plateformes (Skyscanner, SNCF…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Suggestions de trajets communs</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Indica il tuo tragitto andata/ritorno</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Consulta i tragitti di tutti</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Ricerca multi-piattaforma (Skyscanner, SNCF…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Suggerimenti di tragitti comuni</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🍽️ Repas <span class="cmp-count">+4 en Aventure</span></summary>
+          <summary>🍽️ Pasti <span class="cmp-count">+4 in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Planning des repas</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Ajouter des idées de repas manuellement</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Profils alimentaires (allergies, régimes…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Suggestions personnalisées (300+ recettes)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Favoris idées de repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage idées de repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Planning dei pasti</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Aggiungi idee di pasti manualmente</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Profili alimentari (allergie, regimi…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Suggerimenti personalizzati (300+ ricette)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Preferiti idee pasti</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Sondaggio idee pasti</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🛒 Courses <span class="cmp-count">+1 en Aventure</span></summary>
+          <summary>🛒 Spesa <span class="cmp-count">+1 in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Gestion de la liste (ajout, suppression, rayons)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Import automatique depuis le planning repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Gestione della lista (aggiunta, rimozione, reparti)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Import automatico dal planning pasti</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🧳 Bagages <span class="cmp-count">+3 en Aventure</span></summary>
+          <summary>🧳 Bagagli <span class="cmp-count">+3 in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Ma liste (ajout, édition, cochage manuel)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Liste de groupe partagée entre participants</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Liste enfants (différenciée par âge et profil)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Liste pré-configurée selon le contexte du séjour (destination, météo &amp; saison, durée, transport…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Infos pratiques du séjour (formalités, prises électriques, culture, santé &amp; vaccins)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Actualisation automatique si le séjour évolue</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>La mia lista (aggiunta, modifica, spunta manuale)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Lista di gruppo condivisa tra partecipanti</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Lista bambini (differenziata per età e profilo)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Lista preconfigurata in base al contesto del viaggio (destinazione, meteo &amp; stagione, durata, trasporto…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Info pratiche del viaggio (formalità, prese elettriche, cultura, salute &amp; vaccini)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Aggiornamento automatico se il viaggio cambia</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>💰 Budget <span class="cmp-count">tout inclus dans les deux modes</span></summary>
+          <summary>💰 Budget <span class="cmp-count">tutto incluso in entrambe le modalità</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Ajout illimité de dépenses (multi-devises)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Catégorisation par type</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Répartition coût personnalisée par participant</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Équilibres en temps réel</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Suggestions de remboursements</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Import du coût de l'hébergement</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Aggiunta illimitata di spese (multi-valuta)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Categorizzazione per tipo</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Ripartizione costi personalizzata per partecipante</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Saldi in tempo reale</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Suggerimenti di rimborso</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Import del costo dell'alloggio</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>📸 Souvenirs <span class="cmp-count">photos illimitées en Aventure</span></summary>
+          <summary>📸 Ricordi <span class="cmp-count">foto illimitate in Avventura</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Ajout médias (photos et vidéos)</td><td class="custom">30 max par séjour</td><td class="custom good">Illimité</td></tr>
-              <tr><td>Galerie (grille ou fil d'actualité)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Commenter, liker, partager</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escursione</th><th class="col-a">Avventura</th></tr>
+              <tr><td>Aggiunta media (foto e video)</td><td class="custom">30 max per viaggio</td><td class="custom good">Illimitato</td></tr>
+              <tr><td>Galleria (griglia o feed)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Commenta, metti like, condividi</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
@@ -1651,88 +1651,88 @@
 
     <!-- FAQ -->
     <div class="section" id="faq">
-      <div class="kicker"><span class="knum">05</span><span class="kline"></span>Questions fréquentes</div>
-      <h2 class="h2">On vous <em>répond.</em></h2>
+      <div class="kicker"><span class="knum">05</span><span class="kline"></span>Domande frequenti</div>
+      <h2 class="h2">Ti <em>rispondiamo.</em></h2>
       <div class="faq">
         <div class="faq-col">
         <details class="qa">
-          <summary data-emoji="🎉">C'est seulement pour les voyages&nbsp;?</summary>
-          <div class="qa-body">Non&nbsp;! Alela est pensée pour toutes les occasions de se retrouver à plusieurs&nbsp;: week-end entre amis, vacances en famille, EVG/EVJF, cousinade, festival, séminaire… Pas besoin de partir loin, ni longtemps&nbsp;: dès qu'un groupe doit planifier et s'organiser, Alela est là pour vous faire passer moins de temps à vous coordonner, et plus de temps à profiter de votre séjour&nbsp;!</div>
+          <summary data-emoji="🎉">È solo per i viaggi?</summary>
+          <div class="qa-body">No! Alela è pensata per tutte le occasioni in cui ci si ritrova in gruppo: weekend tra amici, vacanze in famiglia, addio al celibato/nubilato, cousinade, festival, seminario… Non serve andare lontano, né per tanto tempo: appena un gruppo deve pianificare e organizzarsi, Alela è lì per farti passare meno tempo a coordinarti e più tempo a goderti il tuo viaggio!</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🗓️">Quand utiliser Alela&nbsp;?</summary>
-          <div class="qa-body">Tout du long du séjour&nbsp;!
+          <summary data-emoji="🗓️">Quando usare Alela?</summary>
+          <div class="qa-body">Per tutto il viaggio!
             <ul>
-              <li><strong>Avant</strong>, pour décider et se préparer&nbsp;: dates, hébergements, trajets, valises…</li>
-              <li><strong>Pendant</strong>, pour vivre le séjour&nbsp;: dépenses, repas, courses, chat…</li>
-              <li><strong>Après</strong>, pour solder les comptes et partager vos souvenirs.</li>
+              <li><strong>Prima</strong>, per decidere e prepararsi: date, alloggi, spostamenti, valigie…</li>
+              <li><strong>Durante</strong>, per vivere il viaggio: spese, pasti, spesa, chat…</li>
+              <li><strong>Dopo</strong>, per saldare i conti e condividere i tuoi ricordi.</li>
             </ul>
           </div>
         </details>
         <details class="qa">
-          <summary data-emoji="🧳">Peut-on organiser plusieurs séjours en même temps&nbsp;?</summary>
-          <div class="qa-body">Oui. Chaque séjour a son propre espace avec toutes les fonctionnalités d'Alela (participants, chat, budget, photos, etc.). Vous pouvez passer d'un séjour à l'autre depuis l'écran «&nbsp;Mes séjours&nbsp;». Le nombre de séjours est illimité, même en mode gratuit.</div>
+          <summary data-emoji="🧳">Si possono organizzare più viaggi contemporaneamente?</summary>
+          <div class="qa-body">Sì. Ogni viaggio ha il suo spazio con tutte le funzionalità di Alela (partecipanti, chat, budget, foto, ecc.). Puoi passare da un viaggio all'altro dalla schermata "I miei viaggi". Il numero di viaggi è illimitato, anche in modalità gratuita.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="✉️">Comment les participants rejoignent-ils un séjour&nbsp;?</summary>
-          <div class="qa-body">Après avoir créé un séjour, un lien d'invitation et un QR code sont générés. Il vous suffit de les partager aux participants où vous voulez (WhatsApp, SMS, mail…). Chaque personne qui clique rejoint directement le séjour dans l'app.</div>
+          <summary data-emoji="✉️">Come fanno i partecipanti a unirsi a un viaggio?</summary>
+          <div class="qa-body">Dopo aver creato un viaggio, vengono generati un link di invito e un codice QR. Ti basta condividerli con i partecipanti dove preferisci (WhatsApp, SMS, email…). Ogni persona che clicca si unisce direttamente al viaggio nell'app.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="👥">Combien de participants peut-on inviter&nbsp;?</summary>
-          <div class="qa-body">Autant que nécessaire&nbsp;: petit week-end à 4 ou grande cousinade à 20, l'application ne fixe pas de limite au nombre de participants d'un séjour.</div>
+          <summary data-emoji="👥">Quanti partecipanti si possono invitare?</summary>
+          <div class="qa-body">Tutti quelli che servono: piccolo weekend in 4 o grande cousinade in 20, l'app non fissa alcun limite al numero di partecipanti di un viaggio.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="👤">Faut-il créer un compte&nbsp;?</summary>
-          <div class="qa-body">Oui, mais c'est rapide&nbsp;: une adresse email suffit.</div>
+          <summary data-emoji="👤">Bisogna creare un account?</summary>
+          <div class="qa-body">Sì, ma è rapido: basta un indirizzo email.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="📲">Et si un participant n'a pas encore téléchargé Alela&nbsp;?</summary>
-          <div class="qa-body">Aucun problème&nbsp;: le lien d'invitation le redirige d'abord vers l'App Store ou le Play Store pour installer Alela. Une fois l'app installée et son compte créé, il lui suffit de rouvrir le lien d'invitation pour rejoindre le séjour.</div>
+          <summary data-emoji="📲">E se un partecipante non ha ancora scaricato Alela?</summary>
+          <div class="qa-body">Nessun problema: il link di invito lo reindirizza prima verso l'App Store o il Play Store per installare Alela. Una volta installata l'app e creato l'account, gli basta riaprire il link di invito per unirsi al viaggio.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🌍">L'application est-elle disponible dans ma langue&nbsp;?</summary>
-          <div class="qa-body">Alela est disponible en 9 langues&nbsp;: français, anglais, espagnol, allemand, italien, portugais, norvégien, suédois et néerlandais. L'application s'affiche automatiquement dans la langue de votre téléphone, et chacun peut choisir la sienne&nbsp;: dans un même séjour, chaque participant utilise Alela dans sa propre langue&nbsp;!</div>
+          <summary data-emoji="🌍">L'app è disponibile nella mia lingua?</summary>
+          <div class="qa-body">Alela è disponibile in 9 lingue: francese, inglese, spagnolo, tedesco, italiano, portoghese, norvegese, svedese e olandese. L'app si visualizza automaticamente nella lingua del tuo telefono, e ognuno può scegliere la propria: nello stesso viaggio, ogni partecipante usa Alela nella propria lingua!</div>
         </details>
         </div>
         <div class="faq-col">
         <details class="qa">
-          <summary data-emoji="💶">L'application est-elle gratuite&nbsp;?</summary>
-          <div class="qa-body">Oui, l'application est téléchargeable gratuitement. Ensuite, deux formules s'offrent à vous à chaque nouveau séjour&nbsp;:
+          <summary data-emoji="💶">L'app è gratuita?</summary>
+          <div class="qa-body">Sì, l'app è scaricabile gratuitamente. Poi, due modalità sono disponibili per ogni nuovo viaggio:
             <ul>
-              <li>le mode <strong>Escapade</strong>, entièrement gratuit&nbsp;;</li>
-              <li>le mode <strong>Aventure</strong>, qui débloque les fonctionnalités avancées, à 4,99&nbsp;€ par séjour, payé une seule fois.</li>
+              <li>la modalità <strong>Escursione</strong>, completamente gratuita;</li>
+              <li>la modalità <strong>Avventura</strong>, che sblocca le funzionalità avanzate, a 4,99 € per viaggio, pagata una sola volta.</li>
             </ul>
             <!-- OFFRE DE LANCEMENT : retirer la phrase suivante à la fin de la période -->
-            Bonne nouvelle&nbsp;: pendant la période de lancement, le mode Aventure est <strong>offert pour tous vos nouveaux séjours</strong>&nbsp;!</div>
+            Buona notizia: durante il periodo di lancio, la Modalità Avventura è <strong>offerta per tutti i tuoi nuovi viaggi</strong>!</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🔁">C'est un abonnement&nbsp;?</summary>
-          <div class="qa-body">Non. Le mode Aventure est un achat unique par séjour&nbsp;: vous payez 4,99&nbsp;€ une fois, rien ne se renouvelle, rien à résilier.</div>
+          <summary data-emoji="🔁">È un abbonamento?</summary>
+          <div class="qa-body">No. La Modalità Avventura è un acquisto unico per viaggio: paghi 4,99 € una volta sola, niente si rinnova, niente da disdire.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🤝">Qui paie pour débloquer le mode Aventure&nbsp;?</summary>
-          <div class="qa-body">Le mode Aventure peut être débloqué&nbsp;:
+          <summary data-emoji="🤝">Chi paga per sbloccare la Modalità Avventura?</summary>
+          <div class="qa-body">La Modalità Avventura può essere sbloccata:
             <ul>
-              <li>soit à la création du séjour, par la personne qui le crée&nbsp;;</li>
-              <li>soit plus tard, à tout moment, par n'importe quel participant qui souhaite passer d'Escapade à Aventure pour débloquer les fonctionnalités avancées.</li>
+              <li>alla creazione del viaggio, dalla persona che lo crea;</li>
+              <li>oppure più tardi, in qualsiasi momento, da qualsiasi partecipante che voglia passare da Escursione ad Avventura per sbloccare le funzionalità avanzate.</li>
             </ul>
-            Dans tous les cas, un seul paiement de 4,99&nbsp;€ suffit, et tous les participants en profitent immédiatement. La personne qui a payé peut ensuite ajouter le montant au budget du séjour pour le partager&nbsp;: à six, ça fait moins d'un café chacun&nbsp;☕</div>
+            In ogni caso, basta un solo pagamento di 4,99 €, e tutti i partecipanti ne beneficiano subito. Chi ha pagato può poi aggiungere l'importo al budget del viaggio per condividerlo: in sei, viene meno di un caffè a testa ☕</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🎒">Que comprend le mode gratuit (Escapade)&nbsp;?</summary>
-          <div class="qa-body">L'essentiel pour organiser un séjour à plusieurs, sans limite de durée ni de nombre de séjours. Pour voir précisément ce que chaque mode inclut, <a href="#prix" id="faq-compare-open">comparez les deux modes fonctionnalité par fonctionnalité</a>.</div>
+          <summary data-emoji="🎒">Cosa include la modalità gratuita (Escursione)?</summary>
+          <div class="qa-body">L'essenziale per organizzare un viaggio in gruppo, senza limiti di durata né di numero di viaggi. Per vedere esattamente cosa include ogni modalità, <a href="#prix" id="faq-compare-open">confronta le due modalità funzionalità per funzionalità</a>.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="📸">Que deviennent les photos/vidéos après le séjour&nbsp;?</summary>
-          <div class="qa-body">Elles restent conservées dans le séjour, accessibles à tous ses participants&nbsp;: pratique pour revivre vos souvenirs des mois plus tard. Vous pouvez aussi tout télécharger sur votre téléphone en un clic, sans doublons.</div>
+          <summary data-emoji="📸">Cosa succede alle foto/video dopo il viaggio?</summary>
+          <div class="qa-body">Restano conservate nel viaggio, accessibili a tutti i suoi partecipanti: comodo per rivivere i tuoi ricordi anche mesi dopo. Puoi anche scaricare tutto sul tuo telefono con un clic, senza doppioni.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🔒">Mes données sont-elles privées&nbsp;?</summary>
-          <div class="qa-body">Oui. Les contenus d'un séjour (photos, messages, dépenses, etc.) sont visibles uniquement par les participants du séjour. Détails dans la <a href="./privacy.html">politique de confidentialité</a>.</div>
+          <summary data-emoji="🔒">I miei dati sono privati?</summary>
+          <div class="qa-body">Sì. I contenuti di un viaggio (foto, messaggi, spese, ecc.) sono visibili solo dai partecipanti del viaggio. Dettagli nella <a href="../privacy.html">politica sulla privacy</a>.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🗑️">Puis-je supprimer mon compte&nbsp;?</summary>
-          <div class="qa-body">Oui, à tout moment&nbsp;: vous pouvez supprimer définitivement votre compte depuis l'app, dans Profil → Compte et sécurité.</div>
+          <summary data-emoji="🗑️">Posso eliminare il mio account?</summary>
+          <div class="qa-body">Sì, in qualsiasi momento: puoi eliminare definitivamente il tuo account dall'app, in Profilo → Account e sicurezza.</div>
         </details>
         </div>
       </div>
@@ -1740,14 +1740,14 @@
 
     <!-- Rappel téléchargement -->
     <div class="download" id="telecharger">
-      <h2>Votre prochain séjour <em>commence ici.</em></h2>
-      <p>Disponible gratuitement et sans abonnement sur iOS et Android.</p>
+      <h2>Il tuo prossimo viaggio <em>comincia qui.</em></h2>
+      <p>Disponibile gratuitamente e senza abbonamento su iOS e Android.</p>
       <div class="badges js-badges-anchor">
-        <a href="https://apps.apple.com/fr/app/id6762174268">
-          <img src="./badge-app-store.svg" alt="Télécharger dans l'App Store" />
+        <a href="https://apps.apple.com/it/app/id6762174268">
+          <img src="../badge-app-store.svg" alt="Scarica su App Store" />
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.alela.app">
-          <img src="./badge-google-play.svg" alt="Disponible sur Google Play" />
+        <a href="https://play.google.com/store/apps/details?id=com.alela.app&hl=it">
+          <img src="../badge-google-play.svg" alt="Disponibile su Google Play" />
         </a>
       </div>
     </div>
@@ -1759,28 +1759,28 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img class="footer-icon" src="./alela-icon.png" alt="Alela" />
+          <img class="footer-icon" src="../alela-icon.png" alt="Alela" />
         </div>
         <div class="footer-col">
-          <h4>Découvrir</h4>
-          <a href="#pourquoi">Notre vision</a>
-          <a href="#etapes">Comment ça marche</a>
-          <a href="#modules">Fonctionnalités</a>
-          <a href="#prix">Tarifs</a>
+          <h4>Scopri</h4>
+          <a href="#pourquoi">La nostra visione</a>
+          <a href="#etapes">Come funziona</a>
+          <a href="#modules">Funzionalità</a>
+          <a href="#prix">Prezzi</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="footer-col">
-          <h4>Télécharger</h4>
-          <a href="https://apps.apple.com/fr/app/id6762174268">App Store</a>
-          <a href="https://play.google.com/store/apps/details?id=com.alela.app">Google Play</a>
+          <h4>Scarica</h4>
+          <a href="https://apps.apple.com/it/app/id6762174268">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.alela.app&hl=it">Google Play</a>
         </div>
         <div class="footer-col">
-          <h4>Légal</h4>
-          <a href="./privacy.html">Politique de confidentialité</a>
-          <a href="./terms.html">Conditions Générales d'Utilisation</a>
+          <h4>Legale</h4>
+          <a href="../privacy.html">Politica sulla privacy</a>
+          <a href="../terms.html">Termini e Condizioni d'Uso</a>
         </div>
         <div class="footer-col">
-          <h4>Suivez-nous</h4>
+          <h4>Seguici</h4>
           <div class="social-row">
             <a href="https://www.instagram.com/alela.io/" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -1795,28 +1795,28 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.6 21v-7.2h2.4l.4-2.8h-2.8V9.2c0-.8.3-1.4 1.5-1.4h1.4V5.3c-.6-.1-1.4-.2-2.2-.2-2.3 0-3.9 1.4-3.9 4v2h-2.4v2.8h2.4V21h3.2Z"/></svg>
             </a>
           </div>
-          <h4 class="contact-title">Contactez-nous</h4>
-          <p class="footer-contact-line">Une question, une remarque, une idée&nbsp;?<br />Écrivez-nous à <a class="footer-mail" href="mailto:info@alela.io">info@alela.io</a></p>
+          <h4 class="contact-title">Contattaci</h4>
+          <p class="footer-contact-line">Una domanda, un'osservazione, un'idea?<br />Scrivici a <a class="footer-mail" href="mailto:info@alela.io">info@alela.io</a></p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Alela. Tous droits réservés.</span>
+        <span>© 2026 Alela. Tutti i diritti riservati.</span>
       </div>
     </div>
   </footer>
 
   <!-- Retour en haut -->
-  <button class="to-top" id="to-top" type="button" aria-label="Revenir en haut de la page">
+  <button class="to-top" id="to-top" type="button" aria-label="Torna in cima alla pagina">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
   </button>
 
   <!-- Barre de téléchargement fixe (mobile) -->
-  <div class="dl-bar" id="dl-bar" aria-label="Télécharger l'application Alela">
-    <a class="dl-bar-btn" href="https://apps.apple.com/fr/app/id6762174268" aria-label="Télécharger dans l'App Store">
-      <img src="./badge-app-store.svg" alt="Télécharger dans l'App Store" />
+  <div class="dl-bar" id="dl-bar" aria-label="Scarica l'app Alela">
+    <a class="dl-bar-btn" href="https://apps.apple.com/it/app/id6762174268" aria-label="Scarica su App Store">
+      <img src="../badge-app-store.svg" alt="Scarica su App Store" />
     </a>
-    <a class="dl-bar-btn" href="https://play.google.com/store/apps/details?id=com.alela.app" aria-label="Disponible sur Google Play">
-      <img src="./badge-google-play.svg" alt="Disponible sur Google Play" />
+    <a class="dl-bar-btn" href="https://play.google.com/store/apps/details?id=com.alela.app&hl=it" aria-label="Disponibile su Google Play">
+      <img src="../badge-google-play.svg" alt="Disponibile su Google Play" />
     </a>
   </div>
 
@@ -1834,11 +1834,11 @@
       burger.addEventListener("click", function () {
         setOpen(burger.getAttribute("aria-expanded") !== "true");
       });
-      // Fermer au clic sur un lien
+      // Chiudi au clic sur un lien
       drawer.querySelectorAll("a").forEach(function (a) {
         a.addEventListener("click", function () { setOpen(false); });
       });
-      // Fermer à Échap
+      // Chiudi à Échap
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
     })();
 
@@ -1904,10 +1904,10 @@
       }
       if (modalClose) { modalClose.addEventListener("click", closeModal); }
       if (modal) {
-        // Fermer en touchant le fond (hors contenu)
+        // Chiudi en touchant le fond (hors contenu)
         modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
 
-        // Fermer par glissement (bas, ou gauche/droite)
+        // Chiudi par glissement (bas, ou gauche/droite)
         var gx = 0, gy = 0, gtrack = false, gdir = null, atTop = true;
         modal.addEventListener("touchstart", function (e) {
           if (e.touches.length !== 1) { gtrack = false; return; }
@@ -2010,7 +2010,7 @@
       // Le lien du FAQ « Que comprend le mode gratuit ? » ouvre aussi le comparatif
       var faqLink = document.getElementById("faq-compare-open");
       if (faqLink) faqLink.addEventListener("click", function (e) { e.preventDefault(); openModal(); });
-      // Cliquer sur une carte Escapade / Aventure ouvre aussi le comparatif
+      // Cliquer sur une carte Escursione / Avventura ouvre aussi le comparatif
       document.querySelectorAll(".plans .plan").forEach(function (plan) {
         plan.addEventListener("click", openModal);
       });
@@ -2293,21 +2293,21 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Alela sert-elle seulement pour les voyages ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, Alela est pensée pour toutes les occasions de se retrouver à plusieurs : week-end entre amis, vacances en famille, EVG/EVJF, cousinade, festival, séminaire… Dès qu'un groupe doit planifier et s'organiser, Alela aide à passer moins de temps à se coordonner et plus de temps à profiter du séjour." } },
-      { "@type": "Question", "name": "Quand utiliser Alela ?", "acceptedAnswer": { "@type": "Answer", "text": "Tout du long du séjour : avant pour décider et se préparer (dates, hébergements, trajets, valises), pendant pour vivre le séjour (dépenses, repas, courses, chat), et après pour solder les comptes et partager les souvenirs." } },
-      { "@type": "Question", "name": "Que deviennent les photos après le séjour ?", "acceptedAnswer": { "@type": "Answer", "text": "Elles restent conservées dans le séjour, accessibles à tous ses participants, et peuvent être téléchargées sur le téléphone en un clic, sans doublons." } },
-      { "@type": "Question", "name": "Peut-on organiser plusieurs séjours en même temps ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, le nombre de séjours est illimité, même en mode gratuit. Chaque séjour a son propre espace." } },
-      { "@type": "Question", "name": "Comment les participants rejoignent-ils un séjour ?", "acceptedAnswer": { "@type": "Answer", "text": "Après la création d'un séjour, un lien d'invitation et un QR code sont générés, à partager où l'on veut (WhatsApp, SMS, mail…). Chaque personne qui clique rejoint directement le séjour dans l'application." } },
-      { "@type": "Question", "name": "Combien de participants peut-on inviter ?", "acceptedAnswer": { "@type": "Answer", "text": "L'application ne fixe pas de limite au nombre de participants d'un séjour." } },
-      { "@type": "Question", "name": "Faut-il créer un compte ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, mais c'est rapide : une adresse email suffit." } },
-      { "@type": "Question", "name": "Et si un participant n'a pas encore téléchargé Alela ?", "acceptedAnswer": { "@type": "Answer", "text": "Le lien d'invitation redirige d'abord vers l'App Store ou le Play Store pour installer Alela. Une fois l'app installée et le compte créé, il suffit de rouvrir le lien d'invitation pour rejoindre le séjour." } },
-      { "@type": "Question", "name": "L'application Alela est-elle disponible dans ma langue ?", "acceptedAnswer": { "@type": "Answer", "text": "Alela est disponible en 9 langues : français, anglais, espagnol, allemand, italien, portugais, norvégien, suédois et néerlandais. L'application s'affiche automatiquement dans la langue du téléphone, et dans un même séjour chaque participant utilise Alela dans sa propre langue." } },
-      { "@type": "Question", "name": "L'application Alela est-elle gratuite ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, l'application est téléchargeable gratuitement. Le mode Escapade est gratuit sans limite de durée ni de nombre de séjours ; le mode Aventure, qui débloque les fonctionnalités avancées, coûte 4,99 € par séjour, payé une seule fois. Pendant la période de lancement, le mode Aventure est offert pour tous les nouveaux séjours." } },
-      { "@type": "Question", "name": "Le mode Aventure est-il un abonnement ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, c'est un achat unique par séjour : vous payez 4,99 € une fois, rien ne se renouvelle, rien à résilier." } },
-      { "@type": "Question", "name": "Qui paie pour débloquer le mode Aventure ?", "acceptedAnswer": { "@type": "Answer", "text": "Le mode Aventure peut être débloqué à la création du séjour par la personne qui le crée, ou plus tard par n'importe quel participant. Un seul paiement de 4,99 € suffit et tous les participants en profitent. Le montant peut être ajouté au budget du groupe pour être partagé." } },
-      { "@type": "Question", "name": "Que comprend le mode gratuit Escapade ?", "acceptedAnswer": { "@type": "Answer", "text": "L'essentiel pour organiser un séjour à plusieurs, sans limite de durée ni de nombre de séjours. Le comparatif détaillé des deux modes, fonctionnalité par fonctionnalité, est disponible dans la section Tarifs." } },
-      { "@type": "Question", "name": "Mes données sont-elles privées ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les contenus d'un séjour (photos, messages, dépenses…) sont visibles uniquement par les participants du séjour. Les données ne sont ni revendues ni utilisées à des fins publicitaires." } },
-      { "@type": "Question", "name": "Puis-je supprimer mon compte ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, à tout moment depuis l'application : suppression définitive du compte dans Profil → Compte et sécurité." } }
+      { "@type": "Question", "name": "Alela serve solo per i viaggi?", "acceptedAnswer": { "@type": "Answer", "text": "No, Alela è pensata per tutte le occasioni in cui ci si ritrova in gruppo: weekend tra amici, vacanze in famiglia, addio al celibato/nubilato, cousinade, festival, seminario… Appena un gruppo deve pianificare e organizzarsi, Alela aiuta a passare meno tempo a coordinarsi e più tempo a godersi il viaggio." } },
+      { "@type": "Question", "name": "Quando usare Alela?", "acceptedAnswer": { "@type": "Answer", "text": "Per tutto il viaggio: prima per decidere e prepararsi (date, alloggi, spostamenti, valigie), durante per vivere il viaggio (spese, pasti, spesa, chat), e dopo per saldare i conti e condividere i ricordi." } },
+      { "@type": "Question", "name": "Cosa succede alle foto dopo il viaggio?", "acceptedAnswer": { "@type": "Answer", "text": "Restano conservate nel viaggio, accessibili a tutti i suoi partecipanti, e possono essere scaricate sul telefono con un clic, senza doppioni." } },
+      { "@type": "Question", "name": "Si possono organizzare più viaggi contemporaneamente?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, il numero di viaggi è illimitato, anche in modalità gratuita. Ogni viaggio ha il suo spazio." } },
+      { "@type": "Question", "name": "Come fanno i partecipanti a unirsi a un viaggio?", "acceptedAnswer": { "@type": "Answer", "text": "Dopo la creazione di un viaggio, vengono generati un link di invito e un codice QR, da condividere dove si preferisce (WhatsApp, SMS, email…). Ogni persona che clicca si unisce direttamente al viaggio nell'app." } },
+      { "@type": "Question", "name": "Quanti partecipanti si possono invitare?", "acceptedAnswer": { "@type": "Answer", "text": "L'app non fissa alcun limite al numero di partecipanti di un viaggio." } },
+      { "@type": "Question", "name": "Bisogna creare un account?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, ma è rapido: basta un indirizzo email." } },
+      { "@type": "Question", "name": "E se un partecipante non ha ancora scaricato Alela?", "acceptedAnswer": { "@type": "Answer", "text": "Il link di invito reindirizza prima verso l'App Store o il Play Store per installare Alela. Una volta installata l'app e creato l'account, basta riaprire il link di invito per unirsi al viaggio." } },
+      { "@type": "Question", "name": "L'app Alela è disponibile nella mia lingua?", "acceptedAnswer": { "@type": "Answer", "text": "Alela è disponibile in 9 lingue: francese, inglese, spagnolo, tedesco, italiano, portoghese, norvegese, svedese e olandese. L'app si visualizza automaticamente nella lingua del telefono, e nello stesso viaggio ogni partecipante usa Alela nella propria lingua." } },
+      { "@type": "Question", "name": "L'app Alela è gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, l'app è scaricabile gratuitamente. La Modalità Escursione è gratuita senza limiti di durata né di numero di viaggi; la Modalità Avventura, che sblocca le funzionalità avanzate, costa 4,99 € per viaggio, pagata una sola volta. Durante il periodo di lancio, la Modalità Avventura è offerta per tutti i nuovi viaggi." } },
+      { "@type": "Question", "name": "La Modalità Avventura è un abbonamento?", "acceptedAnswer": { "@type": "Answer", "text": "No, è un acquisto unico per viaggio: paghi 4,99 € una volta sola, niente si rinnova, niente da disdire." } },
+      { "@type": "Question", "name": "Chi paga per sbloccare la Modalità Avventura?", "acceptedAnswer": { "@type": "Answer", "text": "La Modalità Avventura può essere sbloccata alla creazione del viaggio dalla persona che lo crea, oppure più tardi da qualsiasi partecipante. Basta un solo pagamento di 4,99 € e tutti i partecipanti ne beneficiano. L'importo può essere aggiunto al budget del gruppo per essere condiviso." } },
+      { "@type": "Question", "name": "Cosa include la modalità gratuita Escursione?", "acceptedAnswer": { "@type": "Answer", "text": "L'essenziale per organizzare un viaggio in gruppo, senza limiti di durata né di numero di viaggi. Il confronto dettagliato delle due modalità, funzionalità per funzionalità, è disponibile nella sezione Prezzi." } },
+      { "@type": "Question", "name": "I miei dati sono privati?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. I contenuti di un viaggio (foto, messaggi, spese…) sono visibili solo dai partecipanti del viaggio. I dati non vengono né rivenduti né usati a fini pubblicitari." } },
+      { "@type": "Question", "name": "Posso eliminare il mio account?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, in qualsiasi momento dall'app: eliminazione definitiva dell'account in Profilo → Account e sicurezza." } }
     ]
   }
   </script>

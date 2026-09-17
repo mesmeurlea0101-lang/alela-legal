@@ -2,17 +2,17 @@
 <!-- GÉNÉRÉ par scripts/site-i18n.mjs — NE PAS ÉDITER CE FICHIER.
      Source : docs/github-pages-legal/site-src/*.master.html (français)
      + site-src/locales/<lang>.json, puis : node scripts/site-i18n.mjs build -->
-<html lang="fr">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alela — Organisez vos séjours en groupe</title>
-  <meta name="description" content="Alela est l'application mobile pour planifier et coordonner vos séjours en groupe : dates, destinations, hébergements, trajets, repas, courses, bagages, budget, souvenirs." />
-  <meta property="og:title" content="Alela — Organisez vos séjours en groupe" />
-  <meta property="og:description" content="L'application mobile pour planifier et coordonner vos séjours en groupe." />
+  <title>Alela — Organisera dina gruppresor</title>
+  <meta name="description" content="Alela är mobilappen för att planera och samordna dina gruppresor: datum, resmål, boenden, resor, måltider, inköp, bagage, budget, minnen." />
+  <meta property="og:title" content="Alela — Organisera dina gruppresor" />
+  <meta property="og:description" content="Mobilappen för att planera och samordna dina gruppresor." />
   <meta property="og:image" content="https://alela.io/alela-banner.png" />
-  <link rel="icon" type="image/png" href="./alela-icon.png" />
-  <link rel="canonical" href="https://alela.io/" />
+  <link rel="icon" type="image/png" href="../alela-icon.png" />
+  <link rel="canonical" href="https://alela.io/sv/" />
   <link rel="alternate" hreflang="fr" href="https://alela.io/" />
   <link rel="alternate" hreflang="en" href="https://alela.io/en/" />
   <link rel="alternate" hreflang="es" href="https://alela.io/es/" />
@@ -23,8 +23,8 @@
   <link rel="alternate" hreflang="sv" href="https://alela.io/sv/" />
   <link rel="alternate" hreflang="nl" href="https://alela.io/nl/" />
   <link rel="alternate" hreflang="x-default" href="https://alela.io/" />
-  <meta property="og:url" content="https://alela.io/" />
-  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://alela.io/sv/" />
+  <meta property="og:locale" content="sv_SE" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500;1,9..144,650&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -342,7 +342,7 @@
       .after-hero { padding-top: 70px; }
     }
 
-    /* ── Comment ça marche : timeline verticale ─────────────── */
+    /* ── Så funkar det : timeline verticale ─────────────── */
     .steps-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; }
     .steps-screen { text-align: center; }
     .steps-screen .phone-frame { width: min(272px, 64vw); }
@@ -642,7 +642,7 @@
       .hub-tile svg { width: 24px; height: 24px; }
       .hub-tile-label { font-size: 10px; top: calc(100% + 4px); }
       .hub-center { width: 90px; height: 90px; }
-      /* Pastilles Chat / Sondages / Convertisseur : petites et sur UNE seule ligne. */
+      /* Pastilles Chatt / Omröstningar / Omvandlare : petites et sur UNE seule ligne. */
       .hub-extras { flex-wrap: nowrap; gap: 7px; margin-top: 12px; padding: 0 4px; }
       .hub-pill {
         padding: 7px 10px; font-size: 12px; gap: 5px;
@@ -705,7 +705,7 @@
       text-transform: uppercase; color: var(--orange-light);
       margin: 44px 0 14px;
     }
-    /* « En savoir plus sur le mode Aventure » : dépliable avec une flèche */
+    /* « En savoir plus sur le mode Äventyr » : dépliable avec une flèche */
     .price-more { margin: 40px 0 36px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
     .price-more summary {
       list-style: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
@@ -993,7 +993,7 @@
     @media (max-width: 760px) {
       .container { padding: 0 18px; }
       .download { padding: 52px 24px; margin: 80px 0 60px; }
-      /* Tarifs : panneau plus large (moins de marges) et 2 cartes côte à côte */
+      /* Priser : panneau plus large (moins de marges) et 2 cartes côte à côte */
       .price-panel { padding: 30px 16px; border-radius: 20px; }
       .plans { grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
       /* Les cartes deviennent des colonnes flex : le bandeau prend une vraie
@@ -1008,20 +1008,20 @@
       .plan-price s { font-size: 16px; margin-right: 5px; }
       .plan-price small { display: block; margin-left: 0; margin-top: 4px; font-size: 11.5px; }
       .plan-desc { font-size: 12.5px; line-height: 1.55; margin-top: 12px; margin-bottom: 20px; }
-      /* Le badge « Offre de lancement » : bandeau plein en haut de la carte Aventure */
+      /* Le badge « Lanseringserbjudande » : bandeau plein en haut de la carte Äventyr */
       .plan-tag {
         position: static; order: -1; margin: 0; width: 100%;
         text-align: center; border-radius: 0; white-space: nowrap;
         padding: 8px 6px; font-size: 9px; letter-spacing: 0.06em; line-height: 1.3;
       }
-      /* Escapade n'a pas de bandeau : un bandeau vide de même hauteur garde
-         « Escapade » et « Aventure » parfaitement alignés (pas de valeur magique). */
+      /* Escapad n'a pas de bandeau : un bandeau vide de même hauteur garde
+         « Escapad » et « Äventyr » parfaitement alignés (pas de valeur magique). */
       .plan.ghost::before {
         content: ""; display: block; order: -1;
         padding: 8px 6px; font-size: 9px; line-height: 1.3;
         visibility: hidden;
       }
-      .plan.ghost::before { content: "Offre de lancement"; }
+      .plan.ghost::before { content: "Lanseringserbjudande"; }
     }
     @media (max-width: 400px) {
       .plan-price { font-size: 21px; }
@@ -1037,34 +1037,34 @@
   <!-- Navigation -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="#"><img class="icon-sm" src="./alela-icon.png" alt="Alela" /></a>
+      <a href="#"><img class="icon-sm" src="../alela-icon.png" alt="Alela" /></a>
       <nav class="nav-links">
-        <a class="link" href="#pourquoi">Notre vision</a>
-        <a class="link" href="#etapes">Comment ça marche</a>
-        <a class="link" href="#modules">Fonctionnalités</a>
-        <a class="link" href="#prix">Tarifs</a>
+        <a class="link" href="#pourquoi">Vår vision</a>
+        <a class="link" href="#etapes">Så funkar det</a>
+        <a class="link" href="#modules">Funktioner</a>
+        <a class="link" href="#prix">Priser</a>
         <a class="link" href="#faq">FAQ</a>
-        <a class="nav-cta" href="#telecharger">Télécharger</a>
+        <a class="nav-cta" href="#telecharger">Ladda ner</a>
       </nav>
       <div class="nav-right">
         <div class="lang-switch" id="lang-switch">
-          <button class="lang-btn" id="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Changer la langue du site">
-            <span class="lang-flag">🇫🇷</span>
+          <button class="lang-btn" id="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Byt språk på sidan">
+            <span class="lang-flag">🇸🇪</span>
           </button>
-          <div class="lang-menu" id="lang-menu" hidden><a data-lang="fr" href="/" aria-current="true"><span class="lm-flag">🇫🇷</span>Français</a><a data-lang="en" href="/en/"><span class="lm-flag">🇬🇧</span>English</a><a data-lang="es" href="/es/"><span class="lm-flag">🇪🇸</span>Español</a><a data-lang="de" href="/de/"><span class="lm-flag">🇩🇪</span>Deutsch</a><a data-lang="it" href="/it/"><span class="lm-flag">🇮🇹</span>Italiano</a><a data-lang="pt" href="/pt/"><span class="lm-flag">🇵🇹</span>Português</a><a data-lang="no" href="/no/"><span class="lm-flag">🇳🇴</span>Norsk</a><a data-lang="sv" href="/sv/"><span class="lm-flag">🇸🇪</span>Svenska</a><a data-lang="nl" href="/nl/"><span class="lm-flag">🇳🇱</span>Nederlands</a></div>
+          <div class="lang-menu" id="lang-menu" hidden><a data-lang="fr" href="/"><span class="lm-flag">🇫🇷</span>Français</a><a data-lang="en" href="/en/"><span class="lm-flag">🇬🇧</span>English</a><a data-lang="es" href="/es/"><span class="lm-flag">🇪🇸</span>Español</a><a data-lang="de" href="/de/"><span class="lm-flag">🇩🇪</span>Deutsch</a><a data-lang="it" href="/it/"><span class="lm-flag">🇮🇹</span>Italiano</a><a data-lang="pt" href="/pt/"><span class="lm-flag">🇵🇹</span>Português</a><a data-lang="no" href="/no/"><span class="lm-flag">🇳🇴</span>Norsk</a><a data-lang="sv" href="/sv/" aria-current="true"><span class="lm-flag">🇸🇪</span>Svenska</a><a data-lang="nl" href="/nl/"><span class="lm-flag">🇳🇱</span>Nederlands</a></div>
         </div>
-        <button class="nav-burger" id="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-drawer">
+        <button class="nav-burger" id="nav-burger" type="button" aria-label="Öppna menyn" aria-expanded="false" aria-controls="nav-drawer">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
     <div class="nav-drawer" id="nav-drawer" hidden>
-      <a class="link" href="#pourquoi">Notre vision</a>
-      <a class="link" href="#etapes">Comment ça marche</a>
-      <a class="link" href="#modules">Fonctionnalités</a>
-      <a class="link" href="#prix">Tarifs</a>
+      <a class="link" href="#pourquoi">Vår vision</a>
+      <a class="link" href="#etapes">Så funkar det</a>
+      <a class="link" href="#modules">Funktioner</a>
+      <a class="link" href="#prix">Priser</a>
       <a class="link" href="#faq">FAQ</a>
-      <a class="nav-cta" href="#telecharger">Télécharger l'application</a>
+      <a class="nav-cta" href="#telecharger">Ladda ner appen</a>
     </div>
   </header>
 
@@ -1073,41 +1073,41 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-text">
-          <img class="wordmark" src="./alela-wordmark.png" alt="Alela" />
-          <h1>L'application mobile pour planifier et coordonner vos séjours <em>en groupe.</em></h1>
-          <p class="sub">Alela rassemble dans une seule interface tout ce qu'un groupe doit préparer, décider et partager, pour simplifier l'organisation d'un séjour à plusieurs.</p>
+          <img class="wordmark" src="../alela-wordmark.png" alt="Alela" />
+          <h1>Mobilappen för att planera och samordna dina resor <em>i grupp.</em></h1>
+          <p class="sub">Alela samlar i ett enda gränssnitt allt en grupp behöver förbereda, besluta och dela, för att göra det enklare att organisera en resa tillsammans.</p>
           <div class="badges js-badges-anchor">
-            <a href="https://apps.apple.com/fr/app/id6762174268">
-              <img src="./badge-app-store.svg" alt="Télécharger dans l'App Store" />
+            <a href="https://apps.apple.com/se/app/id6762174268">
+              <img src="../badge-app-store.svg" alt="Ladda ner i App Store" />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.alela.app">
-              <img src="./badge-google-play.svg" alt="Disponible sur Google Play" />
+            <a href="https://play.google.com/store/apps/details?id=com.alela.app&hl=sv">
+              <img src="../badge-google-play.svg" alt="Finns på Google Play" />
             </a>
           </div>
-          <p class="hero-note">Disponible gratuitement et sans abonnement sur iOS et Android.</p>
-          <p class="hero-langs"><span class="hl-flags" aria-hidden="true">🇫🇷🇬🇧🇪🇸🇩🇪🇮🇹🇵🇹🇳🇴🇸🇪🇳🇱</span><span>Application disponible en 9 langues.</span></p>
+          <p class="hero-note">Tillgänglig gratis och utan abonnemang på iOS och Android.</p>
+          <p class="hero-langs"><span class="hl-flags" aria-hidden="true">🇫🇷🇬🇧🇪🇸🇩🇪🇮🇹🇵🇹🇳🇴🇸🇪🇳🇱</span><span>Appen finns på 9 språk.</span></p>
         </div>
         <div class="hero-device">
           <div class="hero-devices">
             <div class="phone-frame fixed">
-              <img src="./shot-home.jpg" alt="L'application Alela : l'écran d'un séjour avec toutes ses fonctionnalités" />
+              <img src="../shot-home.jpg" alt="Alela-appen: skärmen för en resa med alla dess funktioner" />
             </div>
             <div class="rotator-col">
             <div class="phone-frame rotator" id="hero-rotator">
               <div class="rotator-screen">
               <div class="rotator-track" id="rotator-track">
-              <img src="./shot-sondage.jpg" data-caption="Le groupe vote, la destination se décide" alt="Sondage destinations avec les votes du groupe" />
-              <img src="./shot-budget.jpg" data-caption="Qui doit quoi, en temps réel" alt="Équilibres des dépenses du séjour" loading="lazy" />
-              <img src="./shot-repas.jpg" data-caption="Des idées de repas pour tout le groupe" alt="Suggestions d'idées de repas" loading="lazy" />
-              <img src="./shot-courses.jpg" data-caption="La liste de courses se génère toute seule" alt="Liste de courses classée par rayons" loading="lazy" />
-              <img src="./shot-souvenirs.jpg" data-caption="Les souvenirs de tous, au même endroit" alt="Galerie de souvenirs du groupe" loading="lazy" />
-              <img src="./shot-etapes.jpg" data-caption="Chaque étape a ses dates et sa destination" alt="Séjour multi-étapes" loading="lazy" />
-              <img src="./shot-carte.jpg" data-caption="Le séjour et ses étapes, sur une carte" alt="Carte du séjour" loading="lazy" />
-              <img src="./shot-inviter.jpg" data-caption="Un lien ou un QR code, et le groupe est là" alt="Inviter des participants" loading="lazy" />
-              <img src="./shot-enfants.jpg" data-caption="La valise des enfants, adaptée à leur âge" alt="Checklist bagages des enfants" loading="lazy" />
-              <img src="./shot-prises.jpg" data-caption="Les infos pratiques selon la destination" alt="Prises et adaptateurs selon le pays" loading="lazy" />
-              <img src="./shot-chat.jpg" data-caption="La conversation du groupe, déjà prête" alt="Chat de groupe du séjour" loading="lazy" />
-              <img src="./shot-sejour.jpg" data-caption="Le séjour en un coup d'œil" alt="Vue d'ensemble du séjour" loading="lazy" />
+              <img src="../shot-sondage.jpg" data-caption="Gruppen röstar, resmålet bestäms" alt="Resmålsomröstning med gruppens röster" />
+              <img src="../shot-budget.jpg" data-caption="Vem är skyldig vad, i realtid" alt="Saldon för resans utgifter" loading="lazy" />
+              <img src="../shot-repas.jpg" data-caption="Måltidsidéer för hela gruppen" alt="Förslag på måltidsidéer" loading="lazy" />
+              <img src="../shot-courses.jpg" data-caption="Inköpslistan skapar sig själv" alt="Inköpslista sorterad efter avdelning" loading="lazy" />
+              <img src="../shot-souvenirs.jpg" data-caption="Allas minnen, på samma ställe" alt="Minnesgalleri för gruppen" loading="lazy" />
+              <img src="../shot-etapes.jpg" data-caption="Varje etapp har sina datum och sitt resmål" alt="Resa med flera etapper" loading="lazy" />
+              <img src="../shot-carte.jpg" data-caption="Resan och dess etapper, på en karta" alt="Karta över resan" loading="lazy" />
+              <img src="../shot-inviter.jpg" data-caption="En länk eller en QR-kod, och gruppen är där" alt="Bjud in deltagare" loading="lazy" />
+              <img src="../shot-enfants.jpg" data-caption="Barnens packning, anpassad efter ålder" alt="Packlista för barnens bagage" loading="lazy" />
+              <img src="../shot-prises.jpg" data-caption="Praktisk info utifrån resmålet" alt="Eluttag och adaptrar utifrån landet" loading="lazy" />
+              <img src="../shot-chat.jpg" data-caption="Gruppens konversation, redan klar" alt="Gruppchatt för resan" loading="lazy" />
+              <img src="../shot-sejour.jpg" data-caption="Hela resan på en gång" alt="Översikt över resan" loading="lazy" />
               </div>
               </div>
             </div>
@@ -1123,15 +1123,15 @@
 
   <div class="container">
 
-    <!-- Notre vision -->
+    <!-- Vår vision -->
     <div class="section after-hero" id="pourquoi">
-      <div class="kicker"><span class="knum">01</span><span class="kline"></span>Notre vision</div>
-      <h2 class="h2">Moins de temps à s'organiser, <em>plus de temps à en profiter.</em></h2>
+      <div class="kicker"><span class="knum">01</span><span class="kline"></span>Vår vision</div>
+      <h2 class="h2">Mindre tid att organisera, <em>mer tid att njuta.</em></h2>
       <div class="founder">
         <div class="cols">
-        <p>Un voyage entre amis, la cousinade annuelle, les 30 ans de Margaux, l'EVG d'Antoine… Se retrouver à plusieurs, sur le papier, c'est plutôt joyeux.</p>
-        <p>Et puis vient la phase de l'organisation. Dans un groupe, il y a souvent ceux qui planifient tout (qui cherchent le logement, relancent les autres, pensent aux trajets, font les comptes…) et ceux qui, le jour du départ, découvrent 100 messages non lus et culpabilisent d'avoir encore laissé Marie tout gérer.</p>
-        <p>Jusqu'ici, on s'en est toujours sortis sans application dédiée. Mais on s'est dit qu'on pouvait rendre tout ça plus simple, plus clair et plus sympa pour tout le monde. Avec Alela, on peut <strong>planifier, décider, retrouver, partager et relancer</strong>&nbsp;; et puis, idéalement, on referme l'appli <strong>pour passer moins de temps à organiser et plus à profiter de son séjour&nbsp;!</strong></p>
+        <p>En resa med vänner, den årliga kusinträffen, Margaux 30-årsdag, Antoines svensexa… Att samlas i grupp är på pappret ganska glädjande.</p>
+        <p>Och så kommer planeringsfasen. I en grupp finns det ofta de som planerar allt (som letar boende, påminner de andra, tänker på resorna, gör uträkningarna…) och de som, på avresedagen, upptäcker 100 olästa meddelanden och känner skuld över att ha låtit Marie sköta allt igen.</p>
+        <p>Hittills har vi alltid klarat oss utan en särskild app. Men vi tänkte att vi kunde göra allt enklare, tydligare och roligare för alla. Med Alela kan man <strong>planera, besluta, hitta, dela och påminna</strong>; och sedan, helst, stänger man appen <strong>för att lägga mindre tid på att organisera och mer på att njuta av resan!</strong></p>
         </div>
       </div>
 
@@ -1146,29 +1146,29 @@
             <aside class="vmf-sticky">
               <div class="vmf-sticky-inner">
                 <div class="vmf-photo-stage" id="vmf-photo-stage">
-                  <div class="vmf-photo t-orange active"><img src="./themes/road-trip.jpg" alt="Road trip entre potes" loading="lazy"><span>Road trip entre potes</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/week-end-amis.jpg" alt="Enterrement de vie de garçon" loading="lazy"><span>Enterrement de vie de garçon</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/evg-evjf.jpg" alt="Enterrement de vie de jeune fille" loading="lazy"><span>Enterrement de vie de jeune fille</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/vacances-famille.jpg" alt="Vacances en famille" loading="lazy"><span>Vacances en famille</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/anniversaire.jpg" alt="Anniversaire" loading="lazy"><span>Anniversaire</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/seminaire.jpg" alt="Week-end sportif" loading="lazy"><span>Week-end sportif</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/grande-tablee.jpg" alt="Séjour retrouvailles" loading="lazy"><span>Séjour retrouvailles</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/rando-groupe.jpg" alt="Week-end jeux de société" loading="lazy"><span>Week-end jeux de société</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/festival.jpg" alt="Festival" loading="lazy"><span>Festival</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/camping.jpg" alt="Camping et bivouac" loading="lazy"><span>Camping &amp; bivouac</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/cousinade.jpg" alt="Cousinade" loading="lazy"><span>Cousinade</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/vacances-amis.jpg" alt="Vacances entre amis" loading="lazy"><span>Vacances entre amis</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/voyage-amis.jpg" alt="Week-end entre amis" loading="lazy"><span>Week-end entre amis</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/retrouvailles.jpg" alt="Séminaire d'entreprise" loading="lazy"><span>Séminaire d'entreprise</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/sejour-lac.jpg" alt="Vacances en famille" loading="lazy"><span>Vacances en famille</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/soiree.jpg" alt="Soirée d'anniversaire" loading="lazy"><span>Soirée d'anniversaire</span></div>
-                  <div class="vmf-photo t-orange"><img src="./themes/diner-fetes.jpg" alt="Dîner de fêtes" loading="lazy"><span>Dîner de fêtes</span></div>
-                  <div class="vmf-photo t-violet"><img src="./themes/escapade-deux.jpg" alt="Escapade à deux" loading="lazy"><span>Escapade à deux</span></div>
+                  <div class="vmf-photo t-orange active"><img src="../themes/road-trip.jpg" alt="Road trip med kompisar" loading="lazy"><span>Road trip med kompisar</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/week-end-amis.jpg" alt="Svensexa" loading="lazy"><span>Svensexa</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/evg-evjf.jpg" alt="Möhippa" loading="lazy"><span>Möhippa</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/vacances-famille.jpg" alt="Familjesemester" loading="lazy"><span>Familjesemester</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/anniversaire.jpg" alt="Födelsedag" loading="lazy"><span>Födelsedag</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/seminaire.jpg" alt="Sportig helg" loading="lazy"><span>Sportig helg</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/grande-tablee.jpg" alt="Återträff" loading="lazy"><span>Återträff</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/rando-groupe.jpg" alt="Sällskapsspelshelg" loading="lazy"><span>Sällskapsspelshelg</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/festival.jpg" alt="Festival" loading="lazy"><span>Festival</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/camping.jpg" alt="Camping och bivack" loading="lazy"><span>Camping &amp; bivack</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/cousinade.jpg" alt="Kusinträff" loading="lazy"><span>Kusinträff</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/vacances-amis.jpg" alt="Semester med vänner" loading="lazy"><span>Semester med vänner</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/voyage-amis.jpg" alt="Helg med vänner" loading="lazy"><span>Helg med vänner</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/retrouvailles.jpg" alt="Företagsseminarium" loading="lazy"><span>Företagsseminarium</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/sejour-lac.jpg" alt="Familjesemester" loading="lazy"><span>Familjesemester</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/soiree.jpg" alt="Födelsedagsfest" loading="lazy"><span>Födelsedagsfest</span></div>
+                  <div class="vmf-photo t-orange"><img src="../themes/diner-fetes.jpg" alt="Helgmiddag" loading="lazy"><span>Helgmiddag</span></div>
+                  <div class="vmf-photo t-violet"><img src="../themes/escapade-deux.jpg" alt="Utflykt för två" loading="lazy"><span>Utflykt för två</span></div>
                 </div>
-                <div class="vmf-rail" id="vmf-rail" role="tablist" aria-label="Progression du manifeste">
-                  <button type="button" class="a-orange active" data-i="0" aria-label="Conviction 01"></button>
-                  <button type="button" class="a-violet" data-i="1" aria-label="Conviction 02"></button>
-                  <button type="button" class="a-orange" data-i="2" aria-label="Conviction 03"></button>
+                <div class="vmf-rail" id="vmf-rail" role="tablist" aria-label="Manifestets förlopp">
+                  <button type="button" class="a-orange active" data-i="0" aria-label="Övertygelse 01"></button>
+                  <button type="button" class="a-violet" data-i="1" aria-label="Övertygelse 02"></button>
+                  <button type="button" class="a-orange" data-i="2" aria-label="Övertygelse 03"></button>
                 </div>
               </div>
             </aside>
@@ -1177,32 +1177,32 @@
             <div class="vmf-panels" id="vmf-panels">
               <section class="vmf-panel a-orange active" data-i="0">
                 <span class="vmf-bg" aria-hidden="true">01</span>
-                <h3>Tout ce qui concerne votre séjour, dans un espace commun</h3>
+                <h3>Allt som rör din resa, på ett gemensamt ställe</h3>
                 <span class="vmf-rule"></span>
                 <div class="vmf-body">
-                  <p>Alela, c'est <strong>un espace qui rassemble tout ce qui concerne un même séjour</strong>&nbsp;: les participants, les dates, les destinations, les hébergements, les trajets, les repas, les courses, les bagages, le budget, une conversation commune, l'album souvenirs…</p>
-                  <p>Chacun peut y retrouver les informations dont il a besoin, mais aussi partager celles qui peuvent être utiles aux autres. Selon les séjours, à vous de piocher ce qui vous sert vraiment&nbsp;!</p>
+                  <p>Alela är <strong>en gemensam plats som samlar allt som rör en och samma resa</strong>: deltagarna, datumen, resmålen, boendena, resorna, måltiderna, inköpen, bagaget, budgeten, en gemensam konversation, minnesalbumet…</p>
+                  <p>Alla kan hitta den information de behöver, men även dela det som kan vara till nytta för andra. Beroende på resan väljer du själv vad som är relevant för dig!</p>
                 </div>
               </section>
               <section class="vmf-panel a-violet" data-i="1">
                 <span class="vmf-bg" aria-hidden="true">02</span>
-                <h3>Le séjour se planifie et s'organise à plusieurs&nbsp;!</h3>
+                <h3>Resan planeras och organiseras tillsammans!</h3>
                 <span class="vmf-rule"></span>
                 <div class="vmf-body">
-                  <p>Les galères commencent souvent avant le début du séjour, quand le groupe doit se mettre d'accord et décider ensemble.</p>
-                  <p class="qline">On part quand&nbsp;? Où&nbsp;? Quel logement&nbsp;? Qui vient&nbsp;? Qu'est-ce qu'on mange&nbsp;? Qui apporte quoi&nbsp;?</p>
-                  <p>Avec Alela, chacun peut participer, donner son avis, proposer une idée ou prendre en charge une partie de l'organisation&nbsp;: chacun participe à sa façon. <strong>Le séjour se prépare à plusieurs&nbsp;!</strong></p>
+                  <p>Krångel börjar ofta redan innan resan, när gruppen måste komma överens och besluta tillsammans.</p>
+                  <p class="qline">När åker vi? Vart? Vilket boende? Vem kommer? Vad äter vi? Vem tar med vad?</p>
+                  <p>Med Alela kan alla delta, ge sin åsikt, föreslå en idé eller ta ansvar för en del av planeringen: alla bidrar på sitt sätt. <strong>Resan förbereds tillsammans!</strong></p>
                 </div>
               </section>
               <section class="vmf-panel a-orange" data-i="2">
                 <span class="vmf-bg" aria-hidden="true">03</span>
-                <h3>Une application collaborative, mais pensée pour chacun</h3>
+                <h3>En app för samarbete, men tänkt för var och en</h3>
                 <span class="vmf-rule"></span>
                 <div class="vmf-body">
-                  <p>Un séjour s'organise à plusieurs, mais au moment de faire sa valise à une heure du matin, on est souvent bien seul face à ses questions&nbsp;:</p>
-                  <p class="qline">Je prends une serviette&nbsp;? Il me faut un adaptateur pour l'Irlande&nbsp;? Quelqu'un peut me récupérer à la gare&nbsp;?</p>
-                  <p>Alors Alela prend en compte la situation de chacun et vous propose une expérience personnalisée&nbsp;: votre checklist bagages, la prise en compte de votre profil alimentaire, des suggestions de trajets communs selon votre situation…</p>
-                  <p>Un même séjour, une organisation commune, mais <strong>une expérience qui s'adapte à chacun.</strong></p>
+                  <p>En resa organiseras tillsammans, men när det är dags att packa väskan klockan ett på natten står man ofta ganska ensam med sina frågor:</p>
+                  <p class="qline">Ska jag ta med handduk? Behöver jag en adapter för Irland? Kan någon hämta mig på stationen?</p>
+                  <p>Alela tar då hänsyn till allas situation och ger dig en personlig upplevelse: din packlista, din matprofil, förslag på gemensamma resor utifrån din situation…</p>
+                  <p>Samma resa, en gemensam planering, men <strong>en upplevelse som anpassas efter var och en.</strong></p>
                 </div>
               </section>
             </div>
@@ -1216,37 +1216,37 @@
             <div class="vmf-mtrack" id="vmf-mtrack">
             <div class="vmf-mcard a-orange active" data-i="0">
               <div class="vmf-mphoto t-orange">
-                <img src="./themes/road-trip.jpg" alt="" loading="lazy">
+                <img src="../themes/road-trip.jpg" alt="" loading="lazy">
                 <span class="vmf-mphoto-num">01</span>
               </div>
-              <h3>Tout au même endroit</h3>
+              <h3>Allt på samma ställe</h3>
               <span class="vmf-rule"></span>
-              <div class="vmf-body"><p>Chaque séjour a son propre espace qui rassemble tout&nbsp;: participants, dates, lieux, hébergements, trajets, repas, courses, bagages, budget, conversation, souvenirs. <strong>Un seul endroit pour tout retrouver et partager.</strong></p></div>
+              <div class="vmf-body"><p>Varje resa har sitt eget utrymme som samlar allt: deltagare, datum, platser, boenden, resor, måltider, inköp, bagage, budget, konversation, minnen. <strong>Ett enda ställe för att hitta och dela allt.</strong></p></div>
             </div>
             <div class="vmf-mcard a-violet" data-i="1">
               <div class="vmf-mphoto t-violet">
-                <img src="./themes/grande-tablee.jpg" alt="" loading="lazy">
+                <img src="../themes/grande-tablee.jpg" alt="" loading="lazy">
                 <span class="vmf-mphoto-num">02</span>
               </div>
-              <h3>Organiser à plusieurs</h3>
+              <h3>Organisera tillsammans</h3>
               <span class="vmf-rule"></span>
-              <div class="vmf-body"><p>On part quand&nbsp;? Où&nbsp;? Qui apporte quoi&nbsp;? Avec Alela, chacun peut participer, donner son avis, proposer une idée ou prendre en charge une partie de l'organisation&nbsp;: chacun participe à sa façon. <strong>Le séjour se prépare à plusieurs&nbsp;!</strong></p></div>
+              <div class="vmf-body"><p>När åker vi? Vart? Vem tar med vad? Med Alela kan alla delta, ge sin åsikt, föreslå en idé eller ta ansvar för en del av planeringen: alla bidrar på sitt sätt. <strong>Resan förbereds tillsammans!</strong></p></div>
             </div>
             <div class="vmf-mcard a-orange" data-i="2">
               <div class="vmf-mphoto t-orange">
-                <img src="./themes/vacances-famille.jpg" alt="" loading="lazy">
+                <img src="../themes/vacances-famille.jpg" alt="" loading="lazy">
                 <span class="vmf-mphoto-num">03</span>
               </div>
-              <h3>Pensée pour chacun</h3>
+              <h3>Tänkt för var och en</h3>
               <span class="vmf-rule"></span>
-              <div class="vmf-body"><p>Une organisation commune, mais une expérience qui s'adapte à chacun&nbsp;: votre checklist bagages, celle de vos enfants par âge, une liste de courses qui tient compte des régimes de chacun, des trajets communs selon votre situation.</p></div>
+              <div class="vmf-body"><p>En gemensam planering, men en upplevelse som anpassas efter var och en: din packlista, barnens efter ålder, en inköpslista som tar hänsyn till allas kosthållning, gemensamma resor utifrån din situation.</p></div>
             </div>
             </div>
           </div>
-          <div class="vmf-dots" id="vmf-dots" role="tablist" aria-label="Convictions">
-            <button type="button" class="a-orange active" data-i="0" aria-label="Conviction 01"><span></span></button>
-            <button type="button" class="a-violet" data-i="1" aria-label="Conviction 02"><span></span></button>
-            <button type="button" class="a-orange" data-i="2" aria-label="Conviction 03"><span></span></button>
+          <div class="vmf-dots" id="vmf-dots" role="tablist" aria-label="Övertygelser">
+            <button type="button" class="a-orange active" data-i="0" aria-label="Övertygelse 01"><span></span></button>
+            <button type="button" class="a-violet" data-i="1" aria-label="Övertygelse 02"><span></span></button>
+            <button type="button" class="a-orange" data-i="2" aria-label="Övertygelse 03"><span></span></button>
           </div>
         </div>
 
@@ -1254,65 +1254,65 @@
     </div>
 
     <!-- Album des occasions (mobile) : une seule ligne, mêmes titres que le desktop -->
-    <div class="themes themes-mobile" aria-label="Toutes vos occasions de partir">
-      <div class="kicker themes-kicker"><span class="kline"></span>Pour toutes vos occasions<span class="kline"></span></div>
+    <div class="themes themes-mobile" aria-label="Alla dina tillfällen att åka i väg">
+      <div class="kicker themes-kicker"><span class="kline"></span>För alla dina tillfällen<span class="kline"></span></div>
       <div class="themes-row">
         <div class="themes-track">
-          <a class="theme-card t-orange"><img src="./themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip entre potes</span></a>
-          <a class="theme-card t-violet"><img src="./themes/week-end-amis.jpg" alt="" loading="lazy"><span>Enterrement de vie de garçon</span></a>
-          <a class="theme-card t-orange"><img src="./themes/evg-evjf.jpg" alt="" loading="lazy"><span>Enterrement de vie de jeune fille</span></a>
-          <a class="theme-card t-violet"><img src="./themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacances en famille</span></a>
-          <a class="theme-card t-orange"><img src="./themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
-          <a class="theme-card t-violet"><img src="./themes/grande-tablee.jpg" alt="" loading="lazy"><span>Séjour retrouvailles</span></a>
-          <a class="theme-card t-orange"><img src="./themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
-          <a class="theme-card t-violet"><img src="./themes/seminaire.jpg" alt="" loading="lazy"><span>Week-end sportif</span></a>
-          <a class="theme-card t-orange"><img src="./themes/camping.jpg" alt="" loading="lazy"><span>Camping &amp; bivouac</span></a>
-          <a class="theme-card t-violet"><img src="./themes/escapade-deux.jpg" alt="" loading="lazy"><span>Escapade à deux</span></a>
+          <a class="theme-card t-orange"><img src="../themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip med kompisar</span></a>
+          <a class="theme-card t-violet"><img src="../themes/week-end-amis.jpg" alt="" loading="lazy"><span>Svensexa</span></a>
+          <a class="theme-card t-orange"><img src="../themes/evg-evjf.jpg" alt="" loading="lazy"><span>Möhippa</span></a>
+          <a class="theme-card t-violet"><img src="../themes/vacances-famille.jpg" alt="" loading="lazy"><span>Familjesemester</span></a>
+          <a class="theme-card t-orange"><img src="../themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
+          <a class="theme-card t-violet"><img src="../themes/grande-tablee.jpg" alt="" loading="lazy"><span>Återträff</span></a>
+          <a class="theme-card t-orange"><img src="../themes/cousinade.jpg" alt="" loading="lazy"><span>Kusinträff</span></a>
+          <a class="theme-card t-violet"><img src="../themes/seminaire.jpg" alt="" loading="lazy"><span>Sportig helg</span></a>
+          <a class="theme-card t-orange"><img src="../themes/camping.jpg" alt="" loading="lazy"><span>Camping &amp; bivack</span></a>
+          <a class="theme-card t-violet"><img src="../themes/escapade-deux.jpg" alt="" loading="lazy"><span>Utflykt för två</span></a>
           <!-- duplicata pour la boucle -->
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip entre potes</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/week-end-amis.jpg" alt="" loading="lazy"><span>Enterrement de vie de garçon</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/evg-evjf.jpg" alt="" loading="lazy"><span>Enterrement de vie de jeune fille</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/vacances-famille.jpg" alt="" loading="lazy"><span>Vacances en famille</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/grande-tablee.jpg" alt="" loading="lazy"><span>Séjour retrouvailles</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/cousinade.jpg" alt="" loading="lazy"><span>Cousinade</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/seminaire.jpg" alt="" loading="lazy"><span>Week-end sportif</span></a>
-          <a class="theme-card t-orange" aria-hidden="true"><img src="./themes/camping.jpg" alt="" loading="lazy"><span>Camping &amp; bivouac</span></a>
-          <a class="theme-card t-violet" aria-hidden="true"><img src="./themes/escapade-deux.jpg" alt="" loading="lazy"><span>Escapade à deux</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/road-trip.jpg" alt="" loading="lazy"><span>Road trip med kompisar</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/week-end-amis.jpg" alt="" loading="lazy"><span>Svensexa</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/evg-evjf.jpg" alt="" loading="lazy"><span>Möhippa</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/vacances-famille.jpg" alt="" loading="lazy"><span>Familjesemester</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/festival.jpg" alt="" loading="lazy"><span>Festival</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/grande-tablee.jpg" alt="" loading="lazy"><span>Återträff</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/cousinade.jpg" alt="" loading="lazy"><span>Kusinträff</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/seminaire.jpg" alt="" loading="lazy"><span>Sportig helg</span></a>
+          <a class="theme-card t-orange" aria-hidden="true"><img src="../themes/camping.jpg" alt="" loading="lazy"><span>Camping &amp; bivack</span></a>
+          <a class="theme-card t-violet" aria-hidden="true"><img src="../themes/escapade-deux.jpg" alt="" loading="lazy"><span>Utflykt för två</span></a>
         </div>
       </div>
     </div>
 
-    <!-- Comment ça marche -->
+    <!-- Så funkar det -->
     <div class="section" id="etapes">
-      <div class="kicker"><span class="knum">02</span><span class="kline"></span>Comment ça marche</div>
-      <h2 class="h2">Lancez votre séjour <em>en trois étapes.</em></h2>
+      <div class="kicker"><span class="knum">02</span><span class="kline"></span>Så funkar det</div>
+      <h2 class="h2">Starta din resa <em>i tre steg.</em></h2>
       <div class="steps-grid">
         <div class="steps-screen">
           <div class="phone-frame">
-            <video src="./video-creation.mp4" autoplay muted loop playsinline preload="metadata" aria-label="La création d'un séjour sur Alela, de A à Z"></video>
+            <video src="../video-creation.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Att skapa en resa på Alela, från A till Ö"></video>
           </div>
         </div>
         <ol class="timeline">
           <li class="tl-step a-orange">
             <span class="tl-marker">1</span>
             <div class="tl-content">
-              <h3>Créez votre séjour</h3>
-              <p>Répondez à quelques questions&nbsp;: en moins de deux minutes, votre séjour est créé.</p>
+              <h3>Skapa din resa</h3>
+              <p>Svara på några frågor: på under två minuter är din resa skapad.</p>
             </div>
           </li>
           <li class="tl-step a-violet">
             <span class="tl-marker">2</span>
             <div class="tl-content">
-              <h3>Invitez les participants</h3>
-              <p>Partagez-leur un lien ou un QR Code pour rejoindre Alela et le séjour. Chacun s'y connecte depuis son téléphone, iOS ou Android.</p>
+              <h3>Bjud in deltagarna</h3>
+              <p>Dela en länk eller en QR-kod med dem för att gå med i Alela och resan. Alla ansluter från sin telefon, iOS eller Android.</p>
             </div>
           </li>
           <li class="tl-step a-blue">
             <span class="tl-marker">3</span>
             <div class="tl-content">
-              <h3>Et c'est parti&nbsp;!</h3>
-              <p>Faites vivre votre séjour sur Alela&nbsp;: dates, logement, repas, budget… tout se partage et se décide sur la même interface, visible par tout le groupe.</p>
+              <h3>Och nu kör vi!</h3>
+              <p>Håll resan levande på Alela: datum, boende, måltider, budget… allt delas och beslutas i samma gränssnitt, synligt för hela gruppen.</p>
             </div>
           </li>
         </ol>
@@ -1321,326 +1321,326 @@
 
     <!-- Modules -->
     <div class="section" id="modules">
-      <div class="kicker"><span class="knum">03</span><span class="kline"></span>Les fonctionnalités</div>
-      <h2 class="h2">Pour chaque séjour, <em>une interface unique.</em></h2>
+      <div class="kicker"><span class="knum">03</span><span class="kline"></span>Funktionerna</div>
+      <h2 class="h2">För varje resa, <em>ett unikt gränssnitt.</em></h2>
       <div class="lede">
-        <p>Chaque séjour a son propre espace, partagé par tout le groupe et synchronisé en temps réel.</p>
-        <p>On y retrouve toutes les fonctionnalités&nbsp;: des dates au budget, en passant par les repas, les bagages et les souvenirs, mais aussi les décisions, les infos pratiques, la conversation du groupe et bien plus encore&nbsp;!</p>
-        <p>Bien sûr, à chaque séjour, vous n'utilisez que ce qui vous sert vraiment, et vous pouvez créer autant de séjours que vous le souhaitez&nbsp;!</p>
+        <p>Varje resa har sitt eget utrymme, delat av hela gruppen och synkroniserat i realtid.</p>
+        <p>Där finns alla funktioner: från datum till budget, via måltider, bagage och minnen, men även beslut, praktisk info, gruppens konversation och mycket mer!</p>
+        <p>Självklart använder du bara det som verkligen är till nytta för varje resa, och du kan skapa så många resor du vill!</p>
       </div>
 
       <div class="mod-hub-grid" id="mod-hub-grid">
         <div class="mod-hub-col">
         <div class="mod-hub" id="mod-hub">
           <div class="hub-center" aria-hidden="true">
-            <img src="./alela-icon.png" alt="" />
+            <img src="../alela-icon.png" alt="" />
           </div>
-          <button class="hub-tile g-dates active" type="button" data-mod="dates" aria-label="Dates" style="left: 50%; top: 11%;">
+          <button class="hub-tile g-dates active" type="button" data-mod="dates" aria-label="Datum" style="left: 50%; top: 11%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 2.8v4M16 2.8v4"/></svg>
-            <span class="hub-tile-label">Dates</span>
+            <span class="hub-tile-label">Datum</span>
           </button>
-          <button class="hub-tile g-dest" type="button" data-mod="dest" aria-label="Destinations" style="left: 75.1%; top: 20.1%;">
+          <button class="hub-tile g-dest" type="button" data-mod="dest" aria-label="Resmål" style="left: 75.1%; top: 20.1%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5 3.5 6.5v13L9 17.5l6 2 5.5-2v-13l-5.5 2-6-2Z"/><path d="M9 4.5v13M15 6.5v13"/></svg>
-            <span class="hub-tile-label">Destinations</span>
+            <span class="hub-tile-label">Resmål</span>
           </button>
-          <button class="hub-tile g-heberg" type="button" data-mod="heberg" aria-label="Hébergements" style="left: 88.4%; top: 43.2%;">
+          <button class="hub-tile g-heberg" type="button" data-mod="heberg" aria-label="Boenden" style="left: 88.4%; top: 43.2%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18v-11"/><path d="M3.5 15h17v3M3.5 18v0M20.5 15v-2a2.5 2.5 0 0 0-2.5-2.5h-7.5V15"/><circle cx="6.9" cy="11.6" r="1.6"/></svg>
-            <span class="hub-tile-label">Hébergements</span>
+            <span class="hub-tile-label">Boenden</span>
           </button>
-          <button class="hub-tile g-trajets" type="button" data-mod="trajets" aria-label="Trajets" style="left: 83.8%; top: 69.5%;">
+          <button class="hub-tile g-trajets" type="button" data-mod="trajets" aria-label="Resor" style="left: 83.8%; top: 69.5%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3.5" width="12" height="13.5" rx="3"/><path d="M6 11.5h12M9.6 20.5 8.2 17m6.2 3.5 1.4-3.5M9.4 14.3h.01M14.6 14.3h.01"/></svg>
-            <span class="hub-tile-label">Trajets</span>
+            <span class="hub-tile-label">Resor</span>
           </button>
-          <button class="hub-tile g-repas" type="button" data-mod="repas" aria-label="Repas" style="left: 63.3%; top: 86.7%;">
+          <button class="hub-tile g-repas" type="button" data-mod="repas" aria-label="Måltider" style="left: 63.3%; top: 86.7%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M7 3v7.5M4.5 3v4.5a2.5 2.5 0 0 0 5 0V3M7 10.5V21M16.5 3c-1.7 1.2-2.5 3.6-2.5 6v3h5v9M19 3v9"/></svg>
-            <span class="hub-tile-label">Repas</span>
+            <span class="hub-tile-label">Måltider</span>
           </button>
-          <button class="hub-tile g-courses" type="button" data-mod="courses" aria-label="Courses" style="left: 36.7%; top: 86.7%;">
+          <button class="hub-tile g-courses" type="button" data-mod="courses" aria-label="Inköp" style="left: 36.7%; top: 86.7%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="19.7" r="1.3"/><circle cx="16.8" cy="19.7" r="1.3"/><path d="M3.5 4.5h2.2l2.1 10.5h9.9l2.1-7.5H7"/></svg>
-            <span class="hub-tile-label">Courses</span>
+            <span class="hub-tile-label">Inköp</span>
           </button>
-          <button class="hub-tile g-bagages" type="button" data-mod="bagages" aria-label="Bagages" style="left: 16.2%; top: 69.5%;">
+          <button class="hub-tile g-bagages" type="button" data-mod="bagages" aria-label="Bagage" style="left: 16.2%; top: 69.5%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="7.5" width="14" height="13" rx="2.5"/><path d="M9 7.5V5.2A1.7 1.7 0 0 1 10.7 3.5h2.6A1.7 1.7 0 0 1 15 5.2v2.3M9.5 11.5v5M14.5 11.5v5"/></svg>
-            <span class="hub-tile-label">Bagages</span>
+            <span class="hub-tile-label">Bagage</span>
           </button>
           <button class="hub-tile g-budget" type="button" data-mod="budget" aria-label="Budget" style="left: 11.6%; top: 43.2%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13.5" rx="2.5"/><path d="M3 10h18M7 15.5h4"/></svg>
             <span class="hub-tile-label">Budget</span>
           </button>
-          <button class="hub-tile g-souvenirs" type="button" data-mod="souvenirs" aria-label="Souvenirs" style="left: 24.9%; top: 20.1%;">
+          <button class="hub-tile g-souvenirs" type="button" data-mod="souvenirs" aria-label="Minnen" style="left: 24.9%; top: 20.1%;">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 7.5h3l1.8-2.5h5.4l1.8 2.5h3A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5V9a1.5 1.5 0 0 1 1.5-1.5Z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
-            <span class="hub-tile-label">Souvenirs</span>
+            <span class="hub-tile-label">Minnen</span>
           </button>
         </div>
         <div class="hub-extras">
           <span class="hub-plus">+</span>
           <button class="hub-pill" type="button" data-mod="chat">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.5-4.6A8 8 0 1 1 21 12Z"/></svg>
-            Chat
+            Chatt
           </button>
           <button class="hub-pill" type="button" data-mod="sondages">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M5 20v-8M12 20V4M19 20v-11"/></svg>
-            Sondages
+            Omröstningar
           </button>
           <button class="hub-pill" type="button" data-mod="convertisseur">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5h13.5l-3-3M20 16.5H6.5l3 3"/></svg>
-            Convertisseur
+            Omvandlare
           </button>
         </div>
-        <p class="hub-hint"><span class="hint-desktop">Cliquez ou survolez les icônes pour découvrir le détail de chaque fonctionnalité.</span><span class="hint-mobile">Touchez une icône pour découvrir le détail de chaque fonctionnalité.</span></p>
+        <p class="hub-hint"><span class="hint-desktop">Klicka eller för musen över ikonerna för att se detaljerna för varje funktion.</span><span class="hint-mobile">Tryck på en ikon för att se detaljerna för varje funktion.</span></p>
         </div>
 
         <div class="mod-detail-panel" id="mod-detail-panel">
           <div class="mod-detail active" data-mod="dates">
-            <h3>Dates</h3>
-            <div class="mod-tagline">Trouver quand partir, sans y passer trois semaines.</div>
-            <p>Deux façons de faire&nbsp;: <strong>fixez les dates directement</strong> pour en informer les participants, ou <strong>décidez collectivement grâce à un sondage</strong> pour prendre en compte les disponibilités et les préférences de chacun, sans échanges interminables.</p>
-            <p>Une fois les dates posées, l'information se retrouve en un coup d'œil, et chacun peut <strong>ajouter le séjour à son agenda personnel</strong>.</p>
+            <h3>Datum</h3>
+            <div class="mod-tagline">Hitta rätt datum, utan att lägga tre veckor på det.</div>
+            <p>Två sätt att göra det på: <strong>bestäm datumen direkt</strong> för att informera deltagarna, eller <strong>besluta tillsammans genom en omröstning</strong> för att ta hänsyn till allas tillgänglighet och önskemål, utan ändlösa diskussioner.</p>
+            <p>När datumen är bestämda syns informationen på en gång, och alla kan <strong>lägga till resan i sin egen kalender</strong>.</p>
           </div>
           <div class="mod-detail" data-mod="dest">
-            <h3>Destinations</h3>
-            <div class="mod-tagline">Choisir la destination qui met tout le monde d'accord.</div>
-            <p>Là aussi, à vous de choisir&nbsp;: la destination peut être <strong>fixée directement</strong> pour en informer les participants, ou <strong>décidée collectivement grâce à un sondage</strong>&nbsp;: chacun propose, le groupe vote.</p>
-            <p>Ensuite, tout le monde retrouve facilement l'information, ainsi que <strong>la carte et la météo</strong> de la destination.</p>
-            <p>Et si vous partez en mode road trip&nbsp;? Aucun problème&nbsp;: renseignez <strong>plusieurs destinations, chacune avec ses dates</strong>.</p>
+            <h3>Resmål</h3>
+            <div class="mod-tagline">Välj resmålet alla kan enas om.</div>
+            <p>Även här väljer du själv: resmålet kan <strong>bestämmas direkt</strong> för att informera deltagarna, eller <strong>beslutas tillsammans genom en omröstning</strong>: alla föreslår, gruppen röstar.</p>
+            <p>Sedan hittar alla enkelt informationen, samt <strong>kartan och vädret</strong> för resmålet.</p>
+            <p>Och om du åker i road trip-stil? Inga problem: ange <strong>flera resmål, var och en med sina datum</strong>.</p>
           </div>
           <div class="mod-detail" data-mod="heberg">
-            <h3>Hébergements</h3>
-            <div class="mod-tagline">Loger tout le monde, sans prise de tête.</div>
-            <p><strong>Vous avez déjà votre hébergement&nbsp;?</strong> Partagez-en les infos utiles (lien de réservation, adresse, arrivée, parking…)&nbsp;: le groupe les retrouve en un clin d'œil, et les choses à emporter filent directement dans la checklist bagages. Si tout le monde ne dort pas au même endroit, ajoutez simplement plusieurs hébergements.</p>
-            <p><strong>Pas encore trouvé&nbsp;?</strong> Alela facilite votre recherche sur plusieurs plateformes (Airbnb, Booking, Agoda…) en préremplissant vos critères&nbsp;: dates, lieu, nombre de participants. Gardez vos pépites en favoris, puis lancez un sondage pour aider le groupe à trancher&nbsp;: prix, localisation, avis des participants…</p>
+            <h3>Boenden</h3>
+            <div class="mod-tagline">Ordna boende åt alla, utan krångel.</div>
+            <p><strong>Har du redan ett boende?</strong> Dela den viktiga infon (bokningslänk, adress, ankomst, parkering…): gruppen hittar den direkt, och det som ska tas med hamnar automatiskt i packlistan. Om alla inte sover på samma ställe lägger du bara till flera boenden.</p>
+            <p><strong>Inte hittat än?</strong> Alela gör det enklare att söka på flera plattformar (Airbnb, Booking, Agoda…) genom att fylla i dina kriterier i förväg: datum, plats, antal deltagare. Spara dina favoriter, starta sedan en omröstning för att hjälpa gruppen bestämma: pris, läge, omdömen från deltagarna…</p>
           </div>
           <div class="mod-detail" data-mod="trajets">
-            <h3>Trajets</h3>
-            <div class="mod-tagline">Coordonner vos trajets et voyager ensemble.</div>
-            <p>L'idée&nbsp;: que personne ne se retrouve sans solution de transport pour se rendre au séjour, et que les voitures ne partent pas à moitié vides…</p>
-            <p>Pour ça, chacun renseigne son itinéraire et les détails de son trajet aller/retour, même s'il n'est pas encore tout à fait défini.</p>
-            <p>À partir de là, Alela repère les coordinations possibles et <strong>suggère des trajets communs entre participants</strong> quand c'est pertinent&nbsp;: covoiturer, faire un détour pour récupérer quelqu'un, ou tout simplement prendre le même train pour profiter du voyage ensemble.</p>
-            <p>Les suggestions tiennent compte de la situation réelle de chacun&nbsp;: mode de transport, places disponibles, points de départ et d'arrivée, détours possibles ou non, flexibilité sur les dates et les horaires…</p>
+            <h3>Resor</h3>
+            <div class="mod-tagline">Samordna era resor och res tillsammans.</div>
+            <p>Tanken: att ingen ska stå utan transport till resan, och att bilarna inte ska köra iväg halvtomma…</p>
+            <p>För det anger var och en sin resväg och detaljerna för tur och retur, även om den inte är helt bestämd än.</p>
+            <p>Utifrån det upptäcker Alela möjliga samordningar och <strong>föreslår gemensamma resor mellan deltagare</strong> när det är relevant: samåka, ta en omväg för att hämta någon, eller helt enkelt ta samma tåg för att umgås under resan.</p>
+            <p>Förslagen tar hänsyn till allas verkliga situation: transportsätt, lediga platser, start- och slutpunkter, möjliga omvägar eller inte, flexibilitet kring datum och tider…</p>
           </div>
           <div class="mod-detail" data-mod="repas">
-            <h3>Repas</h3>
-            <div class="mod-tagline">Nourrir un groupe, sans casse-tête.</div>
-            <p>Retrouvez un <strong>agenda des repas du séjour</strong>&nbsp;: chacun voit le repas prévu jour après jour, avec des quantités adaptées aux personnes présentes.</p>
-            <p>En manque d'inspiration pour les menus&nbsp;? Alela vous suggère <strong>des idées et des recettes complètes</strong>, calibrées pour le nombre de convives. Et pour des suggestions vraiment adaptées, chacun peut compléter son <strong>profil alimentaire</strong>&nbsp;: allergies, régime, aliments à éviter. Les suggestions pourront en tenir compte sans que vous ayez besoin d'y penser.</p>
-            <p>Un doute sur le menu&nbsp;? Vous pouvez aussi lancer des sondages pour être sûr que les repas conviennent vraiment à tout le monde, et conserver vos recettes fétiches en favoris pour les prochains séjours.</p>
+            <h3>Måltider</h3>
+            <div class="mod-tagline">Mata en grupp, utan huvudbry.</div>
+            <p>Hitta en <strong>måltidsplanering för resan</strong>: alla ser den planerade måltiden dag för dag, med mängder anpassade efter antalet närvarande.</p>
+            <p>Behöver du inspiration till menyerna? Alela föreslår <strong>idéer och kompletta recept</strong>, anpassade efter antalet gäster. Och för verkligt anpassade förslag kan alla fylla i sin <strong>matprofil</strong>: allergier, kosthållning, livsmedel att undvika. Förslagen tar sedan hänsyn till det, utan att du behöver tänka på det.</p>
+            <p>Osäker på menyn? Du kan också starta omröstningar för att se till att måltiderna verkligen passar alla, och spara dina favoritrecept för kommande resor.</p>
           </div>
           <div class="mod-detail" data-mod="courses">
-            <h3>Courses</h3>
-            <div class="mod-tagline">Une liste de courses générée en un clin d'œil.</div>
-            <p>Une <strong>liste de courses commune au groupe</strong>, organisée par rayons et par repas&nbsp;: chacun peut y ajouter des éléments, et au moment des courses, chacun coche de son côté, la liste se met à jour en direct pour tout le monde.</p>
-            <p>Et si vous avez complété l'agenda des repas, <strong>la liste de courses se génère toute seule</strong>. Tous les ingrédients des recettes prévues s'y ajoutent, dans les bonnes quantités pour le bon nombre de convives, sans rien avoir à saisir.</p>
+            <h3>Inköp</h3>
+            <div class="mod-tagline">En inköpslista som skapas på ett kick.</div>
+            <p>En <strong>gemensam inköpslista för gruppen</strong>, sorterad efter avdelning och måltid: alla kan lägga till saker, och när det är dags att handla bockar alla av på sin sida, listan uppdateras i direktsändning för alla.</p>
+            <p>Och om du har fyllt i måltidsplaneringen skapas <strong>inköpslistan helt av sig själv</strong>. Alla ingredienser från de planerade recepten läggs till, i rätt mängd för rätt antal gäster, utan att du behöver skriva något.</p>
           </div>
           <div class="mod-detail" data-mod="bagages">
-            <h3>Bagages</h3>
-            <div class="mod-tagline">Des valises prêtes sans y penser.</div>
-            <p>Chacun retrouve sa <strong>checklist pour préparer sa valise sereinement&nbsp;!</strong></p>
-            <p>Son gros intérêt&nbsp;: elle se <strong>préconfigure et se met à jour selon le contexte du séjour</strong> (durée, météo, pays et culture, essentiels pour l'hébergement, mode de transport et plus encore), tout en s'adaptant à votre profil et à vos choix&nbsp;: activités prévues, espace disponible dans les bagages, essentiels personnels, animaux de compagnie…</p>
-            <p>Vous partez avec vos enfants&nbsp;? Retrouvez également leurs listes, adaptées à leur âge et au contexte du séjour. Et si l'autre co-parent fait partie du séjour, la liste est commune et partagée.</p>
-            <p>Enfin, pour les articles utiles à tout le monde (une enceinte, des jeux, la trousse à pharmacie…), une <strong>liste commune au groupe</strong> permet de tout regrouper. Chacun peut se désigner pour apporter un item&nbsp;: on évite ainsi les doublons… et surtout les oublis&nbsp;!</p>
+            <h3>Bagage</h3>
+            <div class="mod-tagline">Packade väskor utan att behöva tänka på det.</div>
+            <p>Alla hittar sin <strong>checklista för att packa väskan lugnt och tryggt!</strong></p>
+            <p>Det stora plusset: den <strong>förkonfigureras och uppdateras utifrån resans sammanhang</strong> (längd, väder, land och kultur, det viktigaste för boendet, transportsätt och mer), samtidigt som den anpassas efter din profil och dina val: planerade aktiviteter, utrymme i bagaget, personliga nödvändigheter, husdjur…</p>
+            <p>Åker du med dina barn? Hitta även deras listor, anpassade efter ålder och resans sammanhang. Och om den andra medföräldern är med på resan är listan gemensam och delad.</p>
+            <p>Slutligen, för saker som är till nytta för alla (en högtalare, spel, apoteksväskan…), samlar en <strong>gemensam lista för gruppen</strong> allt. Alla kan anmäla sig att ta med en sak: så undviker man dubbletter… och framför allt att något glöms bort!</p>
           </div>
           <div class="mod-detail" data-mod="budget">
             <h3>Budget</h3>
-            <div class="mod-tagline">Zéro calcul de fin de séjour.</div>
-            <p>Vous avez effectué une dépense pour le groupe, ou pour une partie des participants&nbsp;? Ajoutez-la dans Alela, et <strong>visualisez en temps réel qui doit combien à qui</strong>&nbsp;! Alela vous suggère les remboursements les plus simples pour solder les comptes entre participants à la fin du séjour, et chaque remboursement se marque en un clic.</p>
-            <p>Et si vous avez payé dans différentes devises&nbsp;? Pas de souci&nbsp;: Alela convertit automatiquement pour vous faciliter les démarches.</p>
-            <p>Petit plus&nbsp;: le coût de l'hébergement renseigné dans Alela et les 4,99&nbsp;€ pour débloquer le mode Aventure peuvent <strong>s'importer automatiquement dans le budget</strong>, pour être directement répartis entre tous les participants&nbsp;!</p>
+            <div class="mod-tagline">Noll uträkningar i slutet av resan.</div>
+            <p>Har du haft en utgift för gruppen, eller för en del av deltagarna? Lägg till den i Alela, och <strong>se i realtid vem som är skyldig vad till vem</strong>! Alela föreslår de enklaste återbetalningarna för att göra upp räkningen mellan deltagarna i slutet av resan, och varje återbetalning markeras med ett klick.</p>
+            <p>Och om du har betalat i olika valutor? Inga problem: Alela omvandlar automatiskt för att underlätta för dig.</p>
+            <p>Liten bonus: kostnaden för boendet som anges i Alela och de 4,99 € för att låsa upp Äventyrsläge kan <strong>importeras automatiskt till budgeten</strong>, för att direkt delas mellan alla deltagare!</p>
           </div>
           <div class="mod-detail" data-mod="souvenirs">
-            <h3>Souvenirs</h3>
-            <div class="mod-tagline">Les photos de tous, au même endroit.</div>
-            <p>Un espace commun pour <strong>les photos et vidéos de tout le monde</strong>, avec réactions et commentaires pour revivre les moments ensemble. Tout se télécharge en un clic, sans doublons, et chaque séjour garde son album, à rouvrir des mois plus tard.</p>
+            <h3>Minnen</h3>
+            <div class="mod-tagline">Allas foton, på samma ställe.</div>
+            <p>En gemensam plats för <strong>allas foton och videor</strong>, med reaktioner och kommentarer för att återuppleva stunderna tillsammans. Allt laddas ner med ett klick, utan dubbletter, och varje resa behåller sitt album, att öppna igen månader senare.</p>
           </div>
           <div class="mod-detail" data-mod="chat">
-            <h3>Chat</h3>
-            <div class="mod-tagline">Une conversation qui réunit tout le groupe automatiquement&nbsp;!</div>
-            <p>Dès le séjour créé, <strong>la conversation de groupe existe déjà, avec tous les participants dedans</strong>. Rien à créer sur une autre appli, aucun numéro ni contact à récupérer.</p>
-            <p>Besoin d'un aparté&nbsp;? Créez des conversations avec seulement les participants que vous souhaitez&nbsp;: un cadeau surprise à organiser sans la personne concernée, un covoiturage à caler à deux…</p>
+            <h3>Chatt</h3>
+            <div class="mod-tagline">En konversation som samlar hela gruppen automatiskt!</div>
+            <p>Så fort resan är skapad <strong>finns gruppens konversation redan där, med alla deltagare med</strong>. Inget att skapa i en annan app, inget nummer eller kontakt att hämta.</p>
+            <p>Behöver du prata enskilt? Skapa konversationer med bara de deltagare du vill: en överraskningspresent att planera utan den det gäller, en samåkning att bestämma mellan två…</p>
           </div>
           <div class="mod-detail" data-mod="sondages">
-            <h3>Sondages</h3>
-            <div class="mod-tagline">Le groupe vote, la décision est prise.</div>
-            <p>Dates, destinations, hébergements, idées de repas… Dès qu'il faut trancher, <strong>lancez un sondage</strong>&nbsp;: chacun vote depuis son téléphone, le résultat est visible de tous, et la décision est actée, sans relances ni débats sans fin.</p>
+            <h3>Omröstningar</h3>
+            <div class="mod-tagline">Gruppen röstar, beslutet fattas.</div>
+            <p>Datum, resmål, boenden, måltidsidéer… Så fort något ska avgöras, <strong>starta en omröstning</strong>: alla röstar från sin telefon, resultatet syns för alla, och beslutet är fattat, utan påminnelser eller ändlösa diskussioner.</p>
           </div>
           <div class="mod-detail" data-mod="convertisseur">
-            <h3>Convertisseur</h3>
-            <div class="mod-tagline">Les prix sur place, dans votre devise.</div>
-            <p>En séjour à l'étranger&nbsp;? <strong>Convertissez un prix dans votre monnaie habituelle en deux secondes</strong>&nbsp;!</p>
+            <h3>Omvandlare</h3>
+            <div class="mod-tagline">Priserna på plats, i din valuta.</div>
+            <p>På resa utomlands? <strong>Omvandla ett pris till din vanliga valuta på två sekunder</strong>!</p>
           </div>
         </div>
       </div>
 
       <!-- Mobile : fiche fonctionnalité en modale -->
       <dialog class="mod-modal" id="mod-modal">
-        <button class="mod-modal-close" type="button" id="mod-modal-close" aria-label="Fermer">✕</button>
+        <button class="mod-modal-close" type="button" id="mod-modal-close" aria-label="Stäng">✕</button>
         <div class="mod-modal-body" id="mod-modal-body"></div>
       </dialog>
     </div>
 
-    <!-- Tarifs -->
+    <!-- Priser -->
     <div class="section" id="prix">
-      <div class="kicker"><span class="knum">04</span><span class="kline"></span>Les tarifs</div>
+      <div class="kicker"><span class="knum">04</span><span class="kline"></span>Priserna</div>
       <div class="price-panel">
-      <h2 class="h2">Escapade ou Aventure&nbsp;? <em>À vous de choisir, à chaque séjour.</em></h2>
+      <h2 class="h2">Escapad eller Äventyr? <em>Du väljer, för varje resa.</em></h2>
 
-      <p class="price-intro">Téléchargez Alela gratuitement, puis à chaque nouveau séjour, à vous de choisir entre les deux modes disponibles&nbsp;:</p>
+      <p class="price-intro">Ladda ner Alela gratis, och välj sedan för varje ny resa mellan de två tillgängliga lägena:</p>
 
       <div class="plans">
         <div class="plan ghost">
-          <div class="plan-name">Escapade</div>
-          <div class="plan-price">Gratuit</div>
-          <p class="plan-desc">L'essentiel pour organiser un séjour à plusieurs, sans limite de durée ni de nombre de séjours.</p>
+          <div class="plan-name">Escapad</div>
+          <div class="plan-price">Gratis</div>
+          <p class="plan-desc">Det viktigaste för att organisera en resa tillsammans, utan begränsning i tid eller antal resor.</p>
         </div>
         <div class="plan">
-          <div class="plan-tag">Offre de lancement</div>
-          <div class="plan-name">Aventure</div>
-          <div class="plan-price"><s>4,99&nbsp;€</s> Offert <small>pendant le lancement</small></div>
-          <p class="plan-desc">Toutes les fonctionnalités avancées, débloquées pour tout le séjour et tous les participants.</p>
+          <div class="plan-tag">Lanseringserbjudande</div>
+          <div class="plan-name">Äventyr</div>
+          <div class="plan-price"><s>4,99 €</s> Gratis <small>under lanseringen</small></div>
+          <p class="plan-desc">Alla avancerade funktioner, upplåsta för hela resan och alla deltagare.</p>
         </div>
       </div>
 
-      <button class="compare-btn" type="button" id="compare-open">Comparer les deux modes, fonctionnalité par fonctionnalité<span class="plus">＋</span></button>
+      <button class="compare-btn" type="button" id="compare-open">Jämför de två lägena, funktion för funktion<span class="plus">＋</span></button>
 
       <details class="price-more">
-        <summary><span class="price-kicker">En savoir plus sur le mode Aventure</span><span class="price-more-chevron" aria-hidden="true"></span></summary>
+        <summary><span class="price-kicker">Läs mer om Äventyrsläge</span><span class="price-more-chevron" aria-hidden="true"></span></summary>
         <div class="price-punch">
-          <p>C'est sans abonnement&nbsp;! Le mode Aventure est <strong>un achat unique par séjour</strong>&nbsp;: vous payez 4,99&nbsp;€ une fois, rien ne se renouvelle, rien à résilier.</p>
-          <p>Le mode Aventure est payé par un seul participant, <strong>pour tout le groupe</strong>. Mais rien n'oblige à l'assumer seul&nbsp;: ajouté au budget du séjour, le montant se <strong>répartit automatiquement entre tous les participants</strong>. Pour un séjour à six, cela revient à moins d'un café par personne&nbsp;☕&nbsp;!</p>
+          <p>Det är utan abonnemang! Äventyrsläge är <strong>ett engångsköp per resa</strong>: du betalar 4,99 € en gång, inget förnyas, inget att säga upp.</p>
+          <p>Äventyrsläge betalas av en enda deltagare, <strong>för hela gruppen</strong>. Men inget tvingar en att stå för det ensam: när beloppet läggs till i resans budget <strong>delas det automatiskt mellan alla deltagare</strong>. För en resa med sex personer blir det mindre än ett kaffe per person ☕!</p>
         </div>
       </details>
 
-      <!-- OFFRE DE LANCEMENT : retirer cet encadré et le badge de la carte Aventure à la fin de la période -->
-      <div class="launch-box"><strong>Offre de lancement&nbsp;:</strong> Alela vient tout juste de voir le jour, et pour fêter ça, l'application est entièrement gratuite pendant la période de lancement&nbsp;: le mode Aventure est <strong>offert sur tous vos nouveaux séjours</strong>. Profitez-en&nbsp;!</div>
+      <!-- OFFRE DE LANCEMENT : retirer cet encadré et le badge de la carte Äventyr à la fin de la période -->
+      <div class="launch-box"><strong>Lanseringserbjudande:</strong> Alela har precis sett dagens ljus, och för att fira det är appen helt gratis under lanseringsperioden: Äventyrsläge är <strong>gratis på alla dina nya resor</strong>. Passa på!</div>
 
       <dialog class="compare-modal" id="compare-modal">
         <div class="cm-head">
-          <h3>Escapade ou Aventure&nbsp;?</h3>
-          <button class="cm-close" type="button" id="compare-close" aria-label="Fermer">✕</button>
+          <h3>Escapad eller Äventyr?</h3>
+          <button class="cm-close" type="button" id="compare-close" aria-label="Stäng">✕</button>
         </div>
         <div class="compare">
 
         <details class="cmp">
-          <summary>⚙️ Général <span class="cmp-count">+1 en Aventure</span></summary>
+          <summary>⚙️ Allmänt <span class="cmp-count">+1 i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Créer &amp; gérer le séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Inviter des participants</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Chat de groupe</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Convertisseur de monnaie</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Notifications</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondages (dates, destinations, hébergements, idées de repas)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Skapa &amp; hantera resan</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Bjud in deltagare</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Gruppchatt</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Valutaomvandlare</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Notiser</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Omröstningar (datum, resmål, boenden, måltidsidéer)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>📅 Dates &amp; Destinations <span class="cmp-count">+3 en Aventure</span></summary>
+          <summary>📅 Datum &amp; Resmål <span class="cmp-count">+3 i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Fixer les dates du séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Fixer la destination du séjour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Prévisions météorologiques</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Multi-étapes (plusieurs dates et/ou destinations)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage dates</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage destinations</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Bestäm resans datum</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Bestäm resans resmål</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Väderprognoser</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Flera etapper (flera datum och/eller resmål)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Datumomröstning</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Resmålsomröstning</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🏨 Hébergements <span class="cmp-count">+4 en Aventure</span></summary>
+          <summary>🏨 Boenden <span class="cmp-count">+4 i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Renseigner un hébergement (dates, adresse, parking, équipements…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Recherche multi-plateformes (Airbnb, Booking, Agoda…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Multi-hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Favoris hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage hébergements</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Comparatif hébergements (prix, localisation, avis)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Ange ett boende (datum, adress, parkering, utrustning…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Sökning på flera plattformar (Airbnb, Booking, Agoda…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Flera boenden</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Favoritboenden</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Boendeomröstning</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Jämförelse av boenden (pris, läge, omdömen)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🚆 Trajets <span class="cmp-count">+1 en Aventure</span></summary>
+          <summary>🚆 Resor <span class="cmp-count">+1 i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Saisir son trajet aller/retour</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Consulter les trajets de tous</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Recherche multi-plateformes (Skyscanner, SNCF…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Suggestions de trajets communs</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Ange sin resa dit/hem</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Se allas resor</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Sökning på flera plattformar (Skyscanner, SNCF…)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Förslag på gemensamma resor</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🍽️ Repas <span class="cmp-count">+4 en Aventure</span></summary>
+          <summary>🍽️ Måltider <span class="cmp-count">+4 i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Planning des repas</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Ajouter des idées de repas manuellement</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Profils alimentaires (allergies, régimes…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Suggestions personnalisées (300+ recettes)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Favoris idées de repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Sondage idées de repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Måltidsplanering</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Lägg till måltidsidéer manuellt</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Matprofiler (allergier, kosthållning…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Personliga förslag (300+ recept)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Favoritmåltidsidéer</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Måltidsomröstning</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🛒 Courses <span class="cmp-count">+1 en Aventure</span></summary>
+          <summary>🛒 Inköp <span class="cmp-count">+1 i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Gestion de la liste (ajout, suppression, rayons)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Import automatique depuis le planning repas</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Hantera listan (lägga till, ta bort, avdelningar)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Automatisk import från måltidsplaneringen</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>🧳 Bagages <span class="cmp-count">+3 en Aventure</span></summary>
+          <summary>🧳 Bagage <span class="cmp-count">+3 i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Ma liste (ajout, édition, cochage manuel)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Liste de groupe partagée entre participants</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Liste enfants (différenciée par âge et profil)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Liste pré-configurée selon le contexte du séjour (destination, météo &amp; saison, durée, transport…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Infos pratiques du séjour (formalités, prises électriques, culture, santé &amp; vaccins)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
-              <tr><td>Actualisation automatique si le séjour évolue</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Min lista (lägga till, redigera, bocka av manuellt)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Gemensam lista delad mellan deltagare</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Barnlista (anpassad efter ålder och profil)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Förkonfigurerad lista utifrån resans sammanhang (resmål, väder &amp; säsong, längd, transport…)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Praktisk info om resan (formaliteter, eluttag, kultur, hälsa &amp; vaccin)</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
+              <tr><td>Automatisk uppdatering om resan ändras</td><td class="c no">✗</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>💰 Budget <span class="cmp-count">tout inclus dans les deux modes</span></summary>
+          <summary>💰 Budget <span class="cmp-count">tillgängligt i båda lägena</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Ajout illimité de dépenses (multi-devises)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Catégorisation par type</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Répartition coût personnalisée par participant</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Équilibres en temps réel</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Suggestions de remboursements</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Import du coût de l'hébergement</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Obegränsat med utgifter (flera valutor)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Kategorisering efter typ</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Anpassad kostnadsfördelning per deltagare</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Saldon i realtid</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Förslag på återbetalningar</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Import av boendekostnad</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
 
         <details class="cmp">
-          <summary>📸 Souvenirs <span class="cmp-count">photos illimitées en Aventure</span></summary>
+          <summary>📸 Minnen <span class="cmp-count">obegränsat med foton i Äventyr</span></summary>
           <div class="cmp-scroll">
             <table class="cmp-table">
-              <tr><th></th><th class="col-e">Escapade</th><th class="col-a">Aventure</th></tr>
-              <tr><td>Ajout médias (photos et vidéos)</td><td class="custom">30 max par séjour</td><td class="custom good">Illimité</td></tr>
-              <tr><td>Galerie (grille ou fil d'actualité)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
-              <tr><td>Commenter, liker, partager</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><th></th><th class="col-e">Escapad</th><th class="col-a">Äventyr</th></tr>
+              <tr><td>Lägg till media (foton och videor)</td><td class="custom">Max 30 per resa</td><td class="custom good">Obegränsat</td></tr>
+              <tr><td>Galleri (rutnät eller flöde)</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+              <tr><td>Kommentera, gilla, dela</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
             </table>
           </div>
         </details>
@@ -1651,88 +1651,88 @@
 
     <!-- FAQ -->
     <div class="section" id="faq">
-      <div class="kicker"><span class="knum">05</span><span class="kline"></span>Questions fréquentes</div>
-      <h2 class="h2">On vous <em>répond.</em></h2>
+      <div class="kicker"><span class="knum">05</span><span class="kline"></span>Vanliga frågor</div>
+      <h2 class="h2">Vi <em>svarar.</em></h2>
       <div class="faq">
         <div class="faq-col">
         <details class="qa">
-          <summary data-emoji="🎉">C'est seulement pour les voyages&nbsp;?</summary>
-          <div class="qa-body">Non&nbsp;! Alela est pensée pour toutes les occasions de se retrouver à plusieurs&nbsp;: week-end entre amis, vacances en famille, EVG/EVJF, cousinade, festival, séminaire… Pas besoin de partir loin, ni longtemps&nbsp;: dès qu'un groupe doit planifier et s'organiser, Alela est là pour vous faire passer moins de temps à vous coordonner, et plus de temps à profiter de votre séjour&nbsp;!</div>
+          <summary data-emoji="🎉">Är det bara för resor?</summary>
+          <div class="qa-body">Nej! Alela är tänkt för alla tillfällen att samlas i grupp: helg med vänner, familjesemester, svensexa/möhippa, kusinträff, festival, seminarium… Du behöver varken åka långt eller länge: så fort en grupp ska planera och organisera sig är Alela där för att du ska lägga mindre tid på att samordna och mer tid på att njuta av resan!</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🗓️">Quand utiliser Alela&nbsp;?</summary>
-          <div class="qa-body">Tout du long du séjour&nbsp;!
+          <summary data-emoji="🗓️">När ska man använda Alela?</summary>
+          <div class="qa-body">Under hela resan!
             <ul>
-              <li><strong>Avant</strong>, pour décider et se préparer&nbsp;: dates, hébergements, trajets, valises…</li>
-              <li><strong>Pendant</strong>, pour vivre le séjour&nbsp;: dépenses, repas, courses, chat…</li>
-              <li><strong>Après</strong>, pour solder les comptes et partager vos souvenirs.</li>
+              <li><strong>Före</strong>, för att besluta och förbereda sig: datum, boenden, resor, väskor…</li>
+              <li><strong>Under</strong>, för att uppleva resan: utgifter, måltider, inköp, chatt…</li>
+              <li><strong>Efter</strong>, för att göra upp räkningen och dela era minnen.</li>
             </ul>
           </div>
         </details>
         <details class="qa">
-          <summary data-emoji="🧳">Peut-on organiser plusieurs séjours en même temps&nbsp;?</summary>
-          <div class="qa-body">Oui. Chaque séjour a son propre espace avec toutes les fonctionnalités d'Alela (participants, chat, budget, photos, etc.). Vous pouvez passer d'un séjour à l'autre depuis l'écran «&nbsp;Mes séjours&nbsp;». Le nombre de séjours est illimité, même en mode gratuit.</div>
+          <summary data-emoji="🧳">Kan man organisera flera resor samtidigt?</summary>
+          <div class="qa-body">Ja. Varje resa har sitt eget utrymme med alla Alelas funktioner (deltagare, chatt, budget, foton osv.). Du kan växla mellan resor från skärmen "Mina resor". Antalet resor är obegränsat, även i det gratis läget.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="✉️">Comment les participants rejoignent-ils un séjour&nbsp;?</summary>
-          <div class="qa-body">Après avoir créé un séjour, un lien d'invitation et un QR code sont générés. Il vous suffit de les partager aux participants où vous voulez (WhatsApp, SMS, mail…). Chaque personne qui clique rejoint directement le séjour dans l'app.</div>
+          <summary data-emoji="✉️">Hur går deltagarna med i en resa?</summary>
+          <div class="qa-body">När en resa har skapats genereras en inbjudningslänk och en QR-kod. Dela dem bara med deltagarna hur du vill (WhatsApp, SMS, mejl…). Varje person som klickar går direkt med i resan i appen.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="👥">Combien de participants peut-on inviter&nbsp;?</summary>
-          <div class="qa-body">Autant que nécessaire&nbsp;: petit week-end à 4 ou grande cousinade à 20, l'application ne fixe pas de limite au nombre de participants d'un séjour.</div>
+          <summary data-emoji="👥">Hur många deltagare kan man bjuda in?</summary>
+          <div class="qa-body">Så många som behövs: en liten helg för 4 eller en stor kusinträff för 20, appen sätter ingen gräns för antalet deltagare i en resa.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="👤">Faut-il créer un compte&nbsp;?</summary>
-          <div class="qa-body">Oui, mais c'est rapide&nbsp;: une adresse email suffit.</div>
+          <summary data-emoji="👤">Måste man skapa ett konto?</summary>
+          <div class="qa-body">Ja, men det går snabbt: en e-postadress räcker.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="📲">Et si un participant n'a pas encore téléchargé Alela&nbsp;?</summary>
-          <div class="qa-body">Aucun problème&nbsp;: le lien d'invitation le redirige d'abord vers l'App Store ou le Play Store pour installer Alela. Une fois l'app installée et son compte créé, il lui suffit de rouvrir le lien d'invitation pour rejoindre le séjour.</div>
+          <summary data-emoji="📲">Och om en deltagare inte har laddat ner Alela än?</summary>
+          <div class="qa-body">Inga problem: inbjudningslänken skickar dem först till App Store eller Play Store för att installera Alela. När appen är installerad och kontot skapat räcker det att öppna inbjudningslänken igen för att gå med i resan.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🌍">L'application est-elle disponible dans ma langue&nbsp;?</summary>
-          <div class="qa-body">Alela est disponible en 9 langues&nbsp;: français, anglais, espagnol, allemand, italien, portugais, norvégien, suédois et néerlandais. L'application s'affiche automatiquement dans la langue de votre téléphone, et chacun peut choisir la sienne&nbsp;: dans un même séjour, chaque participant utilise Alela dans sa propre langue&nbsp;!</div>
+          <summary data-emoji="🌍">Finns appen på mitt språk?</summary>
+          <div class="qa-body">Alela finns på 9 språk: franska, engelska, spanska, tyska, italienska, portugisiska, norska, svenska och nederländska. Appen visas automatiskt på telefonens språk, och alla kan välja sitt eget: inom samma resa använder varje deltagare Alela på sitt eget språk!</div>
         </details>
         </div>
         <div class="faq-col">
         <details class="qa">
-          <summary data-emoji="💶">L'application est-elle gratuite&nbsp;?</summary>
-          <div class="qa-body">Oui, l'application est téléchargeable gratuitement. Ensuite, deux formules s'offrent à vous à chaque nouveau séjour&nbsp;:
+          <summary data-emoji="💶">Är appen gratis?</summary>
+          <div class="qa-body">Ja, appen är gratis att ladda ner. Därefter finns två alternativ för varje ny resa:
             <ul>
-              <li>le mode <strong>Escapade</strong>, entièrement gratuit&nbsp;;</li>
-              <li>le mode <strong>Aventure</strong>, qui débloque les fonctionnalités avancées, à 4,99&nbsp;€ par séjour, payé une seule fois.</li>
+              <li>läget <strong>Escapad</strong>, helt gratis;</li>
+              <li>läget <strong>Äventyr</strong>, som låser upp de avancerade funktionerna, för 4,99 € per resa, betalas en gång.</li>
             </ul>
             <!-- OFFRE DE LANCEMENT : retirer la phrase suivante à la fin de la période -->
-            Bonne nouvelle&nbsp;: pendant la période de lancement, le mode Aventure est <strong>offert pour tous vos nouveaux séjours</strong>&nbsp;!</div>
+            Goda nyheter: under lanseringsperioden är Äventyrsläge <strong>gratis på alla dina nya resor</strong>!</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🔁">C'est un abonnement&nbsp;?</summary>
-          <div class="qa-body">Non. Le mode Aventure est un achat unique par séjour&nbsp;: vous payez 4,99&nbsp;€ une fois, rien ne se renouvelle, rien à résilier.</div>
+          <summary data-emoji="🔁">Är det ett abonnemang?</summary>
+          <div class="qa-body">Nej. Äventyrsläge är ett engångsköp per resa: du betalar 4,99 € en gång, inget förnyas, inget att säga upp.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🤝">Qui paie pour débloquer le mode Aventure&nbsp;?</summary>
-          <div class="qa-body">Le mode Aventure peut être débloqué&nbsp;:
+          <summary data-emoji="🤝">Vem betalar för att låsa upp Äventyrsläge?</summary>
+          <div class="qa-body">Äventyrsläge kan låsas upp:
             <ul>
-              <li>soit à la création du séjour, par la personne qui le crée&nbsp;;</li>
-              <li>soit plus tard, à tout moment, par n'importe quel participant qui souhaite passer d'Escapade à Aventure pour débloquer les fonctionnalités avancées.</li>
+              <li>antingen när resan skapas, av personen som skapar den;</li>
+              <li>eller senare, när som helst, av vilken deltagare som helst som vill byta från Escapad till Äventyr för att låsa upp de avancerade funktionerna.</li>
             </ul>
-            Dans tous les cas, un seul paiement de 4,99&nbsp;€ suffit, et tous les participants en profitent immédiatement. La personne qui a payé peut ensuite ajouter le montant au budget du séjour pour le partager&nbsp;: à six, ça fait moins d'un café chacun&nbsp;☕</div>
+            I alla fall räcker en enda betalning på 4,99 €, och alla deltagare drar nytta av den direkt. Personen som betalat kan sedan lägga till beloppet i resans budget för att dela det: för sex personer blir det mindre än ett kaffe var ☕</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🎒">Que comprend le mode gratuit (Escapade)&nbsp;?</summary>
-          <div class="qa-body">L'essentiel pour organiser un séjour à plusieurs, sans limite de durée ni de nombre de séjours. Pour voir précisément ce que chaque mode inclut, <a href="#prix" id="faq-compare-open">comparez les deux modes fonctionnalité par fonctionnalité</a>.</div>
+          <summary data-emoji="🎒">Vad ingår i det gratis läget (Escapad)?</summary>
+          <div class="qa-body">Det viktigaste för att organisera en resa tillsammans, utan begränsning i tid eller antal resor. För att se exakt vad varje läge innehåller, <a href="#prix" id="faq-compare-open">jämför de två lägena funktion för funktion</a>.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="📸">Que deviennent les photos/vidéos après le séjour&nbsp;?</summary>
-          <div class="qa-body">Elles restent conservées dans le séjour, accessibles à tous ses participants&nbsp;: pratique pour revivre vos souvenirs des mois plus tard. Vous pouvez aussi tout télécharger sur votre téléphone en un clic, sans doublons.</div>
+          <summary data-emoji="📸">Vad händer med foton/videor efter resan?</summary>
+          <div class="qa-body">De sparas i resan, tillgängliga för alla deltagare: praktiskt för att återuppleva era minnen månader senare. Du kan också ladda ner allt till din telefon med ett klick, utan dubbletter.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🔒">Mes données sont-elles privées&nbsp;?</summary>
-          <div class="qa-body">Oui. Les contenus d'un séjour (photos, messages, dépenses, etc.) sont visibles uniquement par les participants du séjour. Détails dans la <a href="./privacy.html">politique de confidentialité</a>.</div>
+          <summary data-emoji="🔒">Är mina uppgifter privata?</summary>
+          <div class="qa-body">Ja. Innehållet i en resa (foton, meddelanden, utgifter osv.) är endast synligt för resans deltagare. Läs mer i <a href="../privacy.html">integritetspolicyn</a>.</div>
         </details>
         <details class="qa">
-          <summary data-emoji="🗑️">Puis-je supprimer mon compte&nbsp;?</summary>
-          <div class="qa-body">Oui, à tout moment&nbsp;: vous pouvez supprimer définitivement votre compte depuis l'app, dans Profil → Compte et sécurité.</div>
+          <summary data-emoji="🗑️">Kan jag radera mitt konto?</summary>
+          <div class="qa-body">Ja, när som helst: du kan radera ditt konto permanent från appen, under Profil → Konto och säkerhet.</div>
         </details>
         </div>
       </div>
@@ -1740,14 +1740,14 @@
 
     <!-- Rappel téléchargement -->
     <div class="download" id="telecharger">
-      <h2>Votre prochain séjour <em>commence ici.</em></h2>
-      <p>Disponible gratuitement et sans abonnement sur iOS et Android.</p>
+      <h2>Din nästa resa <em>börjar här.</em></h2>
+      <p>Tillgänglig gratis och utan abonnemang på iOS och Android.</p>
       <div class="badges js-badges-anchor">
-        <a href="https://apps.apple.com/fr/app/id6762174268">
-          <img src="./badge-app-store.svg" alt="Télécharger dans l'App Store" />
+        <a href="https://apps.apple.com/se/app/id6762174268">
+          <img src="../badge-app-store.svg" alt="Ladda ner i App Store" />
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.alela.app">
-          <img src="./badge-google-play.svg" alt="Disponible sur Google Play" />
+        <a href="https://play.google.com/store/apps/details?id=com.alela.app&hl=sv">
+          <img src="../badge-google-play.svg" alt="Finns på Google Play" />
         </a>
       </div>
     </div>
@@ -1759,28 +1759,28 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img class="footer-icon" src="./alela-icon.png" alt="Alela" />
+          <img class="footer-icon" src="../alela-icon.png" alt="Alela" />
         </div>
         <div class="footer-col">
-          <h4>Découvrir</h4>
-          <a href="#pourquoi">Notre vision</a>
-          <a href="#etapes">Comment ça marche</a>
-          <a href="#modules">Fonctionnalités</a>
-          <a href="#prix">Tarifs</a>
+          <h4>Upptäck</h4>
+          <a href="#pourquoi">Vår vision</a>
+          <a href="#etapes">Så funkar det</a>
+          <a href="#modules">Funktioner</a>
+          <a href="#prix">Priser</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="footer-col">
-          <h4>Télécharger</h4>
-          <a href="https://apps.apple.com/fr/app/id6762174268">App Store</a>
-          <a href="https://play.google.com/store/apps/details?id=com.alela.app">Google Play</a>
+          <h4>Ladda ner</h4>
+          <a href="https://apps.apple.com/se/app/id6762174268">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.alela.app&hl=sv">Google Play</a>
         </div>
         <div class="footer-col">
-          <h4>Légal</h4>
-          <a href="./privacy.html">Politique de confidentialité</a>
-          <a href="./terms.html">Conditions Générales d'Utilisation</a>
+          <h4>Juridiskt</h4>
+          <a href="../privacy.html">Integritetspolicy</a>
+          <a href="../terms.html">Allmänna användarvillkor</a>
         </div>
         <div class="footer-col">
-          <h4>Suivez-nous</h4>
+          <h4>Följ oss</h4>
           <div class="social-row">
             <a href="https://www.instagram.com/alela.io/" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -1795,28 +1795,28 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.6 21v-7.2h2.4l.4-2.8h-2.8V9.2c0-.8.3-1.4 1.5-1.4h1.4V5.3c-.6-.1-1.4-.2-2.2-.2-2.3 0-3.9 1.4-3.9 4v2h-2.4v2.8h2.4V21h3.2Z"/></svg>
             </a>
           </div>
-          <h4 class="contact-title">Contactez-nous</h4>
-          <p class="footer-contact-line">Une question, une remarque, une idée&nbsp;?<br />Écrivez-nous à <a class="footer-mail" href="mailto:info@alela.io">info@alela.io</a></p>
+          <h4 class="contact-title">Kontakta oss</h4>
+          <p class="footer-contact-line">En fråga, en kommentar, en idé?<br />Skriv till oss på <a class="footer-mail" href="mailto:info@alela.io">info@alela.io</a></p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Alela. Tous droits réservés.</span>
+        <span>© 2026 Alela. Alla rättigheter förbehållna.</span>
       </div>
     </div>
   </footer>
 
   <!-- Retour en haut -->
-  <button class="to-top" id="to-top" type="button" aria-label="Revenir en haut de la page">
+  <button class="to-top" id="to-top" type="button" aria-label="Tillbaka till sidans topp">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
   </button>
 
   <!-- Barre de téléchargement fixe (mobile) -->
-  <div class="dl-bar" id="dl-bar" aria-label="Télécharger l'application Alela">
-    <a class="dl-bar-btn" href="https://apps.apple.com/fr/app/id6762174268" aria-label="Télécharger dans l'App Store">
-      <img src="./badge-app-store.svg" alt="Télécharger dans l'App Store" />
+  <div class="dl-bar" id="dl-bar" aria-label="Ladda ner Alela-appen">
+    <a class="dl-bar-btn" href="https://apps.apple.com/se/app/id6762174268" aria-label="Ladda ner i App Store">
+      <img src="../badge-app-store.svg" alt="Ladda ner i App Store" />
     </a>
-    <a class="dl-bar-btn" href="https://play.google.com/store/apps/details?id=com.alela.app" aria-label="Disponible sur Google Play">
-      <img src="./badge-google-play.svg" alt="Disponible sur Google Play" />
+    <a class="dl-bar-btn" href="https://play.google.com/store/apps/details?id=com.alela.app&hl=sv" aria-label="Finns på Google Play">
+      <img src="../badge-google-play.svg" alt="Finns på Google Play" />
     </a>
   </div>
 
@@ -1834,11 +1834,11 @@
       burger.addEventListener("click", function () {
         setOpen(burger.getAttribute("aria-expanded") !== "true");
       });
-      // Fermer au clic sur un lien
+      // Stäng au clic sur un lien
       drawer.querySelectorAll("a").forEach(function (a) {
         a.addEventListener("click", function () { setOpen(false); });
       });
-      // Fermer à Échap
+      // Stäng à Échap
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
     })();
 
@@ -1904,10 +1904,10 @@
       }
       if (modalClose) { modalClose.addEventListener("click", closeModal); }
       if (modal) {
-        // Fermer en touchant le fond (hors contenu)
+        // Stäng en touchant le fond (hors contenu)
         modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
 
-        // Fermer par glissement (bas, ou gauche/droite)
+        // Stäng par glissement (bas, ou gauche/droite)
         var gx = 0, gy = 0, gtrack = false, gdir = null, atTop = true;
         modal.addEventListener("touchstart", function (e) {
           if (e.touches.length !== 1) { gtrack = false; return; }
@@ -2010,7 +2010,7 @@
       // Le lien du FAQ « Que comprend le mode gratuit ? » ouvre aussi le comparatif
       var faqLink = document.getElementById("faq-compare-open");
       if (faqLink) faqLink.addEventListener("click", function (e) { e.preventDefault(); openModal(); });
-      // Cliquer sur une carte Escapade / Aventure ouvre aussi le comparatif
+      // Cliquer sur une carte Escapad / Äventyr ouvre aussi le comparatif
       document.querySelectorAll(".plans .plan").forEach(function (plan) {
         plan.addEventListener("click", openModal);
       });
@@ -2293,21 +2293,21 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Alela sert-elle seulement pour les voyages ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, Alela est pensée pour toutes les occasions de se retrouver à plusieurs : week-end entre amis, vacances en famille, EVG/EVJF, cousinade, festival, séminaire… Dès qu'un groupe doit planifier et s'organiser, Alela aide à passer moins de temps à se coordonner et plus de temps à profiter du séjour." } },
-      { "@type": "Question", "name": "Quand utiliser Alela ?", "acceptedAnswer": { "@type": "Answer", "text": "Tout du long du séjour : avant pour décider et se préparer (dates, hébergements, trajets, valises), pendant pour vivre le séjour (dépenses, repas, courses, chat), et après pour solder les comptes et partager les souvenirs." } },
-      { "@type": "Question", "name": "Que deviennent les photos après le séjour ?", "acceptedAnswer": { "@type": "Answer", "text": "Elles restent conservées dans le séjour, accessibles à tous ses participants, et peuvent être téléchargées sur le téléphone en un clic, sans doublons." } },
-      { "@type": "Question", "name": "Peut-on organiser plusieurs séjours en même temps ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, le nombre de séjours est illimité, même en mode gratuit. Chaque séjour a son propre espace." } },
-      { "@type": "Question", "name": "Comment les participants rejoignent-ils un séjour ?", "acceptedAnswer": { "@type": "Answer", "text": "Après la création d'un séjour, un lien d'invitation et un QR code sont générés, à partager où l'on veut (WhatsApp, SMS, mail…). Chaque personne qui clique rejoint directement le séjour dans l'application." } },
-      { "@type": "Question", "name": "Combien de participants peut-on inviter ?", "acceptedAnswer": { "@type": "Answer", "text": "L'application ne fixe pas de limite au nombre de participants d'un séjour." } },
-      { "@type": "Question", "name": "Faut-il créer un compte ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, mais c'est rapide : une adresse email suffit." } },
-      { "@type": "Question", "name": "Et si un participant n'a pas encore téléchargé Alela ?", "acceptedAnswer": { "@type": "Answer", "text": "Le lien d'invitation redirige d'abord vers l'App Store ou le Play Store pour installer Alela. Une fois l'app installée et le compte créé, il suffit de rouvrir le lien d'invitation pour rejoindre le séjour." } },
-      { "@type": "Question", "name": "L'application Alela est-elle disponible dans ma langue ?", "acceptedAnswer": { "@type": "Answer", "text": "Alela est disponible en 9 langues : français, anglais, espagnol, allemand, italien, portugais, norvégien, suédois et néerlandais. L'application s'affiche automatiquement dans la langue du téléphone, et dans un même séjour chaque participant utilise Alela dans sa propre langue." } },
-      { "@type": "Question", "name": "L'application Alela est-elle gratuite ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, l'application est téléchargeable gratuitement. Le mode Escapade est gratuit sans limite de durée ni de nombre de séjours ; le mode Aventure, qui débloque les fonctionnalités avancées, coûte 4,99 € par séjour, payé une seule fois. Pendant la période de lancement, le mode Aventure est offert pour tous les nouveaux séjours." } },
-      { "@type": "Question", "name": "Le mode Aventure est-il un abonnement ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, c'est un achat unique par séjour : vous payez 4,99 € une fois, rien ne se renouvelle, rien à résilier." } },
-      { "@type": "Question", "name": "Qui paie pour débloquer le mode Aventure ?", "acceptedAnswer": { "@type": "Answer", "text": "Le mode Aventure peut être débloqué à la création du séjour par la personne qui le crée, ou plus tard par n'importe quel participant. Un seul paiement de 4,99 € suffit et tous les participants en profitent. Le montant peut être ajouté au budget du groupe pour être partagé." } },
-      { "@type": "Question", "name": "Que comprend le mode gratuit Escapade ?", "acceptedAnswer": { "@type": "Answer", "text": "L'essentiel pour organiser un séjour à plusieurs, sans limite de durée ni de nombre de séjours. Le comparatif détaillé des deux modes, fonctionnalité par fonctionnalité, est disponible dans la section Tarifs." } },
-      { "@type": "Question", "name": "Mes données sont-elles privées ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les contenus d'un séjour (photos, messages, dépenses…) sont visibles uniquement par les participants du séjour. Les données ne sont ni revendues ni utilisées à des fins publicitaires." } },
-      { "@type": "Question", "name": "Puis-je supprimer mon compte ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, à tout moment depuis l'application : suppression définitive du compte dans Profil → Compte et sécurité." } }
+      { "@type": "Question", "name": "Är Alela bara till för resor?", "acceptedAnswer": { "@type": "Answer", "text": "Nej, Alela är tänkt för alla tillfällen att samlas i grupp: helg med vänner, familjesemester, svensexa/möhippa, kusinträff, festival, seminarium… Så fort en grupp ska planera och organisera sig hjälper Alela till att lägga mindre tid på att samordna och mer tid på att njuta av resan." } },
+      { "@type": "Question", "name": "När ska man använda Alela?", "acceptedAnswer": { "@type": "Answer", "text": "Under hela resan: före för att besluta och förbereda sig (datum, boenden, resor, väskor), under för att uppleva resan (utgifter, måltider, inköp, chatt), och efter för att göra upp räkningen och dela minnena." } },
+      { "@type": "Question", "name": "Vad händer med fotona efter resan?", "acceptedAnswer": { "@type": "Answer", "text": "De sparas i resan, tillgängliga för alla deltagare, och kan laddas ner till telefonen med ett klick, utan dubbletter." } },
+      { "@type": "Question", "name": "Kan man organisera flera resor samtidigt?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, antalet resor är obegränsat, även i det gratis läget. Varje resa har sitt eget utrymme." } },
+      { "@type": "Question", "name": "Hur går deltagarna med i en resa?", "acceptedAnswer": { "@type": "Answer", "text": "När en resa har skapats genereras en inbjudningslänk och en QR-kod, som kan delas hur man vill (WhatsApp, SMS, mejl…). Varje person som klickar går direkt med i resan i appen." } },
+      { "@type": "Question", "name": "Hur många deltagare kan man bjuda in?", "acceptedAnswer": { "@type": "Answer", "text": "Appen sätter ingen gräns för antalet deltagare i en resa." } },
+      { "@type": "Question", "name": "Måste man skapa ett konto?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, men det går snabbt: en e-postadress räcker." } },
+      { "@type": "Question", "name": "Och om en deltagare inte har laddat ner Alela än?", "acceptedAnswer": { "@type": "Answer", "text": "Inbjudningslänken skickar först till App Store eller Play Store för att installera Alela. När appen är installerad och kontot skapat räcker det att öppna inbjudningslänken igen för att gå med i resan." } },
+      { "@type": "Question", "name": "Finns Alela-appen på mitt språk?", "acceptedAnswer": { "@type": "Answer", "text": "Alela finns på 9 språk: franska, engelska, spanska, tyska, italienska, portugisiska, norska, svenska och nederländska. Appen visas automatiskt på telefonens språk, och inom samma resa använder varje deltagare Alela på sitt eget språk." } },
+      { "@type": "Question", "name": "Är Alela-appen gratis?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, appen är gratis att ladda ner. Escapadeläge är gratis utan begränsning i tid eller antal resor; Äventyrsläge, som låser upp de avancerade funktionerna, kostar 4,99 € per resa, betalas en gång. Under lanseringsperioden är Äventyrsläge gratis för alla nya resor." } },
+      { "@type": "Question", "name": "Är Äventyrsläge ett abonnemang?", "acceptedAnswer": { "@type": "Answer", "text": "Nej, det är ett engångsköp per resa: du betalar 4,99 € en gång, inget förnyas, inget att säga upp." } },
+      { "@type": "Question", "name": "Vem betalar för att låsa upp Äventyrsläge?", "acceptedAnswer": { "@type": "Answer", "text": "Äventyrsläge kan låsas upp vid resans skapande av personen som skapar den, eller senare av vilken deltagare som helst. En enda betalning på 4,99 € räcker och alla deltagare drar nytta av den. Beloppet kan läggas till i gruppens budget för att delas." } },
+      { "@type": "Question", "name": "Vad ingår i det gratis läget Escapad?", "acceptedAnswer": { "@type": "Answer", "text": "Det viktigaste för att organisera en resa tillsammans, utan begränsning i tid eller antal resor. Den detaljerade jämförelsen av de två lägena, funktion för funktion, finns i avsnittet Priser." } },
+      { "@type": "Question", "name": "Är mina uppgifter privata?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Innehållet i en resa (foton, meddelanden, utgifter…) är endast synligt för resans deltagare. Uppgifterna säljs inte vidare och används inte i reklamsyfte." } },
+      { "@type": "Question", "name": "Kan jag radera mitt konto?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, när som helst från appen: permanent radering av kontot under Profil → Konto och säkerhet." } }
     ]
   }
   </script>

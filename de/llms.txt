@@ -1,0 +1,20 @@
+# Alela
+
+> Alela ist die App, die alles vereint, was eine Gruppe vorbereiten, entscheiden und teilen muss, um eine Reise zu mehreren zu organisieren: Termine, Reiseziele, Unterkünfte, Fahrten, Mahlzeiten, Einkäufe, Gepäck, geteiltes Budget, Gruppenchat und Erinnerungsalbum. Kostenlos verfügbar für iOS und Android, in 9 Sprachen.
+
+## Pages
+- [Startseite](https://alela.io/de/): Vorstellung der App: Vision, Funktionsweise, Funktionen, Preise und häufige Fragen
+- [App herunterladen](https://alela.io/de/download.html): Download-Links für iOS (App Store) und Android (Google Play)
+- [Datenschutzerklärung](https://alela.io/privacy.html)
+- [Allgemeine Geschäftsbedingungen](https://alela.io/terms.html)
+
+## Languages
+- [Français](https://alela.io/) — [llms.txt](https://alela.io/llms.txt)
+- [English](https://alela.io/en/) — [llms.txt](https://alela.io/en/llms.txt)
+- [Español](https://alela.io/es/) — [llms.txt](https://alela.io/es/llms.txt)
+- [Deutsch](https://alela.io/de/) — [llms.txt](https://alela.io/de/llms.txt)
+- [Italiano](https://alela.io/it/) — [llms.txt](https://alela.io/it/llms.txt)
+- [Português](https://alela.io/pt/) — [llms.txt](https://alela.io/pt/llms.txt)
+- [Norsk](https://alela.io/no/) — [llms.txt](https://alela.io/no/llms.txt)
+- [Svenska](https://alela.io/sv/) — [llms.txt](https://alela.io/sv/llms.txt)
+- [Nederlands](https://alela.io/nl/) — [llms.txt](https://alela.io/nl/llms.txt)
