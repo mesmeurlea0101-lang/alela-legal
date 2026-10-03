@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Alela — Rejoindre le séjour</title>
+  <meta name="description" content="Tu as reçu une invitation à rejoindre un séjour sur Alela." />
+  <meta property="og:title" content="Alela — Rejoins mon séjour !" />
+  <meta property="og:description" content="Tu as reçu une invitation à rejoindre un séjour sur Alela. Ouvre ce lien depuis ton téléphone pour accéder à l'invitation." />
+  <meta property="og:image" content="https://alela.io/alela-icon.png" />
+  <link rel="icon" type="image/png" href="./alela-icon.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(160deg, #f8f7f5 0%, #f0ecfb 100%);
+      color: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container { max-width: 480px; width: 100%; margin: 0 auto; padding: 40px 24px; text-align: center; }
+    .icon {
+      width: 104px; height: 104px; border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(67,38,196,0.22);
+      margin-bottom: 22px;
+    }
+    h1 { font-size: 26px; font-weight: 800; color: #2A1E3A; margin-bottom: 10px; }
+    .tagline { font-size: 16px; color: #555; line-height: 1.55; margin-bottom: 26px; }
+    .btn {
+      display: block; width: 100%; padding: 16px 24px;
+      border-radius: 999px; font-size: 16px; font-weight: 700;
+      text-decoration: none; margin-bottom: 12px;
+    }
+    .btn-primary { background: #4326C4; color: #fff; }
+    .btn-secondary { background: #fff; color: #4326C4; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .steps {
+      text-align: left; background: #fff; border-radius: 18px;
+      padding: 18px 20px; margin: 14px 0 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .steps-title { font-size: 14px; font-weight: 800; color: #2A1E3A; margin-bottom: 10px; }
+    .steps ol { padding-left: 20px; font-size: 14.5px; color: #555; line-height: 1.6; }
+    .hint {
+      display: none; font-size: 14.5px; line-height: 1.5; color: #2A1E3A;
+      background: #FFF5EA; border-radius: 14px; padding: 12px 16px; margin-bottom: 14px;
+    }
+    .hidden { display: none !important; }
+    .footer { font-size: 12.5px; color: #999; line-height: 1.8; margin-top: 28px; }
+    .footer a { color: #4326C4; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="icon" src="./alela-icon.png" alt="Alela" />
+    <h1 id="heading">Rejoindre le séjour sur Alela</h1>
+    <p class="tagline" id="intro">Tu as reçu une invitation à rejoindre un séjour.</p>
+
+    <div class="hint" id="hint"></div>
+
+    <a class="btn btn-primary" href="alela://" id="open-app">Ouvrir dans Alela</a>
+    <a class="btn btn-secondary" href="https://apps.apple.com/fr/app/id6762174268" id="app-store">Télécharger sur l'App Store</a>
+    <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.alela.app" id="play-store">Télécharger sur Google Play</a>
+
+    <div class="steps" id="steps">
+      <div class="steps-title" id="steps-title">Pas encore l'application ?</div>
+      <ol>
+        <li id="step1">Télécharge Alela et crée ton compte.</li>
+        <li id="step2">Reviens sur ce lien d'invitation.</li>
+        <li id="step3">Appuie sur « Ouvrir dans Alela ».</li>
+      </ol>
+    </div>
+
+    <div class="footer">
+      <a href="./privacy.html">Confidentialité</a> · <a href="./terms.html">CGU</a> · <a href="mailto:info@alela.io">info@alela.io</a><br />
+      Alela — exploitée par Lea MESMEUR
+    </div>
+  </div>
+  <script>
+    (function () {
+      var ANDROID_PACKAGE = "com.alela.app";
+      var PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=" + ANDROID_PACKAGE;
+
+      var COPY = {
+        fr: {
+          title: "Alela — Rejoindre le séjour",
+          heading: "Rejoindre le séjour sur Alela",
+          intro: "Tu as reçu une invitation à rejoindre un séjour.",
+          open: "Ouvrir dans Alela",
+          appStore: "Télécharger sur l'App Store",
+          playStore: "Télécharger sur Google Play",
+          stepsTitle: "Pas encore l'application ?",
+          step1: "Télécharge Alela et crée ton compte.",
+          step2: "Reviens sur ce lien d'invitation.",
+          step3: "Appuie sur « Ouvrir dans Alela ».",
+          notOpened: "L'application ne s'est pas ouverte ? Installe Alela, puis reviens ici et appuie de nouveau sur « Ouvrir dans Alela ».",
+          desktop: "Ouvre ce lien depuis ton téléphone pour rejoindre le séjour.",
+          invalid: "Ce lien d'invitation est incomplet. Demande à l'organisateur de te le renvoyer."
+        },
+        en: {
+          title: "Alela — Join the trip",
+          heading: "Join the trip on Alela",
+          intro: "You've been invited to join a trip.",
+          open: "Open in Alela",
+          appStore: "Download on the App Store",
+          playStore: "Get it on Google Play",
+          stepsTitle: "Don't have the app yet?",
+          step1: "Download Alela and create your account.",
+          step2: "Come back to this invitation link.",
+          step3: "Tap “Open in Alela”.",
+          notOpened: "The app didn't open? Install Alela, then come back here and tap “Open in Alela” again.",
+          desktop: "Open this link on your phone to join the trip.",
+          invalid: "This invitation link is incomplete. Ask the organiser to send it again."
+        },
+        es: {
+          title: "Alela — Unirse al viaje",
+          heading: "Únete al viaje en Alela",
+          intro: "Has recibido una invitación para unirte a un viaje.",
+          open: "Abrir en Alela",
+          appStore: "Descargar en App Store",
+          playStore: "Disponible en Google Play",
+          stepsTitle: "¿Aún no tienes la aplicación?",
+          step1: "Descarga Alela y crea tu cuenta.",
+          step2: "Vuelve a este enlace de invitación.",
+          step3: "Pulsa «Abrir en Alela».",
+          notOpened: "¿No se ha abierto la aplicación? Instala Alela, vuelve aquí y pulsa de nuevo «Abrir en Alela».",
+          desktop: "Abre este enlace desde tu teléfono para unirte al viaje.",
+          invalid: "Este enlace de invitación está incompleto. Pide al organizador que te lo reenvíe."
+        },
+        de: {
+          title: "Alela — Der Reise beitreten",
+          heading: "Tritt der Reise auf Alela bei",
+          intro: "Du wurdest eingeladen, einer Reise beizutreten.",
+          open: "In Alela öffnen",
+          appStore: "Im App Store laden",
+          playStore: "Bei Google Play erhältlich",
+          stepsTitle: "Noch keine App?",
+          step1: "Lade Alela herunter und erstelle dein Konto.",
+          step2: "Kehre zu diesem Einladungslink zurück.",
+          step3: "Tippe auf „In Alela öffnen“.",
+          notOpened: "Die App hat sich nicht geöffnet? Installiere Alela, komm hierher zurück und tippe erneut auf „In Alela öffnen“.",
+          desktop: "Öffne diesen Link auf deinem Handy, um der Reise beizutreten.",
+          invalid: "Dieser Einladungslink ist unvollständig. Bitte den Organisator, ihn erneut zu senden."
+        },
+        it: {
+          title: "Alela — Unisciti al viaggio",
+          heading: "Unisciti al viaggio su Alela",
+          intro: "Hai ricevuto un invito a unirti a un viaggio.",
+          open: "Apri in Alela",
+          appStore: "Scarica su App Store",
+          playStore: "Disponibile su Google Play",
+          stepsTitle: "Non hai ancora l'app?",
+          step1: "Scarica Alela e crea il tuo account.",
+          step2: "Torna a questo link di invito.",
+          step3: "Tocca «Apri in Alela».",
+          notOpened: "L'app non si è aperta? Installa Alela, poi torna qui e tocca di nuovo «Apri in Alela».",
+          desktop: "Apri questo link dal tuo telefono per unirti al viaggio.",
+          invalid: "Questo link di invito è incompleto. Chiedi all'organizzatore di inviartelo di nuovo."
+        },
+        pt: {
+          title: "Alela — Juntar-me à viagem",
+          heading: "Junta-te à viagem no Alela",
+          intro: "Recebeste um convite para te juntares a uma viagem.",
+          open: "Abrir no Alela",
+          appStore: "Descarregar na App Store",
+          playStore: "Disponível no Google Play",
+          stepsTitle: "Ainda não tens a aplicação?",
+          step1: "Descarrega o Alela e cria a tua conta.",
+          step2: "Volta a este link de convite.",
+          step3: "Toca em «Abrir no Alela».",
+          notOpened: "A aplicação não abriu? Instala o Alela, volta aqui e toca novamente em «Abrir no Alela».",
+          desktop: "Abre este link no teu telemóvel para te juntares à viagem.",
+          invalid: "Este link de convite está incompleto. Pede ao organizador que o envie novamente."
+        },
+        no: {
+          title: "Alela — Bli med på reisen",
+          heading: "Bli med på reisen på Alela",
+          intro: "Du har blitt invitert til å bli med på en reise.",
+          open: "Åpne i Alela",
+          appStore: "Last ned fra App Store",
+          playStore: "Hent den på Google Play",
+          stepsTitle: "Har du ikke appen ennå?",
+          step1: "Last ned Alela og opprett kontoen din.",
+          step2: "Gå tilbake til denne invitasjonslenken.",
+          step3: "Trykk på «Åpne i Alela».",
+          notOpened: "Åpnet ikke appen seg? Installer Alela, kom tilbake hit og trykk på «Åpne i Alela» igjen.",
+          desktop: "Åpne denne lenken på telefonen din for å bli med på reisen.",
+          invalid: "Denne invitasjonslenken er ufullstendig. Be arrangøren om å sende den på nytt."
+        },
+        sv: {
+          title: "Alela — Gå med i resan",
+          heading: "Gå med i resan på Alela",
+          intro: "Du har blivit inbjuden att gå med i en resa.",
+          open: "Öppna i Alela",
+          appStore: "Ladda ner på App Store",
+          playStore: "Hämta den på Google Play",
+          stepsTitle: "Har du inte appen än?",
+          step1: "Ladda ner Alela och skapa ditt konto.",
+          step2: "Gå tillbaka till den här inbjudningslänken.",
+          step3: "Tryck på ”Öppna i Alela”.",
+          notOpened: "Öppnades inte appen? Installera Alela, kom tillbaka hit och tryck på ”Öppna i Alela” igen.",
+          desktop: "Öppna den här länken på din telefon för att gå med i resan.",
+          invalid: "Den här inbjudningslänken är ofullständig. Be arrangören att skicka den igen."
+        },
+        nl: {
+          title: "Alela — Deelnemen aan de reis",
+          heading: "Doe mee aan de reis op Alela",
+          intro: "Je bent uitgenodigd om deel te nemen aan een reis.",
+          open: "Openen in Alela",
+          appStore: "Downloaden in de App Store",
+          playStore: "Beschikbaar op Google Play",
+          stepsTitle: "Heb je de app nog niet?",
+          step1: "Download Alela en maak je account aan.",
+          step2: "Ga terug naar deze uitnodigingslink.",
+          step3: "Tik op ‘Openen in Alela’.",
+          notOpened: "Is de app niet geopend? Installeer Alela, kom hier terug en tik opnieuw op ‘Openen in Alela’.",
+          desktop: "Open deze link op je telefoon om deel te nemen aan de reis.",
+          invalid: "Deze uitnodigingslink is onvolledig. Vraag de organisator om hem opnieuw te sturen."
+        }
+      };
+
+      function pickLocale(forced) {
+        var candidates = [forced].concat(navigator.languages || [navigator.language || ""]);
+        for (var i = 0; i < candidates.length; i++) {
+          var base = String(candidates[i] || "").toLowerCase().split(/[-_]/)[0];
+          if (base === "nb" || base === "nn") base = "no";
+          if (COPY[base]) return base;
+        }
+        return "fr";
+      }
+
+      var params = new URLSearchParams(window.location.search);
+      var token = (params.get("token") || "").trim();
+      var tripId = (params.get("tripId") || "").trim();
+      var lang = pickLocale(params.get("lang"));
+      var copy = COPY[lang];
+
+      var byId = function (id) { return document.getElementById(id); };
+      var setText = function (id, value) { byId(id).textContent = value; };
+      var showHint = function (value) {
+        var hint = byId("hint");
+        hint.textContent = value;
+        hint.style.display = "block";
+      };
+
+      document.documentElement.lang = lang;
+      document.title = copy.title;
+      setText("heading", copy.heading);
+      setText("intro", copy.intro);
+      setText("open-app", copy.open);
+      setText("app-store", copy.appStore);
+      setText("play-store", copy.playStore);
+      setText("steps-title", copy.stepsTitle);
+      setText("step1", copy.step1);
+      setText("step2", copy.step2);
+      setText("step3", copy.step3);
+
+      var ua = navigator.userAgent || "";
+      var isAndroid = /android/i.test(ua);
+      // iPadOS se présente comme un Mac : on le reconnaît à son écran tactile.
+      var isIOS =
+        /iphone|ipad|ipod/i.test(ua) ||
+        (/macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+
+      if (isIOS) byId("play-store").classList.add("hidden");
+      if (isAndroid) byId("app-store").classList.add("hidden");
+
+      if (!token) {
+        byId("open-app").classList.add("hidden");
+        byId("steps").classList.add("hidden");
+        showHint(copy.invalid);
+        return;
+      }
+
+      var query = "token=" + encodeURIComponent(token) +
+        (tripId ? "&tripId=" + encodeURIComponent(tripId) : "");
+      var appUrl = "alela://invite?" + query;
+      var intentUrl =
+        "intent://invite?" + query +
+        "#Intent;scheme=alela;package=" + ANDROID_PACKAGE +
+        ";S.browser_fallback_url=" + encodeURIComponent(PLAY_STORE_URL) + ";end";
+
+      if (!isIOS && !isAndroid) {
+        byId("open-app").classList.add("hidden");
+        byId("steps").classList.add("hidden");
+        showHint(copy.desktop);
+        return;
+      }
+
+      var isAndroidChromium = isAndroid && /chrome|chromium|; wv/i.test(ua);
+      var openBtn = byId("open-app");
+      openBtn.setAttribute("href", isAndroidChromium ? intentUrl : appUrl);
+
+      // L'ouverture part toujours d'un appui : sur iOS, tenter alela:// au
+      // chargement affiche « adresse invalide » quand l'app n'est pas installée,
+      // et les navigateurs intégrés ignorent les redirections sans geste.
+      openBtn.addEventListener("click", function () {
+        setTimeout(function () {
+          if (document.hidden || document.visibilityState === "hidden") return; // l'app s'est ouverte
+          showHint(copy.notOpened);
+        }, 1800);
+      });
+    })();
+  </script>
+</body>
+</html>
